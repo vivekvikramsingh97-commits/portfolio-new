@@ -2099,7 +2099,7 @@ function casePage(p){
   secs.forEach(s=>toc.push({id:s.id,label:s.title,n:s.num,kids:s.body.filter(b=>b[0]==="h3").map(b=>({id:b[2],label:b[3]||b[1].replace(/^[A-C] · /,"")}))}));
   if(p.refl) toc.push({id:"reflection",label:"Reflection",n:"",kids:[]});
   return `<article class="cs wrap">
-   <div class="crumb"><a href="#work">Work</a><i></i>${esc(p.cat||"")}${STATUS[p.id]?`<i></i><b class="ok">${STATUS[p.id]}</b>`:""}${mins>2?`<i></i>${mins} min read · 1 min skim`:""}</div>
+   <div class="crumb"><a href="#top">Home</a><i></i><a href="#work">Work</a><i></i>${esc(p.cat||"")}${STATUS[p.id]?`<i></i><b class="ok">${STATUS[p.id]}</b>`:""}${mins>2?`<i></i>${mins} min read · 1 min skim`:""}</div>
    <h1>${esc(p.name)}</h1>
    ${tagline?`<p class="tagline">${esc(tagline)}</p>`:""}
    <p class="stmt lede">${esc(p.lede)}</p>
