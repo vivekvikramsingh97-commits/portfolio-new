@@ -1080,7 +1080,7 @@ a.hlogo:focus-visible{outline:1px solid currentColor;outline-offset:7px}
     <div class="cta">
       <h2>Have an AI product in mind? <span class="it">Let’s talk.</span></h2>
       <div class="mail"><span id="mail">projects.vivekvikramsingh@gmail.com</span><button id="copy" type="button">Copy email</button></div>
-      <p>Open to senior product design roles in AI and enterprise. Happy to walk through the NDA work.</p>
+      <p>Open to senior product design roles in AI and enterprise.</p>
     </div>
     <nav class="ncol a" aria-label="Footer"></nav>
   </div>
@@ -1904,7 +1904,7 @@ function block(b,pid,sec){
 
 function card(p,cls){
   const cover=COVER(p.id)||p.thumb, kind=(p.cat||"").split(" · ")[0], lg=(cls||"").includes("lg");
-  return `<a class="wk ${cls||""}" href="#${p.id}" data-g="${grp(p)}"><div class="im rv-img"><img src="${IMG(cover)}" alt="${esc(p.name)}" loading="${lg?"eager":"lazy"}" decoding="async">${STATUS[p.id]?`<span class="tag st">${STATUS[p.id]}</span>`:""}${p.nda?'<span class="tag nda">NDA</span>':""}</div>
+  return `<a class="wk ${cls||""}" href="#${p.id}" data-g="${grp(p)}"><div class="im rv-img"><img src="${IMG(cover)}" alt="${esc(p.name)}" loading="${lg?"eager":"lazy"}" decoding="async"></div>
    <div class="t"><span>${esc(p.name)}</span><em>${esc(p.year||"")}</em></div>${lg&&p.short?`<p class="sh">${esc(p.short)}</p>`:""}<div class="c">${esc(ORG[p.id]?ORG[p.id]+" · "+kind:kind)}</div></a>`;
 }
 
@@ -2103,7 +2103,6 @@ function casePage(p){
    <h1>${esc(p.name)}</h1>
    ${tagline?`<p class="tagline">${esc(tagline)}</p>`:""}
    <p class="stmt lede">${esc(p.lede)}</p>
-   ${p.nda?'<p class="nda">Microsoft contract work under NDA. Customer names are redacted in screens and internal figures removed. A full walkthrough is available on request.</p>':""}
    <div class="cmeta"><dl>${p.meta.map(([k,v])=>`<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
     ${firstSec&&firstSec.id!=="work"?`<a class="btn" href="#${p.id}" data-jump="${firstSec.id}">See the decisions ${arrow}</a>`:""}</div>
    <div class="chero rv-img"><img src="${IMG(hero)}" alt="${esc(p.name)}" fetchpriority="high" decoding="async"></div>
