@@ -915,6 +915,29 @@ a.hlogo:focus-visible{outline:1px solid currentColor;outline-offset:7px}
 @media (max-width:700px){.pg-list li{grid-template-columns:42px minmax(0,1fr);row-gap:12px}.pg-ar{display:none}.pg-r{grid-column:1/-1;border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:12px}}
 
 /* generation matrix: compare across, follow down */
+.cwhat{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:clamp(56px,6vw,96px);padding-top:20px;border-top:1px solid var(--rule)}
+.cwhat h4{grid-column:1/5;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:500;padding-top:6px}
+.cwhat>div{grid-column:5/13;display:grid;gap:14px}
+.cwhat p{font-size:clamp(19px,1.55vw,23px);line-height:1.42;letter-spacing:-.012em;color:var(--ink);text-wrap:pretty}
+.cwhat p+p{color:var(--ink2)}
+@media (max-width:899px){.cwhat{grid-template-columns:1fr}.cwhat h4,.cwhat>div{grid-column:1}}
+.gp{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gp.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.gp li{background:var(--paper);padding:22px 22px 24px;display:grid;gap:12px;align-content:start}
+.gp-ic{width:20px;height:20px;color:var(--ink)}.gp-ic svg{width:20px;height:20px;display:block}
+.gp h5{font-size:18px;line-height:1.25;letter-spacing:-.012em;font-weight:500;color:var(--ink)}
+.gp p{font-size:15px;line-height:1.45;color:var(--ink2);display:grid;gap:3px}
+.gp p small{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:500}
+.gp .gp-r{color:var(--ink);padding-top:12px;border-top:1px solid var(--rule)}
+@media (max-width:760px){.gp,.gp.c2{grid-template-columns:1fr}}
+.gd{margin-top:28px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:16px 40px;border-top:1px solid var(--ink);padding-top:22px}
+.gd-why{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.gd-why li{font-size:16px;line-height:1.5;color:var(--ink2)}.gd-why b{color:var(--ink);font-weight:500}
+.gd-side{display:grid;gap:20px;align-content:start}
+.gd-side dt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-bottom:8px}
+.gd-side dd{font-size:14px;color:var(--ink2)}
+.gd-bar{font-size:17px!important;line-height:1.4;color:var(--ink)!important}
+@media (max-width:899px){.gd{grid-template-columns:1fr}}
 .ev{margin-top:30px;display:grid;grid-template-columns:150px repeat(3,minmax(0,1fr));border-top:1px solid var(--ink);--evf:14px}
 .ev-c{grid-row:var(--r);grid-column:var(--c);padding:16px 18px 18px;border-top:1px solid var(--rule);min-width:0;position:relative;font-size:var(--evf);line-height:1.5;font-weight:400;color:var(--ink2)}
 .ev-c:not(.ev-lab):not(.ev-corner){border-left:1px solid var(--rule)}
@@ -1082,6 +1105,7 @@ const P=[
 {id:"zbrain",tier:1,name:"ZBrain",year:"2025–2026",cat:"Agentic AI platform · Product designer",
  short:"Three generations of an enterprise agentic AI platform",thumb:"71-349",hero:"68-26",
  title:"ZBrain: three generations of an enterprise agentic AI platform",
+ what:["ZBrain is an enterprise platform for building and running AI agents. A company turns its documents, systems and rules into AI apps, automations and teams of agents, and then governs what runs.","It is built by LeewayHertz, a Hackett Group company. When I joined in May 2025 it was a proof of concept. I designed the three generations that followed: Gen 1, Gen 2 and Gen 3, the latest."],
  lede:"I joined an existing product and designed it through three structural changes, as the question moved from “can we trust an agent?” to “can a whole enterprise build with them safely?”",
  meta:[["Role","Product designer, from problem framing to release follow-up, on a weekly release cycle"],["Team","PMs, engineering and QA, founders, solution consultants, client teams"],["Timeline","May 2025 – now · Gen 1, Gen 2 and Gen 3, the latest, after the POC"],["Users","Scopers, builders, overseers and gatekeepers in enterprise AI teams"],["Product","ZBrain, by LeewayHertz, a Hackett Group company"],["Platform","Desktop web app at 1920 × 1080"]],
  ov:[["Identify","Every solution on ZBrain passes through four people: a scoper, a builder, an overseer and a gatekeeper. Most design problems sat where one hands work to the next, and each generation exposed new ones."],["Iterate","Three structural changes: agent crews on a canvas (Gen 1), one path through a whole solution (Gen 2), then governed Spaces for every team (Gen 3), with deep dives on the Solution Builder, Governance and Requests."],["Impact","Six native apps on ZBrain for a global logistics leader, among 80 AI solutions; Hackett’s engineers now deploy client agentic workflows on it."]],
@@ -1093,33 +1117,13 @@ const P=[
    l:[["Clients:","Hackett’s engineers now design and deploy client agentic workflows on ZBrain."],["Partners:","with Celonis, AI XPLR finds the use cases and ZBrain delivers them."],["Builders:","one conversation from plan to deploy, and a request instead of a dead end."]]}},
  secs:[
  S("identify","01","Identify","The product, the people it serves, and the problems three generations had to solve",[
-  ["h3","ZBrain at a glance","overview-zb","At a glance"],
-  ["p","ZBrain lets an enterprise turn its documents, systems and rules into AI apps, automations and teams of agents, then governs what runs. It is built by LeewayHertz, a Hackett Group company. When I joined, ZBrain was a proof of concept (POC). I designed the three generations that followed: Gen 1, Gen 2 and Gen 3, the latest."],
-  ["cards",{c:3,items:[
-   {art:"g3",k:"May 2025 – Jan 2026",h:"Gen 1 · Foundation",p:"From configuration screens to an agent-first platform that proves, guards and prices what the AI does. I owned three of its seven modules."},
-   {art:"g4",k:"Feb – Sep 2026",h:"Gen 2 · Expansion",p:"From agent parts to one path for a whole solution: plan, build by chat, govern. I owned the whole design."},
-   {art:"g5",k:"Latest · Sep 2026 – now",h:"Gen 3 · Maturity",p:"From one team’s path to a governed workspace for every team. I own the user portal; Indrajit designed the Admin Console."}]}],
-  ["h3","Users and context","users-zb","Users and context"],
-  ["h4","One solution, four owners"],
-  ["p","ZBrain sits between Hackett’s AI advice and a client’s running systems. Every solution on it passes through four people, and most design problems sit where one hands work to the next."],
-  ["cards",{c:4,flow:1,items:[
-   {ic:"scope",k:"Stage 1",h:"The Scoper",s:"Business Analyst · Product Manager",p:"Turn an AI idea into a scoped, costed solution",f:"Pain: requirements get lost between the BRD and the build"},
-   {ic:"build",k:"Stage 2",h:"The Builder",s:"AI development team",p:"Assemble agents, flows and knowledge; make them reliable",f:"Pain: blocked waiting on credentials and access"},
-   {ic:"oversee",k:"Stage 3",h:"The Overseer",s:"Architect · Project Manager",p:"See stage, risk and readiness; approve and unblock",f:"Pain: reviews happen in meetings, not the product"},
-   {ic:"gate",k:"Stage 4",h:"The Gatekeeper",s:"Super Admin · IT",p:"Grant exactly the access teams need",f:"Pain: requests arrive without context"}]}],
-  ["h4","The journey of one solution"],
-  ["p","This map of handoffs became my checklist across all three generations."],
-  ["chain",{items:[["Scoper","scopes the solution"],["Builder","builds and tests it"],["Overseer","reviews and ships it"],["Production","business users run it"]],
-   side:["Gatekeeper","grants access and sets policy · the builder requests, the gatekeeper grants"],
-   loop:"Outcomes and cost should return to the original case"}],
-  ["h4","How I learned the product"],
-  ["cards",{c:3,items:[
-   {h:"Product audit",p:"KT sessions and a walkthrough of the POC, then a map of every module, role and entity."},
-   {h:"Delivery-team input",p:"Founders and PMs on direction; consultants and sales on real client processes; QA findings every release."},
-   {h:"Market reading",p:"Competitor benchmarking in three rounds, plus Gartner and McKinsey on why enterprise AI pilots stall."}]}],
-  ["h3","Problems and direction","problems-zb","Problems and direction"],
-  ["h4","Seven problems, across three generations"],
-  ["p","Each generation’s problems only became visible once the previous one shipped, and the market moved under each one."],
+  ["h3","The problem","problem-zb","The problem"],
+  ["p","Enterprises wanted to run real work on AI agents, not demos. But every solution on ZBrain passes through four people, a scoper, a builder, an overseer and a gatekeeper, and the platform made each hand-off between them hard. Every time one hand-off was fixed, the next one showed up."],
+  ["h4","What we kept hearing"],
+  ["p","The problems came from the people using ZBrain every week: client teams, consultants, builders, compliance and IT, and from the reviews we ran against the market."],
+  ["cards",{c:3,items:[{"ic": "route", "k": "Client teams", "h": "Not sure where to start", "p": "As Gen 1 grew, its seven modules read as a list of parts, not a path. New teams kept asking which one came first."}, {"ic": "scope", "k": "Scopers and PMs", "h": "Requirements got lost", "p": "The plan lived in a BRD outside the product, so a build started from someone’s summary and the reasons behind decisions were lost."}, {"ic": "oversee", "k": "Consultants", "h": "Discovery was the slowest part", "p": "Workshops took weeks to schedule, notes lived with one consultant, and documents described the process on paper, not the real one."}, {"ic": "build", "k": "Builders", "h": "Blocked, then waiting", "p": "A missing connection, model or budget stopped the build. The real approval happened over email, with no record."}, {"ic": "gate", "k": "Compliance and IT", "h": "Checking app by app", "p": "Guardrails were set inside each app. There was no account-wide policy, no mapping to regulations, and no way to stop everything at once."}, {"ic": "target", "k": "Market reviews", "h": "Risk became the blocker", "p": "Three rounds of competitor benchmarking, and Gartner’s warning that over 40% of agentic AI projects may be cancelled by 2027, mostly over weak risk controls."}]}],
+  ["h4","Problems and direction, generation by generation"],
+  ["p","Each generation’s problems only became visible once the previous one shipped, and the market moved under each one. This chart is the map; Iterate shows how each generation answered its row."],
   ["evo",[
    {n:"Gen 1",g:"",d:"May 2025 – Jan 2026",t:"Foundation",
     why:[["Inherited from the POC:","one agent in one straight line, with **no guardrails and no view of cost**."]],
@@ -1137,37 +1141,72 @@ const P=[
     probs:[["spaces","One workspace for everyone","Each team needed its **own data, models, budget and rules**.","Spaces and roles frame every screen"],
      ["noentry","“Not allowed” was a dead end","Approvals happened **over email, with no record**.","Requests in context; one admin queue"]],
     comp:["Microsoft Agent 365","ServiceNow AI Control Tower","Gemini Enterprise"],bar:"**Design-to-deployment across clouds**, backed by Hackett’s process knowledge."}]],
-  ["h4","Principles that held across all three"],
+  ["h3","Who it serves","users-zb","Who it serves"],
+  ["h4","One solution, four owners"],
+  ["p","ZBrain sits between Hackett’s AI advice and a client’s running systems. Every solution on it passes through four people, and most design problems sit where one hands work to the next."],
+  ["cards",{c:4,flow:1,items:[
+   {ic:"scope",k:"Stage 1",h:"The Scoper",s:"Business Analyst · Product Manager",p:"Turn an AI idea into a scoped, costed solution",f:"Pain: requirements get lost between the BRD and the build"},
+   {ic:"build",k:"Stage 2",h:"The Builder",s:"AI development team",p:"Assemble agents, flows and knowledge; make them reliable",f:"Pain: blocked waiting on credentials and access"},
+   {ic:"oversee",k:"Stage 3",h:"The Overseer",s:"Architect · Project Manager",p:"See stage, risk and readiness; approve and unblock",f:"Pain: reviews happen in meetings, not the product"},
+   {ic:"gate",k:"Stage 4",h:"The Gatekeeper",s:"Super Admin · IT",p:"Grant exactly the access teams need",f:"Pain: requests arrive without context"}]}],
+  ["h4","The journey of one solution"],
+  ["p","This map of handoffs became my checklist across all three generations."],
+  ["chain",{items:[["Scoper","scopes the solution"],["Builder","builds and tests it"],["Overseer","reviews and ships it"],["Production","business users run it"]],
+   side:["Gatekeeper","grants access and sets policy · the builder requests, the gatekeeper grants"],
+   loop:"Outcomes and cost should return to the original case"}],
+  ["h3","How each feature gets built","process-zb","How each feature is built"],
+  ["p","Every feature, in every generation, went through the same loop. It was never a single hand-off: after each deploy, logged bugs and client feedback became the next problem to frame."],
+  ["h4","How I learned the product"],
+  ["cards",{c:3,items:[
+   {h:"Product audit",p:"KT sessions and a walkthrough of the POC, then a map of every module, role and entity."},
+   {h:"Delivery-team input",p:"Founders and PMs on direction; consultants and sales on real client processes; QA findings every release."},
+   {h:"Market reading",p:"Competitor benchmarking in three rounds, plus Gartner and McKinsey on why enterprise AI pilots stall."}]}],
+  ["h4","The loop, every release"],
+  ["loop",{items:[["Start","KT sessions, POC audit"],["Frame the problem","with PMs and consultants"],["Explore options","2 or 3 directions"],["Design every state","blank, error, filled"],["Review","founders, PMs, engineering"],["Rework","fixes and new needs"],["Hand off and build","specs and edge cases"],["Deploy","staging, then production"],["Log bugs and feedback","QA and client input"]],note:"Back to framing · repeats every release, on a weekly cycle"}],
+  ["kv",[["How it stayed consistent","One list-page template repeated across stages in Gen 2; in Gen 3 a shared component library built before screens, so two designers could ship one product."],["How it was validated","Design and feasibility reviews, consultants’ client scenarios, then staging regression and production smoke tests."]]],
+  ["h3","The product’s life so far","lifecycle-zb","Lifecycle"],
+  ["p","ZBrain started as a proof of concept (POC): one agent in one straight line, with no guardrails and no view of cost. Since May 2025 it has gone through three generations, each one a structural change, not a reskin."],
+  ["cards",{c:3,items:[
+   {art:"g3",k:"May 2025 – Jan 2026",h:"Gen 1 · Foundation",p:"From configuration screens to an agent-first platform that proves, guards and prices what the AI does. I owned three of its seven modules."},
+   {art:"g4",k:"Feb – Sep 2026",h:"Gen 2 · Expansion",p:"From agent parts to one path for a whole solution: plan, build by chat, govern. I owned the whole design."},
+   {art:"g5",k:"Latest · Sep 2026 – now",h:"Gen 3 · Maturity",p:"From one team’s path to a governed workspace for every team. I own the user portal; Indrajit designed the Admin Console."}]}],
+  ["p","Each generation moved the product further out: from a single agent, to the whole life of a solution, to every team in an enterprise."],
+ ]),
+ S("iterate","02","Iterate","Three generations, then three features in depth",[
+  ["h3","Principles that held across all three","principles-zb","Principles"],
+  ["p","A few rules decided most design arguments. They held from Gen 1 to Gen 3."],
   ["cards",{c:3,items:[
    {ic:"layers",h:"Depth per role, hide the rest",p:"A Scoper never reads a prompt; a Gatekeeper never opens the canvas."},
    {ic:"target",h:"Controls where risk enters",p:"On the input, the output, a step or a pause."},
    {ic:"approve",h:"A person approves before the AI acts",p:"Pause over guess; plan, approve, then build."},
    {ic:"fold",h:"Show the work, folded",p:"Every step visible and collapsed to one line."},
    {ic:"tag",h:"Cost next to the choice",p:"Price sits beside the model."},
-   {ic:"info",h:"Explain every block",p:"A blocked action shows its rule, its prompt and a next step."}]}]
- ]),
- S("iterate","02","Iterate","Three generations, then three features in depth",[
+   {ic:"info",h:"Explain every block",p:"A blocked action shows its rule, its prompt and a next step."}]}],
   ["h3","Gen 1 · From configuration screens to an agent-first platform","v3","Gen 1 · Foundation"],
   ["note","Gen 1 · May 2025 – Jan 2026 · Foundation"],
   ["p","The POC modelled one agent in one straight line. Gen 1 had to let a business build real multi-step work, then prove, guard and price it. I owned Agents and Crew, Apps and Guardrails, and Monitor and Prompts."],
-  ["note","Screens and recordings are from the working files; numbers on them are sample data."],
+  ["h4","Problems it solved"],
+  ["gprob",[{"ic": "crew", "h": "Work with several owners", "e": "A linear wizard couldn’t model write, check, approve, publish.", "r": "A crew of agents on a canvas, with a pause for a person"}, {"ic": "shield", "h": "Unsafe, drifting answers", "e": "Nothing stopped a jailbreak or a made-up answer.", "r": "Guardrails where risk enters, and scheduled evaluations"}, {"ic": "coin", "h": "Invisible cost, copied prompts", "e": "No cost breakdown, and prompts had no versions.", "r": "Credits per run and step, and a versioned Prompt Manager"}]],
+  ["p","Benchmarked against Dify, Langflow, Flowise, Stack AI, Relevance AI and CrewAI, the bar was to stand out on crews, knowledge quality and cost per run."],
   ["fig","zb/v3-ia","Information architecture: Home, seven modules and settings; a typical journey crosses four of them in six steps (in blue)."],
-  ["h4","The defining features, in motion"],
+  ["h4","New features: agents and crews"],
+  ["note","Screens and recordings are from the working files; numbers on them are sample data."],
   ["demo",{v:"zb/zb-crew-build",n:"01",k:"Agents · Crew setup",h:"Assemble a crew in four short steps",
    p:"A crew is a team of agents with one supervisor. Setting one up is a short wizard: what it is, where its work comes from, and who is in it. Agents arrive three ways, so teams reuse what they have already built, on ZBrain or elsewhere.",
    ch:[[0,"Overview","Name, framework, model and who can use it"],[6.2,"Queue","Work arrives from S3, Google Drive and more"],[9.4,"Structure","A supervisor with instructions, tools and MCP servers"],[15.6,"Agents","Create new, add from the library, or import from Bedrock or Azure"]]}],
   ["demo",{v:"zb/zb-crew-test",n:"02",k:"Agents · Crew canvas",h:"See the team, then test it with a person in the loop",
    p:"Testing happens on the canvas itself. The crew does the work, hands over the result and then pauses for a person instead of guessing, so nothing moves on without someone saying so.",
    ch:[[0,"Canvas","A supervisor directs specialists; lines are reporting lines"],[4.6,"Brief","Ask for the work in plain words"],[13.4,"Deliver","The article arrives as a Word file"],[15.2,"Pause","The crew waits for your response before it continues"],[20.4,"Rewire","Drag a line, test again"]]}],
+  ["h4","New features: prompts"],
   ["demo",{v:"zb/zb-prompt-new",n:"03",k:"Prompts · New prompt",h:"Write a prompt once, prove it before it ships",
    p:"A prompt is built like a small product: model and price side by side, variables from the platform, and evaluators that judge every run. Once published, it is a shared, versioned asset that every app and agent can reuse.",
    ch:[[0,"Model","Provider and model, with inference price beside them"],[4.4,"Tune","Temperature, top-p, penalties and token limits"],[16.6,"Variables","User, date, session, knowledge base and more"],[28.8,"Evaluators","Accuracy, creativity, bias, safety and more"],[31.8,"Run","Test values in; output and a verdict per evaluator"]]}],
   ["demo",{v:"zb/zb-prompt-manage",n:"04",k:"Prompts · Prompt Manager",h:"One prompt, many apps: watch it, version it, share it",
    p:"Once live, each prompt has its own page. Runs, tokens and cost come first, every call traces back to the agent or app that made it, older versions can be restored, and access decides who may change behaviour for everyone.",
    ch:[[0,"Overview","Runs, tokens, cost and response time"],[6.4,"Edit","Change the prompt and publish a new version"],[9.6,"Versions","Every published version, ready to restore"],[13,"Trace","One call: messages, evaluations, metadata"],[21.4,"Access","Who can edit, shared by person or with everyone"]]}],
+  ["h4","New features: apps, guardrails and knowledge"],
   ["fig","zb/v3-configure-bot","Apps and guardrails: orchestration, knowledge, golden questions and guardrails on one page."],
   ["mini",[["A canvas, not a form.","The reporting line between agents is the thing people need to see and change."],["Guardrails live where risk enters:","agent setup, app setup, a flow step. Plain toggles, no separate security console."],["Alerts reuse Flows,","so any channel a flow can reach becomes an alert channel for a failed evaluation."]]],
-  ["h4","Also designed in Gen 1"],
   ["figs",[["70-75","Automated reasoning: rules extracted from an HR policy, editable and testable."],["70-79","Knowledge graph view beside chunks and retrieval testing."]],2],
   ["done","Delivered.","17 public releases, May 2025 to January 2026."],
 
@@ -1175,29 +1214,37 @@ const P=[
   ["note","Gen 2 · Feb – Sep 2026 · Expansion"],
   ["p","Gen 1 assumed the user knew what to build. In client work the slow, risky part came before and around the build. I reorganised seven modules into five stages, so the order of the menu is the order of the work."],
   ["q","How might an enterprise team go from a business problem to a governed, deployed solution in one place?"],
+  ["h4","Problems it solved"],
+  ["gprob",[{"ic": "route", "h": "Work lived outside the product", "e": "Planning, process knowledge and test data sat outside ZBrain.", "r": "Five stages in work order; Interview Agent, Design and Datasets feed the Builder"}, {"ic": "sliders", "h": "Controls stopped at each app", "e": "No account-wide policy, no regulation mapping, no global stop.", "r": "Policy templates, compliance frameworks and a kill switch"}]],
+  ["h4","What carried on"],
+  ["p","Nothing from Gen 1 was thrown away. Agents and crews, guardrails, prompts and the Prompt Manager, and cost per run all moved into Gen 2 as tabs inside the stage where they are used. What changed was the order around them."],
   ["fig","zb/v4-modules-stages","Seven modules became five stages: new items highlighted; the Gen 1 modules became tabs inside the stages."],
+  ["h4","Why a new direction"],
+  ["gdir",{"why": [["The buyer changed.", "After Hackett acquired LeewayHertz in 2024, ZBrain was sold to enterprise AI programmes, not single teams."], ["Expectations changed.", "Prompt-to-app tools made “describe it, get it built” the norm."], ["Risk became the blocker.", "Gartner said over 40% of agentic AI projects may be cancelled by 2027."]], "comp": ["Copilot Studio", "Gemini Enterprise", "Agentforce", "watsonx Orchestrate", "OpenAI AgentKit"], "bar": "Describe it, get it built, and show how it’s governed."}],
+  ["h4","Why a new navigation"],
   ["demo",{v:"zb/zb-v4-nav",n:"01",k:"Navigation · Five stages",h:"The menu became the order of the work",
    p:"In Gen 1 the top bar listed seven modules, and a new user had to know which one came first. Gen 2 reads left to right: see what needs attention, prepare what to build, build it, govern what runs, and set up the shared plumbing once. Every Gen 1 module still exists, now as a tab inside the stage where it is used.",
    ch:[[0,"Dashboard","An AI summary, status cards and a ranked list of actions"],[4.8,"Prepare","Design, knowledge, prompts and datasets"],[10,"Build","Solutions, agents and agent groups, flows"],[15.4,"Monitor","Policy templates, compliance, roles, audit and a kill switch"],[17.2,"Configure","Models, connections, MCP, variables, environments, storage"]],
    why:"As Gen 1 grew, the seven modules read as a list of parts, not a path. Client teams kept asking where to start, and the slow, risky work before a build (scoping, gathering knowledge, test data) had no home at all. Ordering the menu by the life of a solution gave that work a place and made the next step obvious.",
    who:[["Scopers and PMs","start in Prepare, with design, knowledge and datasets in one place."],["Builders","work in Build, with solutions, agents and flows side by side."],["Overseers","open the Dashboard to a short, ranked list of what needs fixing."],["Admins and gatekeepers","set models, connections and policy once, in Configure and Monitor."]]}],
-  ["h4","Context carries forward"],
+  ["h4","How the journey is streamlined"],
   ["p","What the Interview Agent collects feeds the design; the design feeds the datasets; both feed the Builder. In Gen 1 each step started from scratch."],
   ["wave",{nodes:[["Interview Agent","employees, by email"],["Knowledge","analysed and stored"],["Design","BRD, epics, user stories"],["Dataset","scenarios from the design"],["Solution Builder","plan, approve, build"],["Deploy","GitHub, staging, production"],["Monitor","policy, kill switch"],["Dashboard","ranked actions"]],
    phases:[["Prepare · design and datasets feed the build",0,3],["Build, ship, govern, track",4,7]],
    tail:"Configure · models, connections, MCP, variables, environments, database, storage"}],
-  ["h4","What Gen 2 added to Prepare"],
+  ["h4","Interviews: knowledge from the people who do the work"],
   ["demo",{v:"zb/zb-v4-interview",n:"02",k:"Prepare · Knowledge · Interview Agent",h:"Knowledge straight from the people who do the work",
    p:"The knowledge an AI solution needs most is rarely written down: how invoices really get approved, where onboarding stalls, which workaround everyone uses. Documents describe the official process; people know the real one. So besides importing from data sources, a knowledge base can now be filled by an Interview Agent that a team sends to employees. The agent works from a catalogue of topics, each saying what to focus on, why it matters and when the answer is good enough, so it asks follow-ups until it has the context it needs.",
    ch:[[0,"Source","Import from data sources, or collect through an interview"],[3.6,"Brief","Company, purpose, expected output and tone"],[9.3,"Topics","A generated catalogue of what to ask, and when it is enough"],[16.4,"Style","Branding, look, and whether people can share images, files or screen"],[22.1,"Invite","Test it yourself, then invite people by name, team and role"],[31,"Interview","An email link, then a voice-first conversation they can resume"]],
    why:"Discovery was the slowest part of client projects. Workshops took weeks to schedule, notes lived with one consultant, and the documents a client handed over described the process on paper. Designs then rested on guesses, and the gaps surfaced only after the build.",
    who:[["Employees","explain their work in their own words, by voice, when it suits them, and can pick up again from the email link."],["PMs and consultants","hear from many people at once, with answers filed against the topics they chose instead of transcripts to read."],["Builders","inherit a knowledge base with real pain points, exceptions and workarounds, which feeds straight into Design."]]}],
+  ["h4","Scoping: the plan before the build"],
   ["demo",{v:"zb/zb-v4-design",n:"03",k:"Prepare · Design",h:"Scope the whole solution before anyone builds it",
    p:"Design is where a PM turns everything known about a problem into a plan. They describe the solution in plain words or upload the PRD, business case or RFP, pull in knowledge bases, interview results and other files, and answer a short set of questions across five steps: project description, solution identity, architectural layers, questions and deliverables. ZBrain then drafts the functional and technical scope (workflows, architecture, personas, epics and user stories) as numbered deliverables the team reviews and edits together.",
    ch:[[0,"Project","Client, project name and team"],[6.4,"Describe","A plain-language brief plus PRD, business case or RFP, each file summarised"],[17.3,"Workspace","Knowledge, questionnaire and deliverables side by side"],[21.8,"Deliverables","Workflow, functional and architecture diagrams, schema, services, epics, stories, BRD"]],
    why:"Scoping used to happen in slides and documents outside the platform, so a build started from someone’s summary and the reasons behind decisions were lost along the way. Keeping the source material, the answers and the plan together in the product means everything downstream, from datasets to the Solution Builder, reads from the same agreed scope.",
    who:[["PMs and scopers","react to a complete first draft of the scope instead of starting from a blank document."],["Business owners","review personas, user stories and the BRD in language they recognise."],["Architects and developers","see diagrams, data schema and services to challenge before any code exists."],["Builders","open the Solution Builder with the approved plan already loaded."]]}],
-  ["h4","Datasets: realistic test data, generated from the design"],
+  ["h4","Datasets: test data generated from the scope"],
   ["p","A solution cannot be tested without data, and on most client projects real data arrives late, is sensitive, or covers only the easy cases. Datasets solves that inside Prepare: a PM describes the data they need in plain words, and ZBrain generates scenario sets from the approved design, each with its files (records, labels, persona profiles) and a note on exactly what it tests."],
   ["fig","zb/v4-dataset-builder","Datasets: numbered scenarios, each tagged and with its files; the source document stays open beside them, and the finished set is published for testing."],
   ["cards",{c:3,items:[
@@ -1205,6 +1252,8 @@ const P=[
    {ic:"target",h:"Edge cases",p:"Missing details, records that conflict across systems, ambiguous requests."},
    {ic:"layers",h:"Complex",p:"Several issues in one interaction, such as wrong items, a billing error and an SLA breach together."}]}],
   ["p","Builders test agents against these sets before go-live and can rerun them as a regression suite after every change, and evaluators score results against the same benchmark, so quality is measured the same way at each release."],
+  ["h4","Connect to Git"],
+  ["p","Most client teams already had code. The Solution Builder connects to GitHub, so teams import an existing repository or package instead of starting again, and a finished solution deploys through GitHub to staging and production. ZBrain explains why it needs access before GitHub asks for it."],
   ["mini",[["Pre-fill, then refine.","People edit a draft built from their documents instead of facing a blank page."],["Structured, not a chat log.","Every answer lands in a named field, every output in a numbered deliverable."],["Rank, don’t list.","The Dashboard orders what needs fixing and gives each a time estimate."]]],
   ["p","I also designed a tailored Gen 2 build for a global electronics test and measurement company: global variables, agent groups with telemetry, flow groups, and flows created by describing them."],
   ["done","Delivered.","Four production releases, 14 Aug to 24 Sep 2026. The Solution Builder and Governance, the two largest pieces, are the deep dives below."],
@@ -1213,24 +1262,36 @@ const P=[
   ["note","Gen 3, the latest · Sep 2026 – now · Maturity"],
   ["p","When finance, HR and sales each wanted their own data, models, budget and rules, the structure had to change again. I own the user portal; Indrajit owns the Admin Console, where IT sets up models, keys and policies once; we designed the places they meet together."],
   ["q","How might business teams build their own AI solutions while IT keeps control, without IT becoming a bottleneck?"],
-  ["h4","The same three jobs, across three generations"],
+  ["h4","Problems it solved"],
+  ["gprob",[{"ic": "spaces", "h": "One workspace for everyone", "e": "Each team needed its own data, models, budget and rules.", "r": "Spaces and roles frame every screen"}, {"ic": "noentry", "h": "“Not allowed” was a dead end", "e": "Approvals happened over email, with no record.", "r": "Requests in context, and one admin queue"}]],
+  ["h4","What carried on"],
+  ["p","The three jobs from Gen 1 stayed the same: see what is going on, build, and keep it safe. Plan-then-build and account-wide policy carried over from Gen 2. What changed is that each job now happens inside a team’s own Space."],
   ["jobs",[
    ["Seeing what is going on",[["zb/v3-control-tower","Gen 1 · Control Tower, a concept"],["zb/v4-dashboard","Gen 2 · Dashboard for one workspace"],["zb/v5-observatory","Gen 3 · Observatory per Space: risk first, with Kill on the agent’s row"]]],
    ["Building",[["zb/v3-builder","Gen 1 · Chat Builder, a concept"],["zb/v4-builder-v3","Gen 2 · Solution Builder: plan, approve, build"],["zb/v5-editor-sessions","Gen 3 · Solution workspace with sessions"]]],
    ["Keeping it safe",[["zb/v3-configure-bot","Gen 1 · Guardrails set inside each app"],["zb/v4-compliance","Gen 2 · Account-wide policy and frameworks"],["zb/v5-computed-policy","Gen 3 · Policy computed per solution"]]]]],
-  ["h4","IT’s rules and each team’s Space, together"],
+  ["h4","Why a new direction"],
+  ["gdir",{"why": [["Scale across business units.", "Finance, HR and sales each needed their own data, models and rules."], ["Agent sprawl.", "Microsoft’s Agent 365 made governing agents a product category of its own."], ["Separation of duties.", "IT has to approve access without becoming the bottleneck for every change."]], "comp": ["Microsoft Agent 365", "ServiceNow AI Control Tower", "Gemini Enterprise"], "bar": "Design-to-deployment across clouds, backed by Hackett’s process knowledge."}],
+  ["h4","Why a new navigation"],
+  ["p","Gen 2’s five stages assumed one team on one account. With many teams on one account, the first question became “whose work am I looking at?”. So Gen 3 splits the product in two: the Admin Console, where IT sets up people, models, keys and policy once, and a Space for each team. Inside a Space the sidebar shows only that team’s solutions, models and budget, and a switch moves between Spaces and the Console."],
   ["demo",{v:"zb/zb-v5-console",n:"01",k:"Admin Console · Spaces",h:"IT sets the rules once; every team works inside them",
    p:"Gen 3 is two products that meet. In the Admin Console, IT manages people, IP access, models, connections, API keys and policies for the whole account, and watches every Space from one Observatory. Each team works in its own Space: the same Observatory, scoped to its own solutions, with the policy that governs it at the foot of every screen and a button to request a change. Requests from every Space land in one queue, and approving one applies the change to that Space at once. Indrajit designed the Admin Console and I designed the user portal; the switcher, the policy card and requests, where the two meet, we designed together.",
    ch:[[0,"Observatory","Cost, runs, agents at risk and violations across all Spaces"],[7.6,"Spaces","One per team, each with its policy, members and budget"],[9.3,"Access","Who can sign in, and which IP ranges may call the platform"],[17.2,"Resources","Models, connections and API keys, set up once"],[19.4,"Governance","Requests, policies and the agent log, with Kill on the row"],[31.8,"Switch","Into a Space: the same view, scoped to Finance and its rules"]],
    why:"Once several teams built on one account, a single workspace stopped working. Finance should not see HR’s data, each team wanted its own models and budget, and IT could not review every agent by hand. Without a shared frame, IT either became the bottleneck for every change or lost sight of what was running.",
    who:[["IT admins","set models, keys, access and policy once, see risk across every Space, and stop a misbehaving agent from its row."],["Space owners","get a workspace scoped to their team, with the rules that apply visible on every screen."],["Builders","work freely inside those rules, and ask for an exception, such as a model, a data source or a bigger budget, right where they need it."],["Security and compliance","review one agent log, one audit trail and one set of policies for the whole account."]]}],
   ["mini",[["The Space is the frame.","A finance builder sees finance solutions, models and budget; HR’s work is simply not there."],["The rules sit next to the work,","at the foot of every screen, not in a settings page."],["Role and grant are separate.","A role says what kind of work you do; grants say which solutions."]]],
+  ["h4","What the Builder can do now"],
+  ["p","In Gen 2 the Builder was one chat that made one app. In Gen 3 a solution is a living product that several people change at once, so the Builder grew new abilities."],
+  ["cards",{c:3,items:[{"ic": "crew", "h": "Many builders, one solution", "p": "Each builder works in a session, a branch of Main with its own live preview, and merges back through a pull request."}, {"ic": "layers", "h": "Code one click away", "p": "The full codebase sits beside the preview, for developers who need to read or change it."}, {"ic": "route", "h": "Components and connections", "p": "Integrations, MCPs, connectors and plugins sit next to the build, so a solution connects straight to the systems it needs."}, {"ic": "approve", "h": "Deploy by approval", "p": "Main is what deploys. Release is approval-based: Dev first, then UAT and Production."}, {"ic": "shield", "h": "Governance inside the build", "p": "Every solution shows its computed policy, compliance, audit trail and violations, without leaving the workspace."}, {"ic": "fold", "h": "Artifacts from the scope", "p": "Prepare drafts the agentic workflow, diagrams, a spec per agent, epics and user stories, all editable with an AI assistant."}]}],
   ["h4","Role-based delivery"],
   ["p","In Gen 2 one builder did everything in one chat. Now a solution passes between four roles, with a review that can send work back."],
   ["chain",{items:[["Set up","Admin creates the solution and names the owner"],["Functional","Business user uploads the BRD or PRD and answers questions"],["Technical","AI developer designs the architecture from the scope"],["Architecture review","Architect or PM approves, or sends it back"],["Build and Dev","AI developer builds a prototype for the business user"],["Deployed","Live in Dev; UAT and Production follow"]],num:1,loop:"Review can send work back to Technical"}],
-  ["h4","Where a solution starts"],
-  ["p","Gen 3 brings the business case into the product. Teams upload a PRD, RFP or business case and Prepare drafts the deliverables: an agentic workflow, functional and architecture diagrams, a spec per agent, epics and user stories, all editable with an AI diagram assistant."],
   ["figs",[["71-64","Prepare: design projects per client, with status, cost and owner."],["71-68","Design deliverables: an architecture diagram with an AI assistant that edits it."]],2],
+  ["p","Deep dive 1 below shows the Gen 3 workspace in motion."],
+  ["h4","Governance and monitoring"],
+  ["p","Gen 3 moved governance from settings pages to the places where work happens: the Space, the solution and the agent’s own row."],
+  ["cards",{c:3,items:[{"ic": "oversee", "h": "An Observatory for every Space", "p": "Risk comes first: agents at risk, violations, cost and runs. Each agent has a trust score, and Kill sits on its row."}, {"ic": "sliders", "h": "Policy computed per solution", "p": "Account rules are locked, solution rules add on top, and each rule shows its computed value, source and action."}, {"ic": "info", "h": "A log that explains every block", "p": "Each violation shows what the agent tried, the prompt and the rule it hit, with a way to flag a false positive or adjust the rule."}]}],
+  ["p","Deep dives 2 and 3 show how governance and requests were designed, step by step."],
   ["done","Delivered.","Core flows in production between 10 Sep and 4 Nov 2026; running at The Hackett Group and at licensed client enterprises."],
 
   ["h3","Deep dive 1 · The Solution Builder","dd-builder","Deep dive · Solution Builder"],
@@ -1306,10 +1367,8 @@ const P=[
   ["h4","Public record"],
   ["kv",[["Sep 2024","Hackett acquires LeewayHertz and calls ZBrain its flagship product."],["Jan 2026","AI XPLR 5.0 paired with ZBrain, from opportunity discovery to agentic deployment."],["Live","Listed on AWS Marketplace. ZBrain’s homepage now leads with “The Governance-First Agentic AI Platform”."]]],
 
-  ["h3","Delivery · A loop that restarted every release","delivery-zb","Delivery"],
-  ["p","The design was never handed off once. After each deploy, logged bugs and client feedback became the next problem to frame."],
-  ["loop",{items:[["Start","KT sessions, POC audit"],["Frame the problem","with PMs and consultants"],["Explore options","2 or 3 directions"],["Design every state","blank, error, filled"],["Review","founders, PMs, engineering"],["Rework","fixes and new needs"],["Hand off and build","specs and edge cases"],["Deploy","staging, then production"],["Log bugs and feedback","QA and client input"]],note:"Back to framing · repeats every release, on a weekly cycle"}],
-  ["kv",[["How it stayed consistent","One list-page template repeated across stages in Gen 2; in Gen 3 a shared component library built before screens, so two designers could ship one product."],["How it was validated","Design and feasibility reviews, consultants’ client scenarios, then staging regression and production smoke tests."]]],
+  ["h3","Delivery · Systems and release record","delivery-zb","Delivery"],
+  ["p","Every release ran through the loop in Identify. This is what it produced: the design systems behind the product, and when each design shipped."],
   ["h4","Systems behind it"],
   ["tbl",["Generation","Design system","Beyond the product"],[["Gen 1","Colours, type, buttons, fields, tables, icons; dark mode; responsive; type tokens","Marketing site with 17 industry pages, agent pages and case studies; landing pages for AI XPLR, the CoE dashboard and the agent store"],["Gen 2","New theme, approved component library, extended components, screen-layout documentation","Enterprise client build"],["Gen 3","Shared component library built before screens, with conversation, message, action and selector components for chat-first building","Positioning flow: business case → deliverables → build"]]],
   ["h4","Designed, then shipped"],
@@ -1891,6 +1950,8 @@ function block(b,pid,sec){
       return `<div class="mk full">${a[0].map(m=>`<div class="mk-c rv"><div class="mk-top"><span class="mk-g">${esc(m.g)}</span><b>${esc(m.cat)}</b></div>
         <ul class="mk-who">${m.who.map(w=>`<li>${esc(w)}</li>`).join("")}</ul><p>${md(m.p)}</p></div>`).join("")}</div>`; }
     case "mini": return `<div class="mini c${Math.min(3,a[0].length)} full">${a[0].map(([b,r])=>`<div class="rv"><small>Decision</small><p><b>${esc(b)}</b> ${esc(r)}</p></div>`).join("")}</div>`;
+    case "gprob": return `<ol class="gp full c${a[0].length}">${a[0].map(x=>`<li class="rv"><span class="gp-ic" aria-hidden="true">${ICON[x.ic]||""}</span><h5>${esc(x.h)}</h5><p class="gp-e"><small>What we saw</small>${esc(x.e)}</p><p class="gp-r"><small>What it did</small>${esc(x.r)}</p></li>`).join("")}</ol>`;
+    case "gdir": { const o=a[0]; return `<div class="gd full rv"><ul class="gd-why">${o.why.map(([b,t])=>`<li><b>${esc(b)}</b> ${esc(t)}</li>`).join("")}</ul><dl class="gd-side"><div><dt>Benchmarked against</dt><dd><ul class="ev-co">${o.comp.map(w=>`<li>${BRANDS[w]?`<i style="--m:url(&quot;${BRANDS[w]}&quot;)" aria-hidden="true"></i>`:`<i class="mono" aria-hidden="true">${esc(w[0])}</i>`}${esc(w)}</li>`).join("")}</ul></dd></div><div><dt>The bar to clear</dt><dd class="gd-bar">${esc(o.bar)}</dd></div></dl></div>`; }
     case "done": return `<p class="done rv"><b>${esc(a[0])}</b> ${esc(a[1])}</p>`;
     case "nums": return `<dl class="proof cstats nums full">${a[0].map(([n,l,src])=>`<div><dt>${esc(n)}</dt><dd>${esc(l)}${src?`<small>${esc(src)}</small>`:""}</dd></div>`).join("")}</dl>`;
     case "jobs": return a[0].map(([l,figs])=>`<div class="jobs full"><h5>${esc(l)}</h5><div class="figs c3">${figs.map(([f,c])=>figure(f,c,pid,true)).join("")}</div></div>`).join("");
@@ -2111,7 +2172,7 @@ function casePage(p){
    <div class="cbody${toc.length>2?" has-toc":""}">
     ${toc.length>2?`<nav class="toc" aria-label="On this page"><p>On this page</p><ol>${toc.map(t=>`<li${t.kids.length?' class="grp"':""}><a href="#${p.id}" data-toc="${t.id}">${t.n?`<small>${t.n}</small>`:""}${esc(t.label)}</a>${t.kids.length?`<ol>${t.kids.map(k=>`<li><a href="#${p.id}" data-toc="${k.id}">${esc(k.label)}</a></li>`).join("")}</ol>`:""}</li>`).join("")}</ol></nav>`:""}
     <div class="cmain">
-   ${p.snap?`<section class="cov" id="overview">${snapHTML(p)}</section>`:(STATS[p.id]||p.ov)?`<section class="cov" id="overview">${STATS[p.id]?`<dl class="proof cstats">${STATS[p.id].map(([n,l])=>`<div><dt>${n}</dt><dd>${esc(l)}</dd></div>`).join("")}</dl>`:""}
+   ${p.snap?`<section class="cov" id="overview">${p.what?`<div class="cwhat rv"><h4>What is ${esc(p.name)}</h4><div>${p.what.map(t=>`<p>${esc(t)}</p>`).join("")}</div></div>`:""}${snapHTML(p)}</section>`:(STATS[p.id]||p.ov)?`<section class="cov" id="overview">${STATS[p.id]?`<dl class="proof cstats">${STATS[p.id].map(([n,l])=>`<div><dt>${n}</dt><dd>${esc(l)}</dd></div>`).join("")}</dl>`:""}
    ${p.ov?`<div class="ov">${p.ov.map(([k,v])=>`<div class="rv"><h4>/${k}.</h4><p>${esc(v)}</p></div>`).join("")}</div>`:""}</section>`:""}
    ${secs.map(s=>`<section class="csec" id="${s.id}">${s.num?`<div class="csec-h"><h2 class="lbl"><small>${s.num}</small>/${esc(s.title)}.</h2><p class="stmt l">${esc(s.sub||"")}</p></div>`:""}
      <div class="flow">${s.body.map(b=>block(b,p.id,s)).join("")}</div></section>`).join("")}
