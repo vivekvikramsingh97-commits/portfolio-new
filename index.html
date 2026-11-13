@@ -1196,16 +1196,18 @@ const P=[
   ["fig","zb/v4-dataset-builder","Datasets: scenarios generated from the approved scope (happy path, edge cases, complex), each with its files, rerun as a regression suite after every change."],
   ["h4","Solution Builder: plan, approve, build"],
   ["chain",{items:[["Describe it","attach files, a Design or a dataset"],["Plan","the Builder writes one"],["Approve","“I approve the plan”"],["Build","steps fold to one line"],["Preview","the live app"],["Change","by chat"],["Publish",""]]}],
-  ["figs",[["zb/v4-builder-v0","v0 · Tabs to fill in: the same assembly work, regrouped."],["zb/v4-builder-v1","v1 · Guided chat: slow, nothing visible until the end."],["zb/v4-builder-v2","v2 · Chat, preview, code: too technical, too early."]],3],
   ["dec",{n:"Decision 1",h:"Should the AI build the app, or help the builder build it?",opts:"Forms · guided chat · chat with preview and code · plan, approve, then build",chose:"Plan first. Nothing is built until a person approves the plan.",trade:"Slower than one-shot generation, but builders understand and can fix what was built.",why:"Enterprises wanted prompt-to-app speed with every step visible."}],
+  ["figs",[["zb/v4-builder-v0","v0 · Tabs to fill in: the same assembly work, regrouped."],["zb/v4-builder-v1","v1 · Guided chat: slow, nothing visible until the end."],["zb/v4-builder-v2","v2 · Chat, preview, code: too technical, too early."]],3],
   ["dec",{n:"Decision 2",h:"How much of the AI’s work should the builder see?",opts:"Final code only · every raw log · one line per step beside the live app",chose:"One line per step, with counts, beside the live app.",trade:"A longer first run; everything the AI makes stays visible and editable."}],
+  ["fig","zb/v4-builder-v3","Chosen: the approved plan with each step folded to one line, beside the live app."],
   ["dec",{n:"Decision 3",h:"How do builders change what the AI built?",opts:"Describe every change in chat · click the part in the live preview",chose:"Click and edit, with the model picker beside the prompt. Publishing becomes a request when policy requires it.",trade:"A harder editor to build; precise changes without rewriting prompts."}],
-  ["figs",[["zb/v4-builder-v3", "Final: the approved plan and folded steps beside the live app, versioned with tokens used."], ["zb/v4-github", "Connect to Git: import a repository, deploy through GitHub; access explained first."]],2],
+  ["fig","71-85","Chosen: click part of the live app; the selection is attached to the prompt, so the change lands exactly there."],
+  ["fig","zb/v4-github","Connect to Git: import a repository and deploy through GitHub, with access explained first."],
   ["h4","Governance: policy at four levels"],
   ["tbl",["Level","What can be set there"],[["Organisation","Policy templates, compliance frameworks, blocked patterns, roles, audit settings, a global kill switch"],["Space","Policies attached at creation; a role per person"],["Solution","Account rules locked; solution rules added on top"],["Agent","Trust score, privilege ring, health, with kill or suspend"]]],
   ["dec",{n:"Decision 4",h:"How much should agents be allowed to do on their own?",opts:"An on/off switch per agent · templates, access levels, trust scores, human approval and an emergency stop",chose:"The full set, in one Observatory: health, trust score, what was blocked, and Kill on every agent.",trade:"More for admins to learn; control that matches how enterprises already manage risk.",why:"Gartner tied agentic project cancellations to weak risk controls."}],
-  ["mini",[["Start from a template:", "Strict, Balanced or Audit only."], ["Rules only get stricter:", "a solution can add, never remove."], ["Every block explained:", "the attempt, the prompt, the rule."]]],
-  ["figs",[["zb/v4-compliance", "Frameworks add rules to a coverage score."], ["zb/v4-gov-solution", "Account rules locked, solution rules editable."], ["70-199", "Kill switch settings."], ["70-203", "Policy templates."]],2],
+  ["figs",[["70-203", "Chosen: start from a policy template (Strict, Balanced or Audit only)."], ["zb/v4-gov-solution", "Account rules locked; a solution can only add stricter rules."], ["zb/v4-compliance", "Frameworks add rules to a coverage score."], ["70-199", "The emergency stop: kill switch settings."]],2],
+  ["mini",[["Every block is explained:","what the agent tried, the prompt and the rule it hit."]]],
   ["note","Also a tailored Gen 2 build for a global test and measurement company: global variables, agent groups with telemetry, flows created by describing them."],
   ["done","Delivered.","Four production releases, 14 Aug – 24 Sep 2026, including the Solution Builder and governance."],
 
@@ -1223,7 +1225,7 @@ const P=[
   ["h4","The Builder became a workspace"],
   ["demo",{v:"zb/zb-v5-builder",n:"02",k:"Solution Builder · Workspace",h:"From one person’s chat to a team’s workspace",p:"Each builder works in a session, a branch of Main with its own preview, and merges by pull request.",ch:[[0, "Solutions", "Cost, runs, status"], [7.7, "Main", "Versions and pull requests"], [15, "Code", "The codebase beside the preview"], [21, "Session", "A branch with its own preview"], [27.7, "Tools", "MCPs, connectors, deployments"], [34.3, "Governance", "Policy, audit, violations"]]}],
   ["chain",{items:[["Set up","Admin creates the solution and names the owner"],["Functional","Business user uploads the BRD or PRD and answers questions"],["Technical","AI developer designs the architecture from the scope"],["Architecture review","Architect or PM approves, or sends it back"],["Build and Dev","AI developer builds a prototype for the business user"],["Deployed","Live in Dev; UAT and Production follow"]],num:1,loop:"Review can send work back to Technical"}],
-  ["figs",[["71-85", "Point and edit: the selected table is attached to the prompt."], ["71-68", "Artifacts: an architecture diagram edited by an AI assistant."], ["zb/v5-github-unsynced", "Out of sync: a state with a way forward."]],3],
+  ["figs",[["71-68", "Artifacts: an architecture diagram edited by an AI assistant."], ["zb/v5-github-unsynced", "Out of sync: a state with a way forward."], ["zb/v5-session-done", "Unmerged: session changes not yet in Main."]],3],
   ["h4","Governance where the work happens"],
   ["figs",[["zb/v5-computed-policy", "Policy computed per solution: value, exception, source, action."], ["zb/v5-violation", "A violation explained, with false-positive and adjust options."]],2],
   ["kv",[["Observatory", "Risk first per Space: agents at risk, violations, cost; trust score and Kill on each agent’s row."], ["Outcome", "Kill, suspend and revive shipped 4 Nov 2026, automatic below a trust score of 300; every governance test passed in the Sep 2026 regression."]]],
@@ -1488,9 +1490,9 @@ const P=[
   ["dec",{n:"Decision 01",h:"Merge the two tools, or improve one?",opts:"Seven areas we could work on: one platform, an easier start in Advanced Hunting, more ways to fix threats, the same data in both tools, keeping what Explorer does well, API use, and email limits",chose:"Take what Explorer does well (charts, grouped views, acting on many items at once) and bring it into Advanced Hunting.",trade:"Making the data match in both tools was left out. It needs engineering work that design can’t solve."}],
   ["fig","25-299","Opportunity areas from the research."],
   ["dec",{n:"Decision 02",h:"How can beginners and experts use the same screen?",opts:"Keep the expert table only · add a separate simple mode · one view with charts by default and the table one click away",chose:"One view. It shows live activity and charts by default, splits results by source (email, devices, identity, cloud apps), and has a switch to the table.",trade:"Experts get a busier default screen, but their familiar table is still there."}],
-  ["fig","25-316","The proposed Advanced Hunting: visualisation, workload tabs, accumulated results and bulk actions."],
+  ["fig","25-333","Chosen: charts and workload tabs by default (right), with the familiar table still one click away (left: today)."],
   ["dec",{n:"Decision 03",h:"How do analysts act on what they find?",opts:"Fix one result at a time · select many and fix them together",chose:"Fix many at once. Extra tabs (link clicks, top links, top clicks) help analysts sort results faster.",trade:"A wrong bulk fix hits many mailboxes at once, so it needs a clear confirmation step."}],
-  ["fig","25-333","Current vs proposed experience."]
+  ["fig","25-316","Chosen: select many results and act on them at once, with accumulated views by workload."]
  ]),
  S("impact","03","Impact","Outcome",[
   ["kv",[["Delivered","Research, opportunity areas and a proposed Advanced Hunting experience, in one month."],["Next","Test time to triage a phishing campaign, current vs proposed."]]]
@@ -1585,12 +1587,12 @@ const P=[
  meta:[["Role","Interaction designer"],["Type","Self-initiated concept"],["Platform","Standalone tool and chat side panel"]],
  ov:[["Identify","Everyone is prompting; few know what makes a prompt good."],["Iterate","Two surfaces and a configuration variant, each weighed for trade-offs."],["Impact","A concept ready for testing."]],
  secs:[
- S("identify","01","Identify","Everyone is prompting",[["q","How might we help non-technical people write better prompts, and understand why they’re better, while they work?"],["fig","26-56","Two directions: a standalone evaluator and a chat with a side panel."]]),
+ S("identify","01","Identify","Everyone is prompting",[["q","How might we help non-technical people write better prompts, and understand why they’re better, while they work?"]]),
  S("iterate","02","Iterate","Decisions",[
   ["dec",{n:"Decision 01",h:"A separate tool, or part of the chat?",opts:"A separate evaluator · a chat with an evaluator panel on the side",chose:"Both. The separate tool is for learning. The side panel lets people check prompts while they chat.",trade:"Two places to build and maintain."}],
-  ["fig","26-73","Enter a prompt, pick a model, get a scored analysis, choose a recommendation."],
+  ["figs",[["26-56", "Both directions: a standalone evaluator, and a chat with an evaluator side panel."], ["26-137", "The side panel, for checking prompts while chatting."]],2],
   ["dec",{n:"Decision 02",h:"How can a score help people improve, not just grade them?",opts:"One number · a breakdown by criteria, with suggestions",chose:"A breakdown across four criteria, suggested rewrites with their own scores, and a guidelines panel.",trade:"More on screen, so the details sit behind “Analyse it better”."}],
-  ["fig","26-137","The chat with an evaluator side panel."]]),
+  ["fig","26-73","Chosen: a scored breakdown with suggested rewrites to pick from."]]),
  S("impact","03","Impact","Next",[["p","Test whether higher-scoring prompts actually produce better answers, and adjust the criteria to match."]])],
  refl:"The risk with any score is that people optimise the number instead of the answer."},
 
