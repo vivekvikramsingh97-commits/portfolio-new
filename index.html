@@ -4,16 +4,15 @@
 <title>Vivek Vikram Singh</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Vivek Vikram Singh, product designer for enterprise AI: agents, copilots and the governance around them.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 /* Layout: a studio portfolio on a soft grey ground with a faint 12-column grid; full-bleed mock-ups, big tight Inter, serif italics for the human voice, a dark closing band. Single deliberate light theme. */
 :root{
   --ground:#EEEEEE; --ink:#131313; --ink2:rgba(19,19,19,.68); --ink3:rgba(19,19,19,.60); --rule:rgba(19,19,19,.14); --panel:#E3E3E3; --paper:#F7F7F7;
   --night:#131313; --night-ink:#F2F2F2; --night-ink2:rgba(242,242,242,.55);
-  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --serif:"Instrument Serif","Iowan Old Style","Times New Roman",serif;
+  --sans:var(--font-body);
+  --serif:var(--font-display);
   --pad:max(20px,env(safe-area-inset-left,0px));
   --ease:cubic-bezier(.22,.61,.24,1);
   color-scheme:light;
@@ -1067,6 +1066,99 @@ a.hlogo:focus-visible{outline:1px solid currentColor;outline-offset:7px}
 [data-theme="light"] .top.on-dark{color:var(--ink)}
 [data-theme="light"] .top.on-dark .tg[aria-checked="false"] .tg-sun,[data-theme="light"] .top.on-dark .tg[aria-checked="true"] .tg-moon{color:var(--ground)}
 .hero,.hb,.hb b,.logos .lw,.top,.cue{transition:background-color .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)}
+
+/* =========================================================
+   TYPOGRAPHY SYSTEM: Bricolage Grotesque (display) · Instrument Sans (body/UI) · Space Mono (metadata)
+   One layer, loaded last, so legacy per-component sizes defer to these tokens.
+   ========================================================= */
+@font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage-grotesque.woff2) format("woff2-variations"),url(fonts/bricolage-grotesque.woff2) format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url(fonts/instrument-sans.woff2) format("woff2-variations"),url(fonts/instrument-sans.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Space Mono";src:url(fonts/space-mono.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+/* metric-matched fallbacks keep line breaks close while the web fonts load */
+@font-face{font-family:"Bricolage Fallback";src:local("Arial"),local("Helvetica Neue"),local("Helvetica");size-adjust:104%;ascent-override:92%;descent-override:26%;line-gap-override:0%}
+@font-face{font-family:"Instrument Fallback";src:local("Arial"),local("Helvetica Neue"),local("Helvetica");size-adjust:97%;ascent-override:98%;descent-override:25%;line-gap-override:0%}
+:root{
+ --font-display:"Bricolage Grotesque","Bricolage Fallback",system-ui,sans-serif;
+ --font-body:"Instrument Sans","Instrument Fallback",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --font-mono:"Space Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+ /* scale */
+ --t-hero:clamp(44px,5.6vw,80px);
+ --t-page:clamp(42px,5.2vw,76px);
+ --t-section:clamp(30px,3.1vw,46px);
+ --t-project:clamp(24px,2.3vw,34px);
+ --t-feature:clamp(30px,2.8vw,40px);
+ --t-card:clamp(20px,1.7vw,24px);
+ --t-sub:clamp(19px,1.6vw,23px);
+ --t-body:17px;
+ --t-nav:14px;
+ --t-small:13.5px;
+ --t-meta:11px;
+ /* rhythm */
+ --lh-display:1.04;--lh-head:1.1;--lh-body:1.6;
+ --ls-display:-.025em;--ls-head:-.018em;--ls-body:-.006em;--ls-meta:.02em;
+}
+/* ---- body & interface: Instrument Sans ---- */
+body{font-family:var(--font-body);font-weight:400;letter-spacing:var(--ls-body);text-rendering:optimizeLegibility;font-optical-sizing:auto}
+.b-p,.cwhat p,.ov p,.prin p,.trio p,.sn-p,.gp p,.gd p{font-family:var(--font-body)}
+.b-p{font-size:var(--t-body);line-height:var(--lh-body)}
+.ncol,.top .ncol.a{font-family:var(--font-body);font-size:var(--t-nav);letter-spacing:-.005em;font-weight:500}
+.btn,.hbtn,.morebtn,.sn-go{font-family:var(--font-body);font-weight:500;letter-spacing:-.005em}
+.fig figcaption,.band figcaption,.apimg figcaption,.ab figcaption,.ab-g figcaption{font-family:var(--font-body);font-size:var(--t-small);letter-spacing:0}
+/* former italic serif subtitles become calm Instrument Sans subheads (Bricolage has no italic) */
+.tagline,.feat .sh,.wk.lg .sh,.pc figcaption{font-family:var(--font-body);font-style:normal;font-weight:400;letter-spacing:-.012em}
+.tagline{font-size:var(--t-sub);line-height:1.35;max-width:46ch;color:var(--ink2)}
+.feat .sh{font-size:var(--t-sub);line-height:1.35}
+.wk.lg .sh{font-size:clamp(16px,1.3vw,19px);line-height:1.35;margin-top:0}
+.pc figcaption{font-size:13px;line-height:1.3}
+.ab-lead,.ab-lead p,.zc-i.big p{font-family:var(--font-body);font-weight:400;font-size:var(--t-sub);line-height:1.42;letter-spacing:-.012em}
+.lbl,.csec-h .lbl,.refl .lbl{font-family:var(--font-body);font-weight:600;font-size:clamp(17px,1.4vw,20px);letter-spacing:-.01em}
+/* ---- display: Bricolage Grotesque ---- */
+.hl h1,.cs h1,.abp h1,.stmt,.sub-h h3,.b-h3,.b-h3 span,.wk .t span,.proof dt,.sn-n dt,.foot .cta h2,.giant,.ov h4,.prin h4,.trio h4,.dec header h4,.nextp h3,.feat h3,.ab-i h4,.sn-c h4,.sn-g b,.mk-g,.b-q,.ab-q p{font-family:var(--font-display);font-style:normal;font-optical-sizing:auto;font-weight:600;text-wrap:balance}
+.it{font-family:inherit;font-style:normal;font-weight:400;letter-spacing:inherit}
+.hl h1{font-size:var(--t-hero);line-height:var(--lh-display);letter-spacing:var(--ls-display)}
+.hl h1 .it{font-size:1em}
+.cs h1,.abp h1{font-size:var(--t-page);line-height:1;letter-spacing:var(--ls-display)}
+.stmt{font-size:var(--t-section);line-height:1.12;letter-spacing:var(--ls-head);word-spacing:0}
+.stmt.lede{font-weight:500;font-size:clamp(23px,2.25vw,33px);line-height:1.28;letter-spacing:-.016em;text-wrap:balance}
+.sub-h h3,.b-h3{font-size:var(--t-section);line-height:var(--lh-head);letter-spacing:var(--ls-head)}
+.wk .t{font-size:var(--t-project);line-height:1.08}
+.wk .t span{letter-spacing:var(--ls-head)}
+.feat h3,.nextp h3{font-size:var(--t-feature);line-height:1.04;letter-spacing:var(--ls-head)}
+.ov h4,.prin h4,.trio h4,.dec header h4,.ab-i h4,.sn-c h4{font-size:var(--t-card);line-height:1.18;letter-spacing:-.012em}
+.proof dt,.sn-n dt{font-weight:700;letter-spacing:-.03em}
+.proof dt{font-size:clamp(48px,5.2vw,80px)}
+.sn-n dt{font-size:clamp(26px,2.2vw,32px)}
+.sn-g b{font-size:19px;letter-spacing:-.01em}
+.mk-g{font-size:34px;letter-spacing:-.02em}
+.foot .cta h2{font-size:clamp(28px,3vw,44px);line-height:1.08;letter-spacing:var(--ls-head)}
+.giant{font-size:clamp(44px,11.2vw,168px);letter-spacing:-.035em;line-height:.86}
+.b-q,.ab-q p{font-weight:500;letter-spacing:-.018em}
+.b-q{font-size:clamp(24px,2.2vw,32px);line-height:1.2}
+.ab-q p{font-size:clamp(30px,3.6vw,54px);line-height:1.08}
+/* ---- metadata: Space Mono (dates, numbers, categories, labels) ---- */
+.crumb,.wk .t em,.wk .c,.wk .tag,.toc p,.toc a small,.dec header span,.cmeta dt,.kv dt,.lbl small,.b-h3 small,.b-h3.full small,.csec-h small,.sub-h span,
+.hint,.cue,.ch-l,.zc-i .pain small,.wv-plot li b,.wv-ph p,.wv-tail span,.pg-wl,.pg-r small,.cwhat h4,.gp p small,.gd-side dt,.ev-lab,.ev-c[data-l]::before,
+.sn-c header small,.sn-k,.ab-s span,.logos .lw,.nums dd small,a.hlogo::after{font-family:var(--font-mono);font-weight:400;font-style:normal;letter-spacing:var(--ls-meta);font-variant-numeric:normal}
+.crumb{font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+.crumb a,.crumb b{font-weight:400}
+.wk .t em,.wk .c,.toc a small,.dec header span,.sn-c header small{font-size:var(--t-meta)}
+.wk .t em{padding-top:.55em}
+.wk .c{text-transform:uppercase;letter-spacing:.03em;margin-top:2px}
+.cmeta dt,.kv dt{font-size:var(--t-meta);text-transform:uppercase;letter-spacing:.04em}
+.toc p,.ch-l,.cwhat h4,.gd-side dt,.ev-lab,.ev-c[data-l]::before,.pg-wl,.pg-r small,.gp p small,.zc-i .pain small,.wv-ph p,.wv-tail span,.sn-k,.ab-s span,.hint,.cue,.wv-plot li b{font-size:var(--t-meta);letter-spacing:.06em}
+.lbl small,.b-h3 small,.b-h3.full small,.csec-h small,.sub-h span{font-size:var(--t-meta);text-transform:uppercase;letter-spacing:.05em;font-weight:400}
+.dec header span{text-transform:uppercase;letter-spacing:.05em}
+/* ---- responsive ---- */
+@media (max-width:899px){
+ :root{--t-body:16px;--t-sub:clamp(17px,4.4vw,20px)}
+ .hl h1{font-size:clamp(40px,10.4vw,56px)}
+ .cs h1,.abp h1{font-size:clamp(38px,10vw,54px)}
+ .stmt{font-size:clamp(26px,7vw,34px)}
+ .stmt.lede{font-size:clamp(19px,5vw,22px)}
+ .crumb{font-size:10.5px;letter-spacing:.01em;line-height:1.7}
+ .giant{font-size:min(9.6vw,84px);white-space:normal}
+ .foot .cta h2{font-size:clamp(26px,7.2vw,34px)}
+}
 </style>
 
 <div class="cols" aria-hidden="true"><div class="wrap"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
