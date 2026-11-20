@@ -1894,7 +1894,7 @@ body{font-family:var(--font-body);font-weight:400;letter-spacing:var(--ls-body);
   <nav class="ms-nav" aria-label="Menu"></nav>
   <div class="ms-ft">
    <a href="mailto:projects.vivekvikramsingh@gmail.com">projects.vivekvikramsingh@gmail.com</a>
-   <div class="ms-l"><a href="resume.pdf" target="_blank" rel="noopener" data-resume>Resume ↗</a><a href="https://www.linkedin.com/in/vivek-vikram-singhh-448014167" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+   <div class="ms-l"><a href="resume.pdf?v=20261120" download="Vivek_Vikram_Singh_AI_Product_Designer_Resume.pdf" data-resume>Resume ↗</a><a href="https://www.linkedin.com/in/vivek-vikram-singhh-448014167" target="_blank" rel="noopener">LinkedIn ↗</a></div>
   </div>
 </div>
 <main id="app"></main>
@@ -2867,7 +2867,7 @@ function home(){
    ${logoHTML()}
    <div class="wrap">
     <div class="hl"><h1><span class="mask"><span>Designed around people,</span></span></h1><h1><span class="mask d2"><span><span class="it">not processes.</span></span></span></h1></div>
-    <div class="hb"><div class="hb-l"><b>Product and interaction designer</b><br>Enterprise AI, agents and copilots<br>Currently at <b>The Hackett Group</b><br>Ex-<b>Microsoft</b><br><b>DNA Paris Design Awards</b> winner, 2024<div class="hcta"><a class="hbtn pri" href="#work">See case studies <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v9M2 6.5 6 10.5 10 6.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a><a class="hbtn" href="resume.pdf" target="_blank" rel="noopener" data-resume>Resume <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a></div></div></div>
+    <div class="hb"><div class="hb-l"><b>Product and interaction designer</b><br>Enterprise AI, agents and copilots<br>Currently at <b>The Hackett Group</b><br>Ex-<b>Microsoft</b><br><b>DNA Paris Design Awards</b> winner, 2024<div class="hcta"><a class="hbtn pri" href="#work">See case studies <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v9M2 6.5 6 10.5 10 6.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a><a class="hbtn" href="resume.pdf?v=20261120" download="Vivek_Vikram_Singh_AI_Product_Designer_Resume.pdf" data-resume>Resume <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a></div></div></div>
    </div>
    <div class="hint" aria-hidden="true"><span class="hm">Hover to decode · click to ripple</span><span class="ht" style="display:none"></span><span class="ht">Tap to ripple</span></div>
   </div></section>
@@ -3839,7 +3839,7 @@ document.getElementById("copy").onclick=()=>{const b=document.getElementById("co
   try{navigator.clipboard.writeText(m.textContent).then(ok).catch(sel)}catch(e){sel()}};
 navFill();
 function resumeCheck(){ const b=document.querySelector("[data-resume]"); if(!b||b.dataset.checked) return; b.dataset.checked="1";
-  fetch("resume.pdf",{method:"HEAD"}).then(r=>{ if(!r.ok) throw 0; }).catch(()=>{ b.setAttribute("href","#contact"); b.removeAttribute("target"); b.title="Resume available on request"; }); }
+  fetch(b.getAttribute("href"),{method:"HEAD"}).then(r=>{ if(!r.ok) throw 0; }).catch(()=>{ b.setAttribute("href","#contact"); b.removeAttribute("target"); b.removeAttribute("download"); b.title="Resume available on request"; }); }
 function setTheme(t){
   const dark=t==="dark"; document.documentElement.dataset.theme=dark?"dark":"light";
   const b=document.querySelector(".tg"); if(b){ b.setAttribute("aria-checked",dark); b.title=dark?"Switch to light mode":"Switch to dark mode"; }
