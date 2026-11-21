@@ -2690,57 +2690,124 @@ body{font-family:var(--font-body);font-weight:400;letter-spacing:var(--ls-body);
 @media (max-width:1099px){.rf-b{grid-template-columns:1fr;row-gap:14px}.rf-src{grid-row:auto;justify-self:start;grid-auto-flow:column;align-items:center;gap:8px;padding:10px 14px}.rf-hd{display:none}.rf-rows{grid-column:1;padding-left:22px}.rf-rows::before{left:8px;top:-14px}.rf-r::before{left:-14px;width:14px}
  .rf-r{grid-template-columns:1fr;gap:6px}.rf-a{display:none}.rf-s{justify-self:start}.rf-q::after{content:" →";color:var(--ink3)}}
 /* v14: warm palette for ZBrain (from the reference image) */
-.p-zbrain{--zp1:#f5f4f2;--zp2:#d7cfc9;--zp3:#c0b6b0;--zp4:#8e8580;--zam:#a37b48;--zgl:#d9c8ac;--zok:#5f8a63;--zno:#b5654b;
+:is(.p-zbrain,.p-squirrel){--zp1:#f5f4f2;--zp2:#d7cfc9;--zp3:#c0b6b0;--zp4:#8e8580;--zam:#a37b48;--zgl:#d9c8ac;--zok:#5f8a63;--zno:#b5654b;
  --zcard:linear-gradient(155deg,color-mix(in srgb,#fffdfa 55%,var(--ground)) 0%,color-mix(in srgb,var(--zp2) 22%,var(--ground)) 100%);
  --zcard2:radial-gradient(120% 90% at 0% 0%,color-mix(in srgb,var(--zgl) 30%,transparent),transparent 60%),linear-gradient(160deg,color-mix(in srgb,var(--zp1) 70%,var(--ground)),color-mix(in srgb,var(--zp2) 30%,var(--ground)))}
-.p-zbrain .gsnap{background:radial-gradient(60% 90% at 12% 15%,color-mix(in srgb,var(--zp3) 45%,transparent),transparent 70%),radial-gradient(45% 70% at 55% 55%,color-mix(in srgb,var(--zgl) 55%,transparent),transparent 70%),radial-gradient(55% 80% at 90% 85%,color-mix(in srgb,var(--zp2) 60%,transparent),transparent 70%),color-mix(in srgb,var(--zp1) 80%,var(--ground))}
-.p-zbrain .gs-c{background:color-mix(in srgb,var(--ground) 62%,transparent)}
-.p-zbrain .ch{background:radial-gradient(70% 50% at 100% 0%,color-mix(in srgb,var(--g) 12%,transparent),transparent 70%),linear-gradient(180deg,color-mix(in srgb,var(--zp1) 75%,var(--ground)),color-mix(in srgb,var(--zp2) 28%,var(--ground)))}
-.p-zbrain .ch::before{background:linear-gradient(90deg,var(--g),color-mix(in srgb,var(--zgl) 70%,transparent),transparent)}
-.p-zbrain .s2-col,.p-zbrain .rf-b,.p-zbrain .md-c,.p-zbrain .hl-s .zoom span{background:var(--zcard);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--zp3) 28%,transparent)}
-.p-zbrain .s2-bet{background:radial-gradient(90% 70% at 85% 10%,color-mix(in srgb,var(--zgl) 45%,transparent),transparent 70%),linear-gradient(160deg,color-mix(in srgb,var(--g) 14%,var(--ground)),color-mix(in srgb,var(--g) 5%,var(--ground)));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--g) 30%,transparent),0 18px 40px -28px color-mix(in srgb,var(--zam) 70%,transparent)}
-.p-zbrain .s2-br li{background:linear-gradient(90deg,color-mix(in srgb,var(--zno) 9%,var(--ground)),color-mix(in srgb,var(--zp2) 14%,var(--ground)))}
-.p-zbrain .s2-br li i{color:var(--zno)}
-.p-zbrain .vd-c.ok{background:linear-gradient(160deg,color-mix(in srgb,var(--zok) 11%,var(--ground)),color-mix(in srgb,var(--zp2) 22%,var(--ground)))}
-.p-zbrain .vd-c.no{background:linear-gradient(160deg,color-mix(in srgb,var(--zno) 10%,var(--ground)),color-mix(in srgb,var(--zp2) 22%,var(--ground)))}
-.p-zbrain .vd-c.ok .s2-l b,.p-zbrain .vd-c.ok li::before{background:var(--zok)}
-.p-zbrain .vd-c.no .s2-l b,.p-zbrain .vd-c.no li::before{background:var(--zno)}
-.p-zbrain .zc-i,.p-zbrain .kk-c,.p-zbrain .cstats>div,.p-zbrain .nums>div,.p-zbrain .ft-c .fig,.p-zbrain .evo-g .zoom span{background:var(--zcard2)!important}
-.p-zbrain .kk-c:last-child{background:radial-gradient(100% 80% at 0% 0%,color-mix(in srgb,var(--zgl) 55%,transparent),transparent 70%),color-mix(in srgb,var(--zp1) 70%,var(--ground))!important}
-.p-zbrain .rf-src{background:linear-gradient(160deg,color-mix(in srgb,var(--zgl) 35%,var(--ground)),color-mix(in srgb,var(--zp2) 25%,var(--ground)));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--zam) 30%,transparent)}
-.p-zbrain .rfs-live .rf-s{color:var(--zok)}.p-zbrain .rfs-live .rf-s i{background:var(--zok)}
-.p-zbrain .refl{background:radial-gradient(60% 120% at 85% 20%,color-mix(in srgb,var(--zam) 45%,transparent),transparent 70%),linear-gradient(135deg,#2a2622,#3a332d)!important}
-.p-zbrain .csec-h .lbl{background:linear-gradient(90deg,color-mix(in srgb,var(--zgl) 40%,transparent),color-mix(in srgb,var(--zp2) 35%,transparent))}
+:is(.p-zbrain,.p-squirrel) .gsnap{background:radial-gradient(60% 90% at 12% 15%,color-mix(in srgb,var(--zp3) 45%,transparent),transparent 70%),radial-gradient(45% 70% at 55% 55%,color-mix(in srgb,var(--zgl) 55%,transparent),transparent 70%),radial-gradient(55% 80% at 90% 85%,color-mix(in srgb,var(--zp2) 60%,transparent),transparent 70%),color-mix(in srgb,var(--zp1) 80%,var(--ground))}
+:is(.p-zbrain,.p-squirrel) .gs-c{background:color-mix(in srgb,var(--ground) 62%,transparent)}
+:is(.p-zbrain,.p-squirrel) .ch{background:radial-gradient(70% 50% at 100% 0%,color-mix(in srgb,var(--g) 12%,transparent),transparent 70%),linear-gradient(180deg,color-mix(in srgb,var(--zp1) 75%,var(--ground)),color-mix(in srgb,var(--zp2) 28%,var(--ground)))}
+:is(.p-zbrain,.p-squirrel) .ch::before{background:linear-gradient(90deg,var(--g),color-mix(in srgb,var(--zgl) 70%,transparent),transparent)}
+:is(.p-zbrain,.p-squirrel) .s2-col,:is(.p-zbrain,.p-squirrel) .rf-b,:is(.p-zbrain,.p-squirrel) .md-c,:is(.p-zbrain,.p-squirrel) .hl-s .zoom span{background:var(--zcard);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--zp3) 28%,transparent)}
+:is(.p-zbrain,.p-squirrel) .s2-bet{background:radial-gradient(90% 70% at 85% 10%,color-mix(in srgb,var(--zgl) 45%,transparent),transparent 70%),linear-gradient(160deg,color-mix(in srgb,var(--g) 14%,var(--ground)),color-mix(in srgb,var(--g) 5%,var(--ground)));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--g) 30%,transparent),0 18px 40px -28px color-mix(in srgb,var(--zam) 70%,transparent)}
+:is(.p-zbrain,.p-squirrel) .s2-br li{background:linear-gradient(90deg,color-mix(in srgb,var(--zno) 9%,var(--ground)),color-mix(in srgb,var(--zp2) 14%,var(--ground)))}
+:is(.p-zbrain,.p-squirrel) .s2-br li i{color:var(--zno)}
+:is(.p-zbrain,.p-squirrel) .vd-c.ok{background:linear-gradient(160deg,color-mix(in srgb,var(--zok) 11%,var(--ground)),color-mix(in srgb,var(--zp2) 22%,var(--ground)))}
+:is(.p-zbrain,.p-squirrel) .vd-c.no{background:linear-gradient(160deg,color-mix(in srgb,var(--zno) 10%,var(--ground)),color-mix(in srgb,var(--zp2) 22%,var(--ground)))}
+:is(.p-zbrain,.p-squirrel) .vd-c.ok .s2-l b,:is(.p-zbrain,.p-squirrel) .vd-c.ok li::before{background:var(--zok)}
+:is(.p-zbrain,.p-squirrel) .vd-c.no .s2-l b,:is(.p-zbrain,.p-squirrel) .vd-c.no li::before{background:var(--zno)}
+:is(.p-zbrain,.p-squirrel) .zc-i,:is(.p-zbrain,.p-squirrel) .kk-c,:is(.p-zbrain,.p-squirrel) .cstats>div,:is(.p-zbrain,.p-squirrel) .nums>div,:is(.p-zbrain,.p-squirrel) .ft-c .fig,:is(.p-zbrain,.p-squirrel) .evo-g .zoom span{background:var(--zcard2)!important}
+:is(.p-zbrain,.p-squirrel) .kk-c:last-child{background:radial-gradient(100% 80% at 0% 0%,color-mix(in srgb,var(--zgl) 55%,transparent),transparent 70%),color-mix(in srgb,var(--zp1) 70%,var(--ground))!important}
+:is(.p-zbrain,.p-squirrel) .rf-src{background:linear-gradient(160deg,color-mix(in srgb,var(--zgl) 35%,var(--ground)),color-mix(in srgb,var(--zp2) 25%,var(--ground)));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--zam) 30%,transparent)}
+:is(.p-zbrain,.p-squirrel) .rfs-live .rf-s{color:var(--zok)}:is(.p-zbrain,.p-squirrel) .rfs-live .rf-s i{background:var(--zok)}
+:is(.p-zbrain,.p-squirrel) .refl{background:radial-gradient(60% 120% at 85% 20%,color-mix(in srgb,var(--zam) 45%,transparent),transparent 70%),linear-gradient(135deg,#2a2622,#3a332d)!important}
+:is(.p-zbrain,.p-squirrel) .csec-h .lbl{background:linear-gradient(90deg,color-mix(in srgb,var(--zgl) 40%,transparent),color-mix(in srgb,var(--zp2) 35%,transparent))}
 /* v15: numeral behind cards, richer warm palette */
-.p-zbrain .ch>*{position:relative;z-index:1}
-.p-zbrain .ch-h{position:static}
-.p-zbrain .ch-h::after{z-index:0;top:4px;right:28px;font-size:clamp(160px,17vw,260px);color:transparent;background:linear-gradient(180deg,color-mix(in srgb,var(--g) 26%,transparent),color-mix(in srgb,var(--g) 4%,transparent) 85%);-webkit-background-clip:text;background-clip:text}
-.p-zbrain .ch::before{z-index:2}
-.p-zbrain{--zcard:linear-gradient(165deg,color-mix(in srgb,#fffdf9 78%,var(--ground)) 0%,color-mix(in srgb,#efe7df 60%,var(--ground)) 100%)}
-.p-zbrain .s2-col,.p-zbrain .md-c,.p-zbrain .rf-b{box-shadow:inset 0 1px 0 color-mix(in srgb,#fff 70%,transparent),inset 0 0 0 1px color-mix(in srgb,#cdbfb2 40%,transparent),0 14px 30px -24px color-mix(in srgb,#6b5a4a 45%,transparent)}
-.p-zbrain .ch{background:radial-gradient(60% 45% at 100% 0%,color-mix(in srgb,var(--g) 16%,transparent),transparent 70%),radial-gradient(50% 40% at 0% 100%,color-mix(in srgb,#e8d2b0 30%,transparent),transparent 70%),linear-gradient(180deg,color-mix(in srgb,#f7f3ee 85%,var(--ground)),color-mix(in srgb,#ece4db 55%,var(--ground)))}
-.p-zbrain .s2-bet{background:radial-gradient(90% 70% at 85% 10%,color-mix(in srgb,#f0d9b5 55%,transparent),transparent 70%),linear-gradient(160deg,color-mix(in srgb,var(--g) 18%,var(--ground)),color-mix(in srgb,var(--g) 6%,var(--ground)))}
-.p-zbrain .s2-sh li i{background:linear-gradient(160deg,color-mix(in srgb,var(--g) 20%,transparent),color-mix(in srgb,#f0d9b5 35%,transparent))}
-.p-zbrain .ch-k b{background:color-mix(in srgb,var(--g) 15%,transparent)}
+:is(.p-zbrain,.p-squirrel) .ch>*{position:relative;z-index:1}
+:is(.p-zbrain,.p-squirrel) .ch-h{position:static}
+:is(.p-zbrain,.p-squirrel) .ch-h::after{z-index:0;top:4px;right:28px;font-size:clamp(160px,17vw,260px);color:transparent;background:linear-gradient(180deg,color-mix(in srgb,var(--g) 26%,transparent),color-mix(in srgb,var(--g) 4%,transparent) 85%);-webkit-background-clip:text;background-clip:text}
+:is(.p-zbrain,.p-squirrel) .ch::before{z-index:2}
+:is(.p-zbrain,.p-squirrel){--zcard:linear-gradient(165deg,color-mix(in srgb,#fffdf9 78%,var(--ground)) 0%,color-mix(in srgb,#efe7df 60%,var(--ground)) 100%)}
+:is(.p-zbrain,.p-squirrel) .s2-col,:is(.p-zbrain,.p-squirrel) .md-c,:is(.p-zbrain,.p-squirrel) .rf-b{box-shadow:inset 0 1px 0 color-mix(in srgb,#fff 70%,transparent),inset 0 0 0 1px color-mix(in srgb,#cdbfb2 40%,transparent),0 14px 30px -24px color-mix(in srgb,#6b5a4a 45%,transparent)}
+:is(.p-zbrain,.p-squirrel) .ch{background:radial-gradient(60% 45% at 100% 0%,color-mix(in srgb,var(--g) 16%,transparent),transparent 70%),radial-gradient(50% 40% at 0% 100%,color-mix(in srgb,#e8d2b0 30%,transparent),transparent 70%),linear-gradient(180deg,color-mix(in srgb,#f7f3ee 85%,var(--ground)),color-mix(in srgb,#ece4db 55%,var(--ground)))}
+:is(.p-zbrain,.p-squirrel) .s2-bet{background:radial-gradient(90% 70% at 85% 10%,color-mix(in srgb,#f0d9b5 55%,transparent),transparent 70%),linear-gradient(160deg,color-mix(in srgb,var(--g) 18%,var(--ground)),color-mix(in srgb,var(--g) 6%,var(--ground)))}
+:is(.p-zbrain,.p-squirrel) .s2-sh li i{background:linear-gradient(160deg,color-mix(in srgb,var(--g) 20%,transparent),color-mix(in srgb,#f0d9b5 35%,transparent))}
+:is(.p-zbrain,.p-squirrel) .ch-k b{background:color-mix(in srgb,var(--g) 15%,transparent)}
 /* v16: numeral fits header; request flow polish */
-.p-zbrain .ch-h::after{top:22px;right:44px;font-size:clamp(110px,11vw,168px);line-height:.82;letter-spacing:-.05em;background:linear-gradient(180deg,color-mix(in srgb,var(--g) 30%,transparent),color-mix(in srgb,var(--g) 8%,transparent));-webkit-background-clip:text;background-clip:text}
-@media (max-width:720px){.p-zbrain .ch-h::after{font-size:96px;top:14px;right:18px}}
-.p-zbrain .rf-b{grid-template-columns:150px 36px minmax(0,1fr);column-gap:0;padding:24px}
-.p-zbrain .rf-src{grid-column:1;grid-row:1/3}
-.p-zbrain .rf-b::before{content:"";grid-column:2;grid-row:2;align-self:center;height:2px;background:color-mix(in srgb,var(--zam) 45%,transparent)}
-.p-zbrain .rf-hd,.p-zbrain .rf-rows{grid-column:3}
-.p-zbrain .rf-rows{padding-left:24px}
-.p-zbrain .rf-rows::before{left:0;top:34px;bottom:34px;background:color-mix(in srgb,var(--zam) 45%,transparent)}
-.p-zbrain .rf-r::before{left:-24px;width:24px;background:color-mix(in srgb,var(--zam) 45%,transparent)}
-.p-zbrain .rf-hd{padding:0 16px 10px 40px}
-.p-zbrain .rf-hd,.p-zbrain .rf-r{grid-template-columns:minmax(0,1.15fr) 28px minmax(0,1.45fr) 28px minmax(0,1.1fr) 100px;column-gap:8px}
-.p-zbrain .ch-h{padding-right:clamp(0px,12vw,180px)}
-.p-zbrain .rf-r{padding:16px;background:linear-gradient(165deg,color-mix(in srgb,#fffdf9 85%,var(--ground)),color-mix(in srgb,#f1e9e1 70%,var(--ground)));box-shadow:inset 0 0 0 1px color-mix(in srgb,#cdbfb2 45%,transparent)}
-.p-zbrain .rfs-in-progress.rf-r{background:linear-gradient(165deg,color-mix(in srgb,#fbf1df 90%,var(--ground)),color-mix(in srgb,#f3e2c6 70%,var(--ground)));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--zam) 55%,transparent)}
-.p-zbrain .rf-w b{white-space:normal}
-.p-zbrain .rf-s{justify-self:start}
-.p-zbrain .rf-hd span:nth-child(4){justify-self:start}
-@media (max-width:1099px){.p-zbrain .rf-b{grid-template-columns:1fr}.p-zbrain .rf-b::before{display:none}.p-zbrain .rf-hd,.p-zbrain .rf-rows{grid-column:1}.p-zbrain .rf-src{grid-row:auto}.p-zbrain .rf-rows{padding-left:22px}.p-zbrain .rf-rows::before{left:8px;top:-14px}.p-zbrain .rf-r::before{left:-14px;width:14px}.p-zbrain .rf-r{grid-template-columns:1fr}}
+:is(.p-zbrain,.p-squirrel) .ch-h::after{top:22px;right:44px;font-size:clamp(110px,11vw,168px);line-height:.82;letter-spacing:-.05em;background:linear-gradient(180deg,color-mix(in srgb,var(--g) 30%,transparent),color-mix(in srgb,var(--g) 8%,transparent));-webkit-background-clip:text;background-clip:text}
+@media (max-width:720px){:is(.p-zbrain,.p-squirrel) .ch-h::after{font-size:96px;top:14px;right:18px}}
+:is(.p-zbrain,.p-squirrel) .rf-b{grid-template-columns:150px 36px minmax(0,1fr);column-gap:0;padding:24px}
+:is(.p-zbrain,.p-squirrel) .rf-src{grid-column:1;grid-row:1/3}
+:is(.p-zbrain,.p-squirrel) .rf-b::before{content:"";grid-column:2;grid-row:2;align-self:center;height:2px;background:color-mix(in srgb,var(--zam) 45%,transparent)}
+:is(.p-zbrain,.p-squirrel) .rf-hd,:is(.p-zbrain,.p-squirrel) .rf-rows{grid-column:3}
+:is(.p-zbrain,.p-squirrel) .rf-rows{padding-left:24px}
+:is(.p-zbrain,.p-squirrel) .rf-rows::before{left:0;top:34px;bottom:34px;background:color-mix(in srgb,var(--zam) 45%,transparent)}
+:is(.p-zbrain,.p-squirrel) .rf-r::before{left:-24px;width:24px;background:color-mix(in srgb,var(--zam) 45%,transparent)}
+:is(.p-zbrain,.p-squirrel) .rf-hd{padding:0 16px 10px 40px}
+:is(.p-zbrain,.p-squirrel) .rf-hd,:is(.p-zbrain,.p-squirrel) .rf-r{grid-template-columns:minmax(0,1.15fr) 28px minmax(0,1.45fr) 28px minmax(0,1.1fr) 100px;column-gap:8px}
+:is(.p-zbrain,.p-squirrel) .ch-h{padding-right:clamp(0px,12vw,180px)}
+:is(.p-zbrain,.p-squirrel) .rf-r{padding:16px;background:linear-gradient(165deg,color-mix(in srgb,#fffdf9 85%,var(--ground)),color-mix(in srgb,#f1e9e1 70%,var(--ground)));box-shadow:inset 0 0 0 1px color-mix(in srgb,#cdbfb2 45%,transparent)}
+:is(.p-zbrain,.p-squirrel) .rfs-in-progress.rf-r{background:linear-gradient(165deg,color-mix(in srgb,#fbf1df 90%,var(--ground)),color-mix(in srgb,#f3e2c6 70%,var(--ground)));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--zam) 55%,transparent)}
+:is(.p-zbrain,.p-squirrel) .rf-w b{white-space:normal}
+:is(.p-zbrain,.p-squirrel) .rf-s{justify-self:start}
+:is(.p-zbrain,.p-squirrel) .rf-hd span:nth-child(4){justify-self:start}
+@media (max-width:1099px){:is(.p-zbrain,.p-squirrel) .rf-b{grid-template-columns:1fr}:is(.p-zbrain,.p-squirrel) .rf-b::before{display:none}:is(.p-zbrain,.p-squirrel) .rf-hd,:is(.p-zbrain,.p-squirrel) .rf-rows{grid-column:1}:is(.p-zbrain,.p-squirrel) .rf-src{grid-row:auto}:is(.p-zbrain,.p-squirrel) .rf-rows{padding-left:22px}:is(.p-zbrain,.p-squirrel) .rf-rows::before{left:8px;top:-14px}:is(.p-zbrain,.p-squirrel) .rf-r::before{left:-14px;width:14px}:is(.p-zbrain,.p-squirrel) .rf-r{grid-template-columns:1fr}}
+
+/* Squirrel: ZBrain card language */
+.p-squirrel .stage{background:var(--zcard2)!important;border-radius:20px}
+.p-squirrel .stage.bare{padding:clamp(18px,3vw,40px)}
+.p-squirrel .dec{background:var(--zcard);border-radius:24px;padding:clamp(20px,2.6vw,32px) clamp(20px,2.6vw,32px) 10px;box-shadow:inset 0 1px 0 color-mix(in srgb,#fff 70%,transparent),inset 0 0 0 1px color-mix(in srgb,#cdbfb2 40%,transparent),0 14px 30px -24px color-mix(in srgb,#6b5a4a 45%,transparent)}
+.p-squirrel .dec header span{display:inline-block;justify-self:start;text-transform:none;letter-spacing:.02em;font-weight:600;padding:3px 10px;border-radius:99px;background:linear-gradient(90deg,color-mix(in srgb,var(--zgl) 45%,transparent),color-mix(in srgb,var(--zp2) 40%,transparent));color:var(--ink)}
+.p-squirrel .dec header h4{font-family:var(--font-body);font-weight:600;letter-spacing:-.025em}
+.p-squirrel .dec dl div{border-top-color:color-mix(in srgb,#cdbfb2 45%,transparent)}
+.p-squirrel .dec .pick{margin:6px -14px;padding:14px;border-radius:14px;border-top:0;background:color-mix(in srgb,var(--zam) 9%,transparent)}
+.p-squirrel .dec .pick+div{border-top:0}
+.p-squirrel .gp li{background:var(--zcard2);border-radius:20px;padding:clamp(18px,2vw,24px)}
+.p-squirrel .gp-ic{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:color-mix(in srgb,var(--ground) 70%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,#cdbfb2 45%,transparent)}
+.p-squirrel .gp-ic svg{width:18px;height:18px}
+.p-squirrel .gp p small{text-transform:none;letter-spacing:.02em;font-weight:600}
+.p-squirrel .gp .gp-r{border-top-color:color-mix(in srgb,#cdbfb2 45%,transparent)}
+.p-squirrel .steps{border-top:0;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.p-squirrel .steps li{padding:16px 18px 18px;border-radius:18px;background:var(--zcard2)}
+.p-squirrel .steps li i{font-weight:600;color:var(--zam)}
+.p-squirrel .steps li b{font-weight:600}
+.p-squirrel .b-q{padding:clamp(24px,3vw,40px);border-radius:28px;font-family:var(--font-body);font-weight:600;letter-spacing:-.03em;background:radial-gradient(90% 80% at 90% 0%,color-mix(in srgb,#f0d9b5 55%,transparent),transparent 70%),linear-gradient(160deg,color-mix(in srgb,#2fa36b 10%,var(--ground)),color-mix(in srgb,var(--zp2) 25%,var(--ground)))}
+.p-squirrel .b-q small{font-weight:600}
+.p-squirrel .mo-i{background:var(--zcard2);padding:0}
+.p-squirrel .mo-i img{width:100%;height:100%;object-fit:cover;border-radius:16px;box-shadow:none}
+.p-squirrel .mo-c figcaption small{color:var(--zam)}
+.p-squirrel .kk{gap:12px}
+.p-squirrel .kk-c:last-child{background:var(--zcard2)!important}
+@media (min-width:560px) and (max-width:899px){.p-squirrel .kk{grid-template-columns:1fr 1fr}}
+.gs-c ol li span small{display:block;margin-top:2px;font-size:13px;line-height:1.4;color:var(--ink2)}
+.gs-c ol li{display:flex;gap:4px;align-items:baseline}
+
+/* warm cards in dark mode (ZBrain and Squirrel) */
+[data-theme="dark"] :is(.p-zbrain,.p-squirrel){--zp1:#24201c;--zp2:#3a322b;--zp3:#4d4239;--zp4:#8e8580;--zgl:#5c4a33;--zam:#c99a5f;
+ --zcard:linear-gradient(165deg,#2b2621 0%,#211e1b 100%);--zcard2:radial-gradient(120% 90% at 0% 0%,rgba(201,154,95,.10),transparent 60%),linear-gradient(160deg,#28241f,#1e1b18)}
+[data-theme="dark"] :is(.p-zbrain,.p-squirrel) .ch{background:radial-gradient(60% 45% at 100% 0%,color-mix(in srgb,var(--g) 18%,transparent),transparent 70%),linear-gradient(180deg,#26221e,#1d1a17)}
+[data-theme="dark"] :is(.p-zbrain,.p-squirrel) :is(.s2-col,.md-c,.rf-b,.dec){box-shadow:inset 0 1px 0 rgba(255,255,255,.05),inset 0 0 0 1px rgba(255,255,255,.07)}
+[data-theme="dark"] :is(.p-zbrain,.p-squirrel) .rf-r{background:linear-gradient(165deg,#2b2621,#221f1c);box-shadow:inset 0 0 0 1px rgba(255,255,255,.07)}
+[data-theme="dark"] :is(.p-zbrain,.p-squirrel) .rfs-in-progress.rf-r{background:linear-gradient(165deg,#3a2f22,#2a241d)}
+[data-theme="dark"] :is(.p-zbrain,.p-squirrel) .s2-bet{background:radial-gradient(90% 70% at 85% 10%,rgba(201,154,95,.18),transparent 70%),linear-gradient(160deg,color-mix(in srgb,var(--g) 22%,#1d1a17),#1d1a17)}
+[data-theme="dark"] .p-squirrel .b-q{background:radial-gradient(90% 80% at 90% 0%,rgba(201,154,95,.16),transparent 70%),linear-gradient(160deg,color-mix(in srgb,#2fa36b 14%,#1d1a17),#1d1a17)}
+[data-theme="dark"] .p-squirrel :is(.dec dl div,.gp .gp-r){border-top-color:rgba(255,255,255,.08)}
+[data-theme="dark"] .p-squirrel .gp-ic{box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+
+/* Squirrel chapters */
+.sqc{gap:clamp(24px,3vw,40px)}
+.sqc-ds{display:grid}
+.sqc-d{grid-template-columns:minmax(0,2fr) minmax(0,10fr);padding:18px 0 20px}
+.sqc-d .ch-l{margin-top:4px}
+.sqc-d .ch-bt>p:not(.ch-c){color:var(--ink)}
+.sqc-blk{display:grid;gap:14px;min-width:0}
+.sqc-sg{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:16px;align-items:start}
+.sqc-s{margin:0;display:grid;gap:10px;min-width:0}
+.sqc-s img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent),0 24px 48px -30px rgba(60,40,20,.5)}
+.sqc-s figcaption,.sqc-c figcaption{font-size:var(--x6);line-height:1.45;color:var(--ink2);max-width:40em}
+.sqc-cg{display:flex;flex-wrap:wrap;gap:32px 40px;align-items:flex-end}
+.sqc-c{margin:0;display:grid;gap:12px;min-width:0;max-width:100%}
+.sqc-c .zoom{width:auto}
+.sqc-c img{display:block;max-width:100%;height:auto;filter:drop-shadow(0 18px 28px rgba(70,50,30,.16))}
+.sqc-c figcaption span{font-weight:600;color:var(--g);margin-right:8px}
+.sqc-fam{grid-template-columns:repeat(3,minmax(0,1fr))}
+.sqc-fam b i{font-style:normal;font-weight:600;color:var(--g);margin-left:4px}
+.sqc-mb{gap:clamp(24px,3vw,36px)!important;margin-top:24px}
+.sqc .ch-m{border-top-color:color-mix(in srgb,#cdbfb2 45%,transparent)}
+[data-theme="dark"] .sqc .ch-m{border-top-color:rgba(255,255,255,.08)}
+[data-theme="dark"] .sqc-c.lo .zoom{background:#f3efe9;border-radius:14px;padding:16px;box-sizing:border-box}
+[data-theme="dark"] .sqc-c img{filter:drop-shadow(0 18px 28px rgba(0,0,0,.45))}
+@media (max-width:899px){.sqc-d{grid-template-columns:1fr;gap:8px}.sqc-fam{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.sqc-sg{grid-template-columns:1fr}.sqc-fam{grid-template-columns:1fr}.sqc-cg{gap:28px}}
 </style>
 
 <div class="cols" aria-hidden="true"><div class="wrap"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
@@ -3126,7 +3193,7 @@ const P=[
  refl:"The risk with any score is that people optimise the number instead of the answer."},
 
 /* ======================= SQUIRREL ======================= */
-{id:"squirrel",tier:2,name:"Squirrel",year:"2026",cat:"EdTech · Freelance product designer",
+{id:"squirrel",tier:2,v2:true,name:"Squirrel",year:"2026",cat:"EdTech · Freelance product designer",
  short:"Teaching kids money habits through play",thumb:"8-170",hero:"8-60",
  title:"Making money practice feel like a game kids come back to",
  whatName:"Squirrel",
@@ -3134,12 +3201,12 @@ const P=[
  snap:{
   identify:{k:"The problem",p:"The old app taught money, but it didn’t feel like a game, and the screens didn’t look like one product.",
    l:["No badges or rewards to work towards","Notifications mixed in one messy list","Only one class leaderboard","No jobs for kids to earn from","No wellbeing check-ins","Visuals that changed from screen to screen"]},
-  iterate:{k:"How I decided",l:[["01","Navigation","Seven sections named for what kids do, and a progress bar on every screen."],["02","Game layer","Rankings, 40 badges, streaks and 25 school jobs, each tied to a money habit."],["03","Wellbeing","Six squirrel faces to check in before the dashboard opens."]]},
+  iterate:{k:"How I decided",l:[["01","Finding your way","Seven named sections, a progress bar, and alerts behind the bell."],["02","Game layer","Rankings, 40 badges, streaks and 25 school jobs."],["03","Wellbeing","Six squirrel faces before the dashboard opens."],["04","Design system","38 component families for desktop, iPad and mobile."]]},
   impact:{k:"What it delivered",n:[["40","badges in 8 groups, each for a money habit"],["25","school jobs students apply for"]],
    l:[["Delivered:","a new design system and student screens for desktop, iPad and mobile."],["Variation:","a simpler dashboard for ages 6–8."]]}},
  lede:"I redesigned Squirrel’s student app: how students find their way around it, and the game layer that rewards good money habits: rankings, badges, streaks, school jobs and a daily wellbeing check-in. All of it sits on a new design system for desktop, iPad and mobile.",
  meta:[["Role","Product designer (freelance)"],["Timeline","2026"],["Users","Students aged 7–18, and their teachers"],["Research","Interviews, feedback on old screens, rose/thorn/bud/seed, card sort, teacher survey"],["Platforms","Desktop, iPad, mobile"]],
- ov:[["Identify","The old student app had no badges, rankings, jobs or wellbeing check-ins, and its notifications and visuals were messy."],["Iterate","Interviews, a 112-note rose/thorn/bud/seed review, a card sort and a teacher survey, then seven decisions."],["Impact","A new design system and a student app with a full game layer, on desktop, iPad and mobile."]],
+ ov:[["Identify","The old student app had no badges, rankings, jobs or wellbeing check-ins, and its notifications and visuals were messy."],["Iterate","Interviews, a 112-note rose/thorn/bud/seed review, a card sort and a teacher survey, then seven decisions in four chapters."],["Impact","A new design system and a student app with a full game layer, on desktop, iPad and mobile."]],
  secs:[
  S("identify","01","Identify","What the old app was missing",[
   ["h3","The old app","old-sq","The old app"],
@@ -3153,34 +3220,32 @@ const P=[
   ["figs",[["sq/p-feedback","Feedback on the old screens, with votes on the problems that mattered most. Names blurred."],["sq/p-rtbs","The rose, thorn, bud, seed review, with its summary."]],2],
   ["figs",[["sq/p-cards","Card sort: which features belong on which dashboard. Jobs, badges, streaks and wellbeing all landed on the student’s."],["sq/p-survey","The teacher survey, planned section by section."]],2],
   ["q","How might we make practising money feel like a game students want to come back to, without hiding the money lessons?"]]),
- S("iterate","02","Iterate","Seven decisions, each with its screen",[
-  ["h3","Navigation","nav-sq","Navigation"],
-  ["dec",{n:"Decision 01",h:"How should students find their way around?",opts:"Keep the old menu · tabs across the top · a side menu plus a progress bar",chose:"A side menu with seven sections named for what kids do: Dashboard, Leaderboard, Money, Marketplace, Classroom, Closet and House. Above every screen, a bar with their avatar, house, badges, streak and points.",trade:"The progress bar takes up the top of every screen."}],
-  ["fig","sq/new-dash","After: the progress bar on top, money in the middle, and rankings, streaks and jobs on the right. Bills to pay sit in My bills, with a Pay now button."],
-  ["h3","Rankings","rank-sq","Rankings"],
-  ["dec",{n:"Decision 02",h:"How do you make rankings motivating for everyone, not just the top three?",opts:"One class list, as before · only your own rank · your rank at three levels, plus the gap to the next place",chose:"Three ranks: you in your class, your class in the school, and your house. One line says how many points you need to move up.",trade:"The full list of names moves to the Leaderboard page, one click away."}],
-  ["fig","sq/c-rank","Rank in class, class in school and house, with the gap to first place."],
-  ["fig","sq/b-rank","Ranking badges, from Top 10 in class up to #1 in the school."],
-  ["h3","Badges and streaks","badges-sq","Badges and streaks"],
-  ["dec",{n:"Decision 03",h:"What should students collect?",opts:"Points only · general badges · badges tied to money habits",chose:"40 badges in 8 groups, each for a money habit: learning, points, dream purchases, bills, jobs, savings, investing and rankings. Logging in every day builds a streak that adds bonus points.",trade:"40 badges to draw and keep balanced."}],
-  ["fig","sq/new-streak","Streaks and awards: the streak on a calendar, the bonus each day earned, and the badges collected so far."],
-  ["fig","sq/b-learn","Learning badges, from First Acorn (first lesson) to Certified Financier (every lesson in the year)."],
-  ["h3","School jobs","jobs-sq","School jobs"],
-  ["dec",{n:"Decision 04",h:"How do students earn money in a way that feels like real work?",opts:"A fixed salary, as before · chores set by the teacher · a jobs board students apply to",chose:"A jobs board with 25 school jobs in five groups. Each shows the pay and the hours. Students apply, wait for approval, then get paid when the work is done.",trade:"Someone at school has to approve each application."}],
-  ["fig","sq/new-jobs","All jobs: active, pending, open and completed, with earnings, hours and rating."],
-  ["fig","sq/b-jobs","The 25 jobs: academic, campus, tech, events and economy."],
-  ["h3","Wellbeing check-in","wellbeing-sq","Wellbeing check-in"],
-  ["dec",{n:"Decision 05",h:"How do you ask a child how they feel without it feeling like a test?",opts:"A survey form · an emoji scale · six squirrel faces",chose:"Before the dashboard opens, six squirrel faces to choose from, and an optional note. A line under it says their feelings come first.",trade:"One more step when students log in, though they can close it."}],
-  ["fig","sq/new-mood","The check-in: happy, excited, angry, sad, scared or calm. Teachers asked to see this, and how it changes over time."],
-  ["h3","Notifications","notif-sq","Notifications"],
-  ["dec",{n:"Decision 06",h:"How do you stop important alerts getting lost?",opts:"Keep one mixed list on the dashboard · a separate inbox page · one panel behind the bell",chose:"One panel behind the bell. Each type has its own icon and colour, every item shows when it arrived, unread ones are highlighted, and one link marks them all as read.",trade:"Alerts take a click to see, but the bell shows how many are waiting."}],
-  ["fig","sq/new-notif","Notifications: life events, salary, bill warnings and new jobs, each with a time."],
-  ["h3","Design system","ds-sq","Design system"],
-  ["dec",{n:"Decision 07",h:"How do you stop the visuals changing from screen to screen?",opts:"Patch the old screens · build a new design system",chose:"A new system: one green (#34D874), Outfit and Inter for type, a 4px spacing scale, and every component in every state, from buttons to badges and streak cards.",trade:"Every screen had to be rebuilt on it."}],
-  ["figs",[["sq/ds-buttons","Buttons and form fields in every size and state."],["sq/ds-all","The whole system: colour, type, spacing, components, layouts and guidelines."]],2],
-  ["h3","Variations","var-sq","Variations"],
-  ["p","The same app had to work for the youngest students and on classroom tablets."],
-  ["figs",[["sq/new-young","Variation for ages 6–8: stars instead of points, a podium of the top three, fewer bills, and today’s goals."],["8-102","Variation for iPad in landscape, for classroom tablets."]],2]]),
+ S("iterate","02","Iterate","Four chapters, seven decisions",[
+  ["p","I grouped the seven decisions into four chapters. Each one shows the finished screen and the parts it is built from. Open More to see the rest."],
+  ["sqch",{n:"Chapter 1",k:"Decisions 01 and 06",c:"#3c9a6a",num:"1",q:"Can students find their way, and see what needs them?",mk:"The old app had a plain menu and one mixed list of alerts. I named seven sections for what kids do, put a progress bar on every screen and moved alerts behind the bell.",
+   decs:[{n:"Decision 01",h:"How should students find their way around?",opts:"Keep the old menu · tabs across the top · a side menu plus a progress bar",chose:"A side menu with seven sections named for what kids do: Dashboard, Leaderboard, Money, Marketplace, Classroom, Closet and House. Above every screen, a bar with their avatar, house, badges, streak and points.",trade:"The progress bar takes up the top of every screen."},{n:"Decision 06",h:"How do you stop important alerts getting lost?",opts:"Keep one mixed list on the dashboard · a separate inbox page · one panel behind the bell",chose:"One panel behind the bell. Each type has its own icon and colour, every item shows when it arrived, unread ones are highlighted, and one link marks them all as read.",trade:"Alerts take a click to see, but the bell shows how many are waiting."}],
+   shots:[["sq/new-dash","The new dashboard: the progress bar on top, money in the middle, and rankings, streaks and jobs on the right."]],
+   comps:[["sq/cp-money-d","D01","Money card"],["sq/cp-buttons","N04","Buttons",1],["sq/cp-tags","N07","Status tags",1]],
+   more:{h:"More screens and components",d:"Notifications, the version for ages 6 to 8, iPad, and the money card on smaller screens",
+    shots:[["sq/new-notif","Notifications: life events, salary, bill warnings and new jobs, each with a time."],["sq/new-young","For ages 6 to 8: stars instead of points, a podium of the top three, fewer bills and today’s goals."],["8-102","iPad in landscape, for classroom tablets."]],
+    comps:[["sq/cp-money-i","D01","Money card on iPad"],["sq/cp-money-m","D01","Money card on mobile"]]}},"ch1-sq","Finding your way"],
+  ["sqch",{n:"Chapter 2",k:"Decisions 02, 03 and 04",c:"#3f7fb8",num:"2",q:"What makes a student want to come back tomorrow?",mk:"Points alone gave students no next goal. I added rankings at three levels, badges and a daily streak, and a jobs board where they earn their salary.",
+   decs:[{n:"Decision 02",h:"How do you make rankings motivating for everyone, not just the top three?",opts:"One class list, as before · only your own rank · your rank at three levels, plus the gap to the next place",chose:"Three ranks: you in your class, your class in the school, and your house. One line says how many points you need to move up.",trade:"The full list of names moves to the Leaderboard page, one click away."},{n:"Decision 03",h:"What should students collect?",opts:"Points only · general badges · badges tied to money habits",chose:"40 badges in 8 groups, each for a money habit: learning, points, dream purchases, bills, jobs, savings, investing and rankings. Logging in every day builds a streak that adds bonus points.",trade:"40 badges to draw and keep balanced."},{n:"Decision 04",h:"How do students earn money in a way that feels like real work?",opts:"A fixed salary, as before · chores set by the teacher · a jobs board students apply to",chose:"A jobs board with 25 school jobs in five groups. Each shows the pay and the hours. Students apply, wait for approval, then get paid when the work is done.",trade:"Someone at school has to approve each application."}],
+   shots:[["sq/new-streak","Streaks and awards: the streak on a calendar, the bonus each day earned, and the badges collected so far."],["sq/new-jobs","All jobs: active, pending, open and completed, with earnings, hours and rating."]],
+   comps:[["sq/cp-rank","D04","Rankings and points"],["sq/cp-login","D06","Login streak"],["sq/cp-cal","R01","Streak calendar"]],
+   more:{h:"More screens and components",d:"The badge set, the 25 jobs, and the mobile versions",
+    shots:[["sq/b-learn","Learning badges, from First Acorn to Certified Financier."],["sq/b-rank","Ranking badges, from Top 10 in class up to #1 in the school."],["sq/b-jobs","The 25 jobs: academic, campus, tech, events and economy."]],
+    comps:[["sq/ds-badges","R02","The badge set, one colour per group"],["sq/cp-rank-m","D04","Rankings on mobile"],["sq/cp-streak-modal","R01","Streaks and awards"],["sq/cp-date","R01","Day detail"]]}},"ch2-sq","The game layer"],
+  ["sqch",{n:"Chapter 3",k:"Decision 05",c:"#c08a3e",num:"3",q:"How do you ask a child how they feel?",mk:"Teachers wanted to know how students were doing. A form felt like a test, so the check-in is six squirrel faces and an optional note, before the dashboard opens.",
+   decs:[{n:"Decision 05",h:"How do you ask a child how they feel without it feeling like a test?",opts:"A survey form · an emoji scale · six squirrel faces",chose:"Before the dashboard opens, six squirrel faces to choose from, and an optional note. A line under it says their feelings come first.",trade:"One more step when students log in, though they can close it."}],
+   shots:[["sq/new-mood","The check-in: happy, excited, angry, sad, scared or calm."]],
+   comps:[["sq/cp-feel","J03","Feeling check-in on desktop"],["sq/cp-feel-m","J03","On mobile, as its own page",1]]},"ch3-sq","Wellbeing"],
+  ["sqch",{n:"Chapter 4",k:"Decision 07 and what was finalized",c:"#7a6e8c",num:"4",q:"How do you keep every screen looking like one product?",mk:"Every old screen looked a little different. So I built one design system first and drew every screen from it: 38 component families, for four screen sizes from 1920px desktop to 402px mobile.",
+   decs:[{n:"Decision 07",h:"How do you stop the visuals changing from screen to screen?",opts:"Patch the old screens · build a new design system",chose:"A new system: one green (#34D874), Outfit and Inter for type, a 4px spacing scale, and every component in every state, from buttons to badges and streak cards.",trade:"Every screen had to be rebuilt on it."}],
+   fam:[["Shell","8","Side menu, header, buttons, tabs, tags"],["Dashboard","8","Money card, bills, jobs, goals, rankings, streak"],["Money","7","Accounts, charts, transfers, savings"],["Jobs and wellbeing","4","Job browser, application, check-in"],["Rewards","5","Streak calendar, badges, notifications"],["Shop and avatar","6","Products, cart, checkout, avatar"]],
+   comps:[["sq/cp-amt","M05","Amount entry",1],["sq/cp-avatar","C05","Avatar customizer"]],
+   more:{h:"More from the system",d:"Buttons and fields in every state, and the whole system on one page",
+    shots:[["sq/ds-buttons","Buttons and form fields in every size and state."],["sq/ds-all","The whole system: colour, type, spacing, components, layouts and guidelines."]]}},"ch4-sq","Design system"]]),
  S("impact","03","Impact","What was delivered",[
   ["nums",[["40","badges in 8 groups"],["25","school jobs"],["6","moods in the check-in"],["3","screen sizes: desktop, iPad, mobile"]]],
   ["p","Squirrel got a design system and a student app where every part of the game points back to a money habit: badges for saving and paying bills, a salary from a real school job, and rankings that show everyone their next step."]])],
@@ -3244,7 +3309,7 @@ const COVER=id=>MOCK[id]?`mock/${id}-cover`:(OWN[id]||null);
 const HERO=id=>MOCK[id]?`mock/${id}-hero`:null;
 const BOARD=new Set(["zb/v3-ia","zb/v4-modules-stages","25-66","25-412","25-455","26-194","8-40","25-299","6-61","43-355-r","70-68","25-270","26-56"]);
 const TABLET=new Set(["8-102"]);
-const BARE=new Set(["sq/c-rank","sq/b-rank","sq/b-learn","sq/b-jobs"]);
+const BARE=new Set(["sq/ds-badges","sq/c-rank","sq/b-rank","sq/b-learn","sq/b-jobs"]);
 const PHOTO=new Set(["zb/f-team-crit","zb/f-team-handover","zb/f-team-bugbash","zb/f-team-session","zb/f-g2-ai-proto","zb/f-g3-ai-proto"]);
 const SIZE={"zb/f-from":1.78,"zb/f-to":1.67,"zb/f-g2-builder":1.78,"zb/f-g2-gov":1.78,"zb/f-alt-playground":1.78,"zb/f-alt-mcp-settings":1.78,"zb/f-alt-crew-canvas":1.78,"zb/f-alt-builder":1.78,"zb/f-g3-integrations":1.67,"zb/f-g3-policies":1.78,"zb/f-g3-deployments":1.67,"zb/v3-builder": 1.78, "zb/v3-configure-bot": 1.01, "zb/v3-control-tower": 1.64, "zb/v3-crew-canvas": 1.78, "zb/v3-ia": 2.74, "zb/v3-import-agent": 1.78, "zb/v3-prompt-manager": 1.78, "zb/v3-test-crew": 1.78, "zb/v4-builder-v0": 1.78, "zb/v4-builder-v1": 1.78, "zb/v4-builder-v2": 1.78, "zb/v4-builder-v3": 1.78, "zb/v4-compliance": 1.78, "zb/v4-dashboard": 1.78, "zb/v4-dataset-builder": 1.78, "zb/v4-design-identity": 1.19, "zb/v4-github": 1.78, "zb/v4-gov-solution": 1.78, "zb/v4-interview-data": 1.78, "zb/v4-modules-stages": 1.58, "zb/v5-ask-connection": 1.67, "zb/v5-computed-policy": 1.78, "zb/v5-editor-sessions": 1.78, "zb/v5-github-unsynced": 1.67, "zb/v5-members": 1.78, "zb/v5-observatory": 1.67, "zb/v5-requests-admin": 1.67, "zb/v5-requests-builder": 1.67, "zb/v5-session-done": 1.78, "zb/v5-toast": 1.67, "zb/v5-violation": 1.78, "70-48": 1.78, "70-68": 2.4, "70-75": 1.78, "70-79": 1.78, "70-84": 1.78, "70-88": 1.64, "70-149": 1.78, "70-170": 1.77, "70-174": 1.77, "70-194": 1.41, "70-199": 1.77, "70-203": 1.77, "71-40": 1.67, "71-44": 1.67, "71-64": 1.67, "71-68": 1.65, "71-85": 1.67, "71-94": 1.78, "88-159": 1.78, "88-164": 1.78, "88-170": 1.78, "86-72": 1.78, "86-76": 1.78, "86-81": 1.78, "88-175": 1.78, "88-179": 1.78, "88-183": 1.78, "87-125": 1.78, "88-188": 1.78, "88-196": 1.78, "88-40": 1.78, "88-44": 2.85, "53-145-r": 1.72, "55-305-r": 2.48, "55-89-r": 1.69, "55-93-r": 1.78, "55-97-r": 1.78, "55-101-r": 3.07, "55-121-r": 3.89, "55-179-r": 3.69, "55-188-r": 2.15, "55-208-r": 3.95, "55-217-r": 1.7, "55-221-r": 1.7, "55-266-r": 3.07, "55-270-r": 3.11, "42-115-r": 2.83, "43-131-r": 1.86, "43-135-r": 1.75, "43-140-r": 3.88, "43-144-r": 1.98, "43-148": 3.9, "43-169-r": 1.78, "43-173-r": 1.78, "43-177-r": 1.78, "43-195-r": 1.78, "43-199-r": 1.78, "43-307-r": 4.78, "43-312-r": 1.78, "43-320-r": 1.78, "43-338-r": 1.77, "43-347-r": 1.78, "43-355-r": 1.56, "25-245": 0.86, "25-270": 1.38, "25-299": 1.95, "25-316": 0.92, "25-333": 0.98, "6-61": 1.88, "6-81": 1.78, "6-98": 1.78, "6-101": 1.78, "6-118": 1.78, "6-121": 1.78, "6-168": 1.78, "25-62": 1.2, "25-66": 1.65, "25-74": 2.61, "25-78": 2.25, "25-99": 0.95, "25-117": 1.58, "25-121": 1.54, "25-138": 1.29, "25-185": 1.02, "25-401": 1.27, "25-412": 1.59, "25-433": 1.43, "25-451": 1.2, "25-455": 1.59, "26-56": 1.38, "26-73": 0.98, "26-137": 1.16, "8-40": 1.73, "8-60": 1.78, "8-76": 1.78, "8-102": 1.33, "26-194": 1.65, "26-205": 0.64, "26-226": 0.79, "26-251": 1.16, "26-308": 1.78, "26-312": 1.78, "26-333": 1.78, "26-351": 1.78, "26-367": 1.0, "27-54": 1.78, "27-58": 1.78, "27-63": 1.78, "27-67": 1.78, "27-141": 0.77, "27-153": 1.78, "27-157": 1.27, "26-459": 1.85, "26-471": 1.77, "26-475": 1.76, "27-225": 1.07, "27-237": 1.78, "27-241": 1.78, "27-309": 2.75, "27-326": 1.4, "27-393": 1.13, "27-401": 0.9, "27-405": 1.57, "27-466": 0.5, "27-474": 0.74};
 const GROUP={zbrain:"agentic",xplr:"agentic","ce-agent":"copilots","mdm-copilot":"copilots","advanced-hunting":"security",cipherstar:"security","watchtower-onboarding":"security",crestos:"tools",loom:"tools",squirrel:"product",chaperone:"product"};
@@ -3562,6 +3627,20 @@ function block(b,pid,sec){
         ${o.route?`<div class="rf"><p class="ch-l">${esc(o.route.h)}</p><div class="rf-b"><div class="rf-src"><span>${ICON.build}</span><b>Builder</b><small>working in a Space</small></div><div class="rf-hd" aria-hidden="true"><span>Wants to</span><span>Decided by</span><span>Seen in</span><span>Status</span></div><ol class="rf-rows">${o.route.rows.map(([q,who,was,where,st])=>`<li class="rf-r rfs-${st.toLowerCase().replace(/ /g,"-")}"><span class="rf-q">${esc(q)}</span><i class="rf-a" aria-hidden="true"></i><span class="rf-w"><b>${esc(who)}</b>${was?`<s>${esc(was)}</s>`:""}</span><i class="rf-a" aria-hidden="true"></i><span class="rf-p">${esc(where)}</span><span class="rf-s"><i></i>${esc(st)}</span></li>`).join("")}</ol></div></div>`:""}
         ${o.more&&o.more.length?`<details class="ch-m"><summary><span>More decisions in ${esc(o.n)}</span><small>${o.more.length} problems, with the options we explored</small></summary><div class="ch-mb">${o.more.map((c,i)=>block(["mdec",c,i+1],pid,null)).join("")}</div></details>`:""}
       </section>`; }
+    case "sqch": { const o=a[0], id=a[1], cap=x=>x.charAt(0).toUpperCase()+x.slice(1);
+      const zb=(f,c,inner)=>`<button class="zoom" type="button" data-src="${IMGHD(f)}" data-cap="${esc(c)}" aria-label="Enlarge: ${esc(c)}">${inner}</button>`;
+      const im=(f,c)=>`<img src="${IMG(f)}" alt="${esc(c)}" loading="lazy" decoding="async">`;
+      const shots=l=>l&&l.length?`<div class="sqc-sg" style="--n:${Math.min(l.length,3)}">${l.map(([f,c])=>`<figure class="sqc-s">${zb(f,c,im(f,c))}<figcaption>${esc(c)}</figcaption></figure>`).join("")}</div>`:"";
+      const comps=l=>l&&l.length?`<div class="sqc-cg">${l.map(([f,k,c,lo])=>`<figure class="sqc-c${lo?" lo":""}">${zb(f,c,im(f,c))}<figcaption><span>${esc(k)}</span>${esc(c)}</figcaption></figure>`).join("")}</div>`:"";
+      const dec=d=>{const op=String(d.opts).split(" · "); return `<div class="ch-row sqc-d"><p class="ch-l">${esc(d.n)}</p><div class="ch-bt"><h5>${esc(d.h)}</h5><ul class="ch-o">${op.map((x,i)=>`<li${i===op.length-1?' class="on"':""}>${esc(cap(x))}</li>`).join("")}</ul><p>${esc(d.chose)}</p><p class="ch-c">Trade-off: ${esc(d.trade)}</p></div></div>`;};
+      return `<section class="ch sqc full rv" id="${id}" style="--g:${o.c}">
+        <header class="ch-h" data-num="${esc(o.num)}"><p class="ch-k"><b>${esc(o.n)}</b><span>${esc(o.k)}</span></p><h4>${esc(o.q)}</h4><p class="ch-mk">${esc(o.mk)}</p></header>
+        <div class="sqc-ds">${o.decs.map(dec).join("")}</div>
+        ${o.fam?`<div class="sqc-blk"><p class="ch-l">The six families</p><ul class="ch-br sqc-fam">${o.fam.map(([h,n,d])=>`<li><b>${esc(h)} <i>${esc(n)}</i></b>${esc(d)}</li>`).join("")}</ul></div>`:""}
+        ${o.shots?`<div class="sqc-blk"><p class="ch-l">The finished screen${o.shots.length>1?"s":""}</p>${shots(o.shots)}</div>`:""}
+        ${o.comps?`<div class="sqc-blk"><p class="ch-l">Components</p>${comps(o.comps)}</div>`:""}
+        ${o.more?`<details class="ch-m"><summary><span>${esc(o.more.h)}</span><small>${esc(o.more.d)}</small></summary><div class="ch-mb sqc-mb">${shots(o.more.shots)}${comps(o.more.comps)}</div></details>`:""}
+      </section>`; }
     case "mdec": { const c=a[0], k=a[1]||1;
       const tn=(x,fin)=>`<button class="zoom md-tn${fin?" fin":""}" type="button" data-src="${IMG(x[0])}" data-cap="${esc(x[1])}" aria-label="Enlarge: ${esc(x[1])}" title="${esc((fin?"Shipped: ":"Explored: ")+x[1])}"><img src="${IMG(x[0])}" alt="${esc(x[1])}" loading="lazy" decoding="async"></button>`;
       return `<article class="md-c"><header class="md-h"><small>Problem ${k}</small><h6>${esc(c.h)}</h6><p>${esc(c.p)} <span>Built: ${esc(c.f)}</span></p></header>
@@ -3826,7 +3905,7 @@ function aboutPage(){
 function snapHTML(p){
   if(p.v2&&p.snap.gens){ return `<div class="gsnap gq">${p.snap.gens.map(([g,y,q,bet,res],i)=>`<a class="gs-c rv" style="--g:${["#7a6e8c","#a46b4e","#b8862f"][i]}" href="#${p.id}" data-jump="g${i+1}-zb" aria-label="${g}: go to chapter"><small>${g} · ${y}</small><p class="gq-q">${esc(q)}</p><dl><div><dt>Bet</dt><dd>${esc(bet)}</dd></div><div><dt>Result</dt><dd>${esc(res)}</dd></div></dl></a>`).join("")}</div>`; }
   if(p.v2){ const s=p.snap, c=(id,num,name,inner)=>`<a class="gs-c rv" href="#${p.id}" data-jump="${id}" aria-label="${name}: go to section"><small>${num} · ${name}</small>${inner}</a>`;
-   return `<div class="gsnap">${c("identify","01","Identify",`<p>${esc(s.identify.p)}</p>`)}${c("iterate","02","Iterate",`<ol>${s.iterate.l.map(([n,t])=>`<li><b>${esc(n)}</b> ${esc(t)}</li>`).join("")}</ol>`)}${c("impact","03","Impact",`<dl>${s.impact.n.map(([n,l])=>`<div><dt>${esc(n)}</dt><dd>${esc(l)}</dd></div>`).join("")}</dl>`)}</div>`; }
+   return `<div class="gsnap">${c("identify","01","Identify",`<p>${esc(s.identify.p)}</p>`)}${c("iterate","02","Iterate",`<ol>${s.iterate.l.map(([n,t,d])=>`<li><b>${esc(n)}</b> <span>${esc(t)}${d?`<small>${esc(d)}</small>`:""}</span></li>`).join("")}</ol>`)}${c("impact",(p.secs.find(x=>x.id==="impact")||{}).num||"03","Impact",`<dl>${s.impact.n.map(([n,l])=>`<div><dt>${esc(n)}</dt><dd>${esc(l)}</dd></div>`).join("")}</dl>`)}</div>`; }
   const s=p.snap, go=n=>`<span class="sn-go">Go to ${n} <i aria-hidden="true">→</i></span>`;
   const col=(id,num,name,k,inner)=>`<a class="sn-c rv" href="#${p.id}" data-jump="${id}" aria-label="${name}: go to section"><header><small>${num}</small><h4>${name}</h4></header><p class="sn-k">${k}</p>${inner}${go(name)}</a>`;
   return `<div class="snap">
@@ -3846,7 +3925,7 @@ function casePage(p){
   const secs=p.secs.map(s=>({...s,body:s.body.map((b,k)=>b[0]==="h3"?["h3",b[1],b[2]||`${s.id}-${k}`,b[3]]:b)}));
   const toc=[];
   if(STATS[p.id]||p.ov) toc.push({id:"overview",label:"Overview",n:"",kids:[]});
-  secs.forEach(s=>toc.push({id:s.id,label:s.title,n:s.num,kids:s.body.filter(b=>b[0]==="h3"||b[0]==="genhead"||b[0]==="chapter").map(b=>({id:b[2],label:b[3]||b[1].replace(/^[A-C] · /,"")}))}));
+  secs.forEach(s=>toc.push({id:s.id,label:s.title,n:s.num,kids:s.body.filter(b=>b[0]==="h3"||b[0]==="genhead"||b[0]==="chapter"||b[0]==="sqch").map(b=>({id:b[2],label:b[3]||b[1].replace(/^[A-C] · /,"")}))}));
   if(p.refl) toc.push({id:"reflection",label:"Reflection",n:"",kids:[]});
   return `<article class="cs wrap${p.v2?" v2":""} p-${p.id}">
    <div class="crumb"><a href="#top">Home</a><i></i><a href="#work">Work</a><span class="cb-x"><i></i>${esc(p.cat||"")}</span>${STATUS[p.id]?`<i></i><b class="ok">${STATUS[p.id]}</b>`:""}${mins>2?`<i></i>${mins} min read · 1 min skim`:""}</div>
