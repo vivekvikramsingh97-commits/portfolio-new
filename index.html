@@ -1882,6 +1882,865 @@ body{font-family:var(--font-body);font-weight:400;letter-spacing:var(--ls-body);
 [data-theme="light"] .hero{background:#FFFFFF!important}
 [data-theme="light"] .hero .hl h1{text-shadow:0 0 22px #fff,0 0 8px #fff!important}
 [data-theme="light"] .hero .hb-l{text-shadow:0 0 12px #fff!important}
+
+/* ZBrain case: from → to, market context, problem chapters */
+.ft{display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);gap:16px;align-items:center}
+.ft-c{display:grid;gap:10px;min-width:0}
+.ft-c .fig{margin:0}
+.ft-k{margin:0;font-size:13px;color:var(--ink3);font-weight:500}
+.ft-b .ft-k{color:var(--ink)}
+.ft-ar{width:44px;height:44px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;color:var(--ink);margin-top:-40px}
+.ft-ar svg{width:14px;height:14px}
+.ft-l{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink)}
+.cs .cmain .flow>.ft+.ft-l{margin-top:var(--s-4)}
+.ft-l li{position:relative;padding:18px 16px 0 0;display:grid;gap:4px}
+.ft-l li::before{content:"";position:absolute;left:0;top:-5px;width:9px;height:9px;border-radius:50%;background:var(--ground);border:1.3px solid var(--ink)}
+.ft-l li.on::before{background:var(--ink)}
+.ft-l b{font-family:var(--font-display);font-weight:600;font-size:20px;letter-spacing:-.01em}
+.ft-l span{font-size:15px;line-height:1.4;color:var(--ink2)}
+@media (max-width:899px){.ft{grid-template-columns:1fr;gap:20px}.ft-ar{margin:0 auto;transform:rotate(90deg)}.ft-l{grid-template-columns:1fr 1fr;row-gap:24px}}
+.cx{border:1px solid color-mix(in srgb,var(--ink) 10%,transparent);border-radius:16px;padding:22px 24px 8px;background:color-mix(in srgb,var(--ink) 2%,var(--ground))}
+.cx header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;padding-bottom:14px}
+.cx header p{margin:0;font-size:17px;font-weight:500;color:var(--ink)}
+.cx header small{font-size:13px;color:var(--ink3)}
+.cx ol{list-style:none;margin:0;padding:0}
+.cx li{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,6fr) minmax(0,2.4fr);gap:20px;align-items:baseline;padding:14px 0;border-top:1px solid var(--rule)}
+.cx li b{font-size:15px;font-weight:500;color:var(--ink);line-height:1.35}
+.cx li span{font-size:15px;line-height:1.5;color:var(--ink2)}
+.cx li em{font-style:normal;font-size:13px;font-weight:500;color:var(--ink);display:inline-flex;gap:6px;align-items:center;justify-self:start;padding:4px 10px;border-radius:99px;background:color-mix(in srgb,var(--ink) 6%,transparent);white-space:nowrap}
+.cx li em svg{width:11px;height:11px}
+@media (max-width:760px){.cx{padding:18px 16px 4px}.cx li{grid-template-columns:1fr;gap:6px}}
+.pb{padding-top:var(--s-3);border-top:2px solid var(--ink);display:grid;gap:12px;scroll-margin-top:calc(var(--navh) + 24px)}
+.pb-n{margin:0;font-size:13px;font-weight:500;color:var(--ink3)}
+.pb h4{margin:0;font-family:var(--font-display);font-weight:600;font-size:clamp(24px,2.25vw,32px);line-height:1.12;letter-spacing:-.015em}
+.pb-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:6px}
+.pb-g>div{display:grid;gap:6px;align-content:start;padding:16px 18px;border-radius:12px;background:color-mix(in srgb,var(--ink) 3%,transparent)}
+.pb-g>div+div{background:color-mix(in srgb,var(--ink) 7%,transparent)}
+.pb-g small{font-size:13px;font-weight:500;color:var(--ink3)}
+.pb-g p{margin:0;font-size:16px;line-height:1.5;color:var(--ink)}
+@media (max-width:760px){.pb-g{grid-template-columns:1fr}}
+.cs .cmain .flow>.pb{margin-top:var(--s-7)}
+.cs .cmain .flow>.pb+*{margin-top:var(--s-4)}
+.cs .cmain .flow>.b-h3+.pb{margin-top:var(--s-5)}
+.pain-l{margin:0;padding-left:16px;display:grid;gap:4px}
+.zc-q{display:block;margin-top:12px;font-size:14px;line-height:1.45;font-style:italic;color:var(--ink2);quotes:"“" "”"}
+.zc-q::before{content:open-quote}.zc-q::after{content:close-quote}
+
+/* generation chapters, problem grid, problem cards */
+.gh{position:relative;overflow:hidden;border-radius:28px;background:#131313;color:#F2F2F2;padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:end;scroll-margin-top:calc(var(--navh) + 24px);isolation:isolate}
+.gh::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 90% at 100% 0%,rgba(120,140,255,.22),transparent 60%),radial-gradient(50% 70% at 0% 100%,rgba(80,200,190,.14),transparent 60%)}
+[data-theme="dark"] .gh{background:#1E1E1E}
+.gh-n{font-family:var(--font-display);font-weight:600;font-size:clamp(96px,13vw,190px);line-height:.78;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.2px rgba(242,242,242,.55)}
+.gh-t{display:grid;gap:10px;min-width:0}
+.gh-k{margin:0;font-size:13px;font-weight:500;color:rgba(242,242,242,.6)}
+.gh h3{margin:0;font-family:var(--font-display);font-weight:600;font-size:clamp(30px,3.4vw,48px);line-height:1.04;letter-spacing:-.022em;color:#fff}
+.gh-p{margin:0;font-size:17px;line-height:1.45;color:rgba(242,242,242,.78);max-width:46ch}
+.gh-m{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.gh-m li{font-size:13px;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.08);color:rgba(242,242,242,.85)}
+.gh-s{grid-column:1/-1;list-style:none;margin:8px 0 0;padding:16px 0 0;border-top:1px solid rgba(255,255,255,.14);display:flex;gap:28px;flex-wrap:wrap}
+.gh-s li{font-size:13px;color:rgba(242,242,242,.45);position:relative;padding-left:14px}
+.gh-s li::before{content:"";position:absolute;left:0;top:.45em;width:6px;height:6px;border-radius:50%;background:currentColor}
+.gh-s li.on{color:#fff}
+@media (max-width:760px){.gh{grid-template-columns:1fr;border-radius:20px}.gh-n{font-size:96px}}
+.cs .cmain .flow>.gh{margin-top:var(--s-7)}
+.cs .cmain .flow>.gh+*{margin-top:var(--s-5)}
+.cs .cmain .flow>.gh.gh-lite{margin-top:var(--s-6)}
+.gh.gh-lite{background:color-mix(in srgb,var(--ink) 4%,var(--ground));color:var(--ink);grid-template-columns:auto minmax(0,1fr)}
+.gh.gh-lite::after{display:none}
+.gh.gh-lite .gh-n{-webkit-text-stroke-color:color-mix(in srgb,var(--ink) 30%,transparent);font-size:clamp(64px,8vw,110px)}
+.gh.gh-lite h3{color:var(--ink);font-size:clamp(24px,2.4vw,32px)}.gh.gh-lite .gh-k{color:var(--ink3)}.gh.gh-lite .gh-p{color:var(--ink2)}
+/* problem grid */
+.pg2-h{margin:0 0 16px;font-size:15px;font-weight:500;color:var(--ink2)}
+.pg2-l{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:12px}
+@media (max-width:1099px){.pg2-l{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:599px){.pg2-l{grid-template-columns:1fr}}
+.pg2-l a{position:relative;height:100%;box-sizing:border-box;display:flex;flex-direction:column;gap:10px;padding:20px 20px 18px;border-radius:20px;background:color-mix(in srgb,var(--ink) 3.5%,var(--ground));text-decoration:none;color:inherit;transition:background .35s var(--ease),transform .45s var(--ease),box-shadow .45s var(--ease)}
+.pg2-l a:hover{background:var(--ground);transform:translateY(-3px);box-shadow:0 24px 50px -28px rgba(0,0,0,.3),0 0 0 1px color-mix(in srgb,var(--ink) 10%,transparent)}
+.pg2-i{font-family:var(--font-display);font-weight:600;font-size:30px;line-height:1;letter-spacing:-.03em;color:color-mix(in srgb,var(--ink) 22%,transparent)}
+.pg2-l b{font-family:var(--font-display);font-weight:600;font-size:19px;line-height:1.15;letter-spacing:-.012em}
+.pg2-w{font-size:14px;line-height:1.45;color:var(--ink2)}
+.pg2-f{margin-top:auto;padding-top:12px;display:flex;gap:8px;align-items:center;font-size:14px;font-weight:500;color:var(--ink)}
+.pg2-f i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--ground);display:grid;place-items:center;transition:transform .35s var(--ease)}
+.pg2-f svg{width:10px;height:10px}
+.pg2-l a:hover .pg2-f i{transform:translateX(3px)}
+/* problem card */
+.pc2{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(24px,3.5vw,56px);padding:clamp(22px,3vw,44px);border-radius:28px;background:color-mix(in srgb,var(--ink) 3%,var(--ground));scroll-margin-top:calc(var(--navh) + 24px)}
+.pc2-l{display:flex;flex-direction:column;gap:16px;min-width:0}
+@media (min-width:1100px){.pc2-l{position:sticky;top:calc(var(--navh) + 32px);align-self:start}}
+.pc2-n{margin:0;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:500;color:var(--ink3)}
+.pc2-n span{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--ground);display:grid;place-items:center;font-size:13px}
+.pc2-l h4{margin:0;font-family:var(--font-display);font-weight:600;font-size:clamp(26px,2.4vw,34px);line-height:1.08;letter-spacing:-.02em}
+.pc2-s{margin:4px 0 0;display:grid;gap:14px}
+.pc2-s div{display:grid;gap:3px;padding-left:14px;border-left:2px solid color-mix(in srgb,var(--ink) 12%,transparent)}
+.pc2-s dt{font-size:13px;font-weight:500;color:var(--ink3)}
+.pc2-s dd{margin:0;font-size:15px;line-height:1.5;color:var(--ink2)}
+.pc2-s .pc2-fx{border-left-color:var(--ink)}
+.pc2-s .pc2-fx dd{color:var(--ink);font-weight:500}
+.pc2-r{display:grid;gap:26px;align-content:start;min-width:0}
+.pc2-ds{display:grid;gap:12px}
+.pc2-d{display:grid;gap:12px;padding:20px 22px;border-radius:18px;background:var(--ground);box-shadow:0 1px 0 color-mix(in srgb,var(--ink) 6%,transparent),0 14px 30px -24px rgba(0,0,0,.25)}
+.pc2-q{margin:0;font-size:17px;font-weight:500;line-height:1.3;color:var(--ink)}
+.pc2-o{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.pc2-o li{display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:1.3;padding:8px 14px;border-radius:99px;color:var(--ink3);background:color-mix(in srgb,var(--ink) 4%,transparent);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ink) 25%,transparent)}
+.pc2-o li.on{background:var(--ink);color:var(--ground);text-decoration:none;font-weight:500}
+.pc2-o svg,.pc2-c svg{width:12px;height:12px;flex:none}
+.pc2-c{margin:0;display:flex;gap:8px;align-items:baseline;font-size:15px;line-height:1.45;font-weight:500;color:var(--ink)}
+.pc2-c svg{transform:translateY(1px)}
+.pc2-tr{margin:0;font-size:14px;line-height:1.45;color:var(--ink2)}
+.pc2-tr span{font-size:13px;font-weight:500;color:var(--ink3);margin-right:8px}
+.pc2-xh{margin:0 0 12px;font-size:13px;font-weight:500;color:var(--ink3)}
+.pc2-xr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:14px;align-items:start}
+.pc2-xr:has(.pc2-xf:only-child){grid-template-columns:1fr}
+.pc2-xs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.pc2-xs li:only-child{grid-column:1/-1}
+.pc2-xf{list-style:none;margin:0;padding:0}
+.pc2-t{all:unset;box-sizing:border-box;cursor:zoom-in;display:grid;gap:8px;width:100%}
+.pc2-im{display:block;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:var(--ground);box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent)}
+.pc2-im img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .6s var(--ease);opacity:.9}
+.pc2-xs .pc2-im img{filter:saturate(.6)}
+.pc2-t:hover .pc2-im img{transform:scale(1.04);opacity:1;filter:none}
+.pc2-xf .pc2-im{border-radius:16px;box-shadow:0 0 0 2px var(--ink),0 24px 40px -26px rgba(0,0,0,.35)}
+.pc2-xf .pc2-im img{opacity:1}
+.pc2-tl{font-size:13px;line-height:1.35;color:var(--ink3)}
+.pc2-tl b{display:inline-block;margin-right:8px;font-size:13px;font-weight:500;padding:2px 8px;border-radius:99px;background:var(--ink);color:var(--ground)}
+.pc2-xf .pc2-tl{color:var(--ink)}
+.pc2-t:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:12px}
+@media (max-width:1099px){.pc2{grid-template-columns:1fr}}
+@media (max-width:599px){.pc2{border-radius:20px;padding:20px 16px}.pc2-xr{grid-template-columns:1fr}.pc2-d{padding:16px}}
+.cs .cmain .flow>.pc2{margin-top:var(--s-6)}
+.cs .cmain .flow>.pg2+.pc2{margin-top:var(--s-5)}
+
+/* ===== case study v2 (ZBrain): one type scale, three clear levels ===== */
+.v2{--x1:clamp(40px,4.4vw,60px);--x2:clamp(28px,2.6vw,36px);--x3:clamp(20px,1.7vw,24px);--x4:17px;--x5:15px;--x6:13px}
+.v2 .crumb{font-size:var(--x6)}
+.v2 h1{font-size:var(--x1)}
+.v2 .tagline{font-size:var(--x3)}
+.v2 .cintro .stmt.lede{font-size:var(--x3);line-height:1.35}
+.v2 .cmeta dt{font-size:var(--x6)}.v2 .cmeta dd{font-size:var(--x5)}
+/* overview */
+.v2 .cwhat h4{font-size:var(--x6)}
+.v2 .cwhat p{font-size:var(--x3);line-height:1.35}
+.v2 .snap{border-top:0;border-bottom:0;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.v2 .sn-c{padding:22px!important;border-radius:20px;background:color-mix(in srgb,var(--ink) 3%,var(--ground));border:0!important}
+.v2 .sn-c:hover{background:color-mix(in srgb,var(--ink) 6%,var(--ground))}
+.v2 .sn-c h4{font-size:var(--x3)}
+.v2 .sn-k,.v2 .sn-c header small,.v2 .sn-n dd,.v2 .sn-go{font-size:var(--x6)}
+.v2 .sn-p,.v2 .sn-l li,.v2 .sn-g p,.v2 .sn-g span{font-size:var(--x5)}
+.v2 .sn-g b{font-size:var(--x4)}
+.v2 .sn-n dt{font-size:var(--x2)}
+@media (max-width:899px){.v2 .snap{grid-template-columns:1fr}}
+/* level 1: parts */
+.cs.v2 .csec{margin-top:clamp(140px,14vw,220px)}
+.cs.v2 .cmain .csec-h{border-top:0;padding-top:0;gap:14px}
+.v2 .csec-h .lbl{display:inline-flex;align-self:start;justify-self:start;gap:8px;align-items:center;font-size:var(--x6);font-weight:500;color:var(--ink);padding:6px 14px 6px 6px;border-radius:99px;background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.v2 .csec-h .lbl small{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--ground)!important;font-size:13px}
+.v2 .csec-h .stmt{font-size:var(--x1);line-height:1.02;letter-spacing:-.03em;max-width:16em}
+.act-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.act-nav a{font-size:var(--x6);font-weight:500;color:var(--ink2);padding:7px 14px;border-radius:99px;border:1px solid color-mix(in srgb,var(--ink) 14%,transparent);text-decoration:none;transition:background .25s,color .25s,border-color .25s}
+.act-nav a:hover{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.cs.v2 .cmain .csec-h+.flow>:first-child{margin-top:var(--s-6)}
+/* level 2: subsections and chapters */
+.cs.v2 .cmain .b-h3,.cs.v2 .cmain .b-h3.full{border-top:0;padding-top:0;font-size:var(--x2);line-height:1.1;letter-spacing:-.02em}
+.cs.v2 .cmain .flow>.b-h3{margin-top:var(--s-7)}
+.cs.v2 .cmain .flow>.b-h3+*{margin-top:var(--s-4)}
+.v2 .b-h4{font-size:var(--x4);font-weight:500}
+.cs.v2 .cmain .flow>.b-h4{margin-top:var(--s-5)}
+.cs.v2 .cmain .flow>.b-h4+*{margin-top:var(--s-3)}
+.v2 .gh h3{font-size:var(--x2)}
+.v2 .gh-p{font-size:var(--x4)}
+.v2 .gh-k,.v2 .gh-m li,.v2 .gh-s li{font-size:var(--x6)}
+.cs.v2 .cmain .flow>.gh{margin-top:var(--s-7)}
+.cs.v2 .cmain .flow>.gh.gh-lite{margin-top:var(--s-4)}
+.cs.v2 .cmain .flow>.gh+*{margin-top:var(--s-4)}
+/* body text */
+.v2 .b-p{font-size:var(--x4)}
+.v2 .b-note,.v2 .fig figcaption,.v2 .pg2-h,.v2 .pc2-xh{font-size:var(--x6)}
+/* level 3: one card style everywhere */
+.v2 .zc{gap:12px!important}
+.v2 .zc .zc-i,.v2 .zc.zc-flow .zc-i{border:0!important;border-radius:20px!important;background:color-mix(in srgb,var(--ink) 3%,var(--ground))!important;padding:22px!important;box-shadow:none!important;transform:none!important}
+.v2 .zc .zc-i:hover{background:color-mix(in srgb,var(--ink) 5%,var(--ground))!important}
+.v2 .zc-i h5{font-size:var(--x4);font-weight:500;line-height:1.3}
+.v2 .zc-i p{font-size:var(--x5)}
+.v2 .zc-i small,.v2 .zc-i em{font-size:var(--x6)}
+.v2 .zc-i.big p{font-family:var(--font-display);font-weight:600;font-size:var(--x3);line-height:1.25;letter-spacing:-.01em;color:var(--ink)}
+.v2 .zc-ic{border:0!important;background:var(--ground)!important;border-radius:12px}
+.v2 .zc .zc-i:hover .zc-ic{background:var(--ink)!important;color:var(--ground)!important}
+.v2 .zc-i .pain{border-radius:12px!important;background:var(--ground)!important}
+.v2 .zc-i .pain,.v2 .zc-q{font-size:var(--x6)}
+.v2 .zc-ho{background:var(--ground)!important;border:0!important;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 10%,transparent)}
+.v2 .pg2-l b{font-size:var(--x4)!important;font-weight:600}
+.v2 .pg2-i{font-size:var(--x2)}
+.v2 .pg2-w,.v2 .pg2-f{font-size:var(--x5)}
+.v2 .pc2-l h4{font-size:var(--x3);line-height:1.15}
+.v2 .pc2-q{font-size:var(--x4)}
+.v2 .pc2-s dd,.v2 .pc2-c{font-size:var(--x5)}
+.v2 .pc2-o li,.v2 .pc2-tr{font-size:var(--x6)}
+.v2 .pc2-s dt,.v2 .pc2-tl{font-size:var(--x6)}
+/* video walkthroughs inside a problem card */
+.v2 .pc2-r .dm{margin:0}
+.v2 .pc2-r .dm-h{margin-bottom:12px;gap:4px}
+.v2 .pc2-r .dm-h small{font-size:var(--x6)}
+.v2 .pc2-r .dm-h h5{font-size:var(--x4)}
+.v2 .pc2-r .dm-h p{font-size:var(--x5);margin-top:2px}
+.v2 .pc2-r .dm-v.stage{padding:0;background:none!important;border-radius:16px}
+.v2 .pc2-r .dm-v .win{border-radius:14px;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent),0 20px 40px -30px rgba(0,0,0,.35)}
+.v2 .pc2-r .dm-ch{margin-top:12px;gap:10px}
+.v2 .pc2-r .dm-ch span{font-size:var(--x6)}
+.v2 .pc2-r .dm-ch small{display:none}
+/* kv, tables, numbers */
+.v2 .kv{font-size:var(--x5)}
+.v2 .kv div{grid-template-columns:160px minmax(0,1fr)}
+.v2 .kv dt{font-size:var(--x6)}
+.v2 .b-tbl table{font-size:var(--x5)}
+.v2 .b-tbl th{font-size:var(--x6)}
+.v2 .nums{gap:12px}
+.v2 .nums div{padding:22px 22px 20px!important;border-radius:20px;background:color-mix(in srgb,var(--ink) 3%,var(--ground))}
+.v2 .nums div::before{display:none}
+.v2 .nums dt{font-size:var(--x1)!important;letter-spacing:-.04em}
+.v2 .nums dd{font-size:var(--x5);max-width:none}
+.v2 .nums dd small{font-size:var(--x6)}
+.v2 .proof.nums{grid-template-columns:repeat(var(--nn,4),minmax(0,1fr))}
+@media (max-width:760px){.v2 .proof.nums{grid-template-columns:1fr 1fr}}
+/* from → to */
+.v2 .ft-l b{font-size:var(--x4)}.v2 .ft-l span,.v2 .ft-k{font-size:var(--x6)}
+/* loop */
+.v2 .lp-grid b{font-size:var(--x4)}.v2 .lp-grid span{font-size:var(--x5)}
+/* reflection and sources */
+.cs.v2 .refl{margin-top:clamp(140px,14vw,220px);border-top:0;padding:clamp(28px,4vw,56px);border-radius:28px;background:#131313;color:#F2F2F2}
+.v2 .refl .lbl{color:rgba(242,242,242,.6);font-size:var(--x6)}
+.v2 .refl .stmt{font-size:var(--x2);color:#fff;max-width:22em}
+.v2 .srcs{font-size:var(--x6)}
+
+.v2 .pc2-xr{grid-template-columns:1fr!important;gap:12px}
+.v2 .pc2-xs{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));order:0}
+.v2 .pc2-xs li:only-child{grid-column:auto;max-width:50%}
+.v2 .pc2-xf{order:1}
+.v2 .pc2-xf .pc2-im{aspect-ratio:16/9}
+.v2 .pc2-r{gap:22px}
+
+@media (max-width:760px){
+ .v2 .pc2-r .dm-ch{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;scrollbar-width:none;margin-top:10px}
+ .v2 .pc2-r .dm-ch::-webkit-scrollbar{display:none}
+ .v2 .pc2-r .dm-ch li{border:0!important;flex:none}
+ .v2 .pc2-r .dm-ch button{display:block;padding:6px 12px;border-radius:99px;background:color-mix(in srgb,var(--ink) 5%,transparent)}
+ .v2 .pc2-r .dm-ch li.on button{background:var(--ink)}
+ .v2 .pc2-r .dm-ch li.on span{color:var(--ground)}
+ .v2 .pc2-r .dm-ch u,.v2 .pc2-r .dm-ch small{display:none!important}
+ .v2 .gh.gh-lite{grid-template-columns:1fr}.v2 .gh.gh-lite .gh-n{font-size:64px}
+}
+
+.v2 .pc2,.v2 .pc2-r,.v2 .pc2-r>*,.v2 .pc2-r .dm{min-width:0;max-width:100%}
+.v2 .pc2-xs{grid-template-columns:repeat(auto-fit,minmax(min(120px,100%),1fr))}
+@media (max-width:760px){
+ .v2 .pc2-r .dm-ch{width:100%;max-width:100%}
+ .v2 .pc2-r .dm-ch li{width:auto}
+ .v2 .pc2-r .dm-ch button{width:auto;white-space:nowrap;position:static}
+ .v2 .pc2-r .dm-ch span{grid-row:auto}
+ .v2 .pc2-xs{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .v2 .pc2-xs li:only-child{max-width:none}
+}
+
+/* problem card v3: stacked bands, full-width media */
+.v2 .p3{display:block;padding:0;border-radius:28px;background:color-mix(in srgb,var(--ink) 3%,var(--ground));overflow:hidden}
+.p3-hd{display:flex;gap:16px;align-items:center;padding:clamp(22px,3vw,36px) clamp(20px,3vw,40px)}
+.p3-k{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--ground);display:grid;place-items:center;font:600 18px/1 var(--font-display)}
+.p3-hd p{margin:0 0 2px;font-size:var(--x6);font-weight:500;color:var(--ink3)}
+.p3-hd h4{margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--x2);line-height:1.08;letter-spacing:-.02em}
+.p3-b{padding:clamp(20px,2.6vw,32px) clamp(20px,3vw,40px);border-top:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.p3-b.p3-wide{background:var(--ground)}
+.p3-bh{margin:0 0 18px;display:flex;align-items:center;gap:10px;font-size:var(--x6);font-weight:500;color:var(--ink)}
+.p3-bh i{font-style:normal;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:13px;border:1px solid var(--ink)}
+.p3-s{margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.p3-s div{padding:16px 18px;border-radius:16px;background:var(--ground);display:grid;gap:6px;align-content:start}
+.p3-s dt{font-size:var(--x6);font-weight:500;color:var(--ink3)}
+.p3-s dd{margin:0;font-size:var(--x5);line-height:1.5;color:var(--ink)}
+.p3-s .p3-fx{background:var(--ink)}
+.p3-s .p3-fx dt{color:color-mix(in srgb,var(--ground) 65%,transparent)}
+.p3-s .p3-fx dd{color:var(--ground);font-weight:500}
+.p3-ds{display:grid;gap:10px}
+.p3-d{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:start;padding:16px 18px;border-radius:16px;background:var(--ground)}
+.p3-q{margin:0;display:flex;gap:10px;font-size:var(--x4);font-weight:500;line-height:1.35}
+.p3-q span{flex:none;font-size:var(--x6);color:var(--ink3);padding-top:3px}
+.p3-da{display:grid;gap:10px}
+.v2 .p3 .pc2-o li{padding:6px 12px}
+.v2 .p3 .pc2-tr span{margin-right:6px}
+/* walkthroughs, full card width */
+.p3-v{display:grid;gap:var(--s-5)}
+.v2 .p3-v .dm{margin:0}
+.v2 .p3-v .dm-h{grid-template-columns:minmax(0,1fr);gap:4px;margin-bottom:14px}
+.v2 .p3-v .dm-h small{font-size:var(--x6)}
+.v2 .p3-v .dm-h h5{font-size:var(--x3);font-family:var(--font-display);font-weight:600;letter-spacing:-.012em}
+.v2 .p3-v .dm-h p{font-size:var(--x5);margin-top:2px}
+.v2 .p3-v .dm-v.stage{padding:0;background:none!important;border-radius:16px}
+.v2 .p3-v .dm-v .win{border-radius:16px;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 10%,transparent),0 30px 60px -40px rgba(0,0,0,.4)}
+.v2 .p3-v .dm-ch{margin-top:14px}
+.v2 .p3-v .dm-ch span{font-size:var(--x6)}
+.v2 .p3-v .dm-ch small{display:block;font-size:var(--x6)}
+/* explorations: bigger row, then a full-width final */
+.p3-xs{list-style:none;margin:0 0 16px;padding:0;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:14px}
+.p3-xf{list-style:none;margin:0;padding:0}
+.v2 .p3 .pc2-im{position:relative;aspect-ratio:16/10;border-radius:12px;background:var(--ground)}
+.v2 .p3 .pc2-im img{object-fit:cover;object-position:top center;opacity:1;filter:none}
+.v2 .p3 .p3-xf .pc2-im{aspect-ratio:auto;border-radius:16px;box-shadow:0 0 0 2px var(--ink),0 30px 60px -40px rgba(0,0,0,.4)}
+.v2 .p3 .p3-xf .pc2-im img{height:auto;object-fit:contain}
+.p3-z{position:absolute;right:8px;bottom:8px;width:28px;height:28px;border-radius:50%;background:rgba(247,247,247,.92);color:#131313;display:grid;place-items:center;font-style:normal;font-size:14px;opacity:0;transition:opacity .25s}
+.pc2-t:hover .p3-z,.pc2-t:focus-visible .p3-z{opacity:1}
+@media (hover:none){.p3-z{opacity:1}}
+.v2 .p3 .pc2-tl{font-size:var(--x6);margin-top:2px}
+@media (max-width:899px){
+ .p3-s{grid-template-columns:1fr}
+ .p3-d{grid-template-columns:1fr;gap:12px}
+ .p3-xs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:599px){.v2 .p3{border-radius:20px}.p3-hd h4{font-size:var(--x3)}}
+
+.v2 .p3 .p3-xf .pc2-im{display:flex;justify-content:center;background:color-mix(in srgb,var(--ink) 3%,var(--ground))}
+.v2 .p3 .p3-xf .pc2-im img{width:auto;max-width:100%;max-height:min(680px,80vh);height:auto}
+
+@media (max-width:760px){
+ .v2 .p3-v .dm-ch{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;scrollbar-width:none;margin-top:10px;width:100%}
+ .v2 .p3-v .dm-ch::-webkit-scrollbar{display:none}
+ .v2 .p3-v .dm-ch li{border:0!important;flex:none;width:auto}
+ .v2 .p3-v .dm-ch button{display:block;width:auto;white-space:nowrap;position:static;padding:6px 12px;border-radius:99px;background:color-mix(in srgb,var(--ink) 5%,transparent)}
+ .v2 .p3-v .dm-ch li.on button{background:var(--ink)}
+ .v2 .p3-v .dm-ch li.on span{color:var(--ground)}
+ .v2 .p3-v .dm-ch u,.v2 .p3-v .dm-ch small{display:none!important}
+ .v2 .p3-v .dm-h h5{font-size:var(--x4)}
+ .p3-b{padding:18px 16px}.p3-hd{padding:20px 16px}
+}
+.v2 .p3,.v2 .p3-b,.v2 .p3-v,.v2 .p3-v .dm{min-width:0;max-width:100%}
+
+/* ===== ZBrain v4: strict hierarchy, linear problem cards ===== */
+.v2{--x1:clamp(44px,5vw,64px);--x2:clamp(26px,2.4vw,32px);--x3:22px;--x4:17px;--x5:15px;--x6:13px}
+/* one display face for levels 1–2 only; everything else in the body face */
+.v2 .p4 h4,.v2 .p4 h5,.v2 .pg2-l b,.v2 .zc-i h5,.v2 .zc-i.big p,.v2 .dm-h h5,.v2 .ft-l b,.v2 .sn-c h4,.v2 .sn-g b,.v2 .b-h4{font-family:var(--font-body)!important}
+.v2 .pg2-i,.v2 .nums dt,.v2 .sn-n dt{font-family:var(--font-display)}
+/* L1 part */
+.v2 .csec-h .stmt{font-size:var(--x1)}
+/* L2: subsection + chapter */
+.cs.v2 .cmain .b-h3,.cs.v2 .cmain .b-h3.full,.v2 .gh h3{font-size:var(--x2)}
+/* L3: problem / card titles */
+.v2 .p4-h h4,.v2 .zc-i.big p{font-size:var(--x3);font-weight:600;letter-spacing:-.012em}
+/* L4: sub-problem, card heads */
+.v2 .p4 h5,.v2 .zc-i h5,.v2 .pg2-l b,.v2 .b-h4,.v2 .dm-h h5,.v2 .sn-c h4{font-size:var(--x4)!important;font-weight:600!important;letter-spacing:-.005em}
+.v2 .sn-c h4{font-family:var(--font-body)!important}
+/* problem card */
+.p4{border-radius:24px;background:color-mix(in srgb,var(--ink) 3%,var(--ground));padding:clamp(22px,3vw,40px);display:grid;gap:clamp(24px,2.6vw,36px);scroll-margin-top:calc(var(--navh) + 24px)}
+.p4-h p{margin:0 0 4px;font-size:var(--x6);font-weight:500;color:var(--ink3)}
+.p4-h h4{margin:0;line-height:1.2}
+.p4-ctx{margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.p4-ctx div{display:grid;gap:4px;align-content:start;padding-top:12px;border-top:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
+.p4-ctx div.on{border-top:2px solid var(--ink)}
+.p4-ctx dt{font-size:var(--x6);color:var(--ink3);font-weight:500}
+.p4-ctx dd{margin:0;font-size:var(--x5);line-height:1.5;color:var(--ink2)}
+.p4-ctx .on dd{color:var(--ink);font-weight:500}
+.p4-s{display:grid;gap:14px;padding:clamp(18px,2vw,24px);border-radius:18px;background:var(--ground)}
+.p4 h5{margin:0;display:flex;gap:10px;align-items:baseline;line-height:1.35}
+.p4 h5 span{flex:none;font-size:var(--x6);font-weight:500;color:var(--ink3);font-variant-numeric:tabular-nums}
+.p4-dec{display:grid;gap:8px;padding-left:34px}
+.p4-o{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.p4-o li{font-size:var(--x6);padding:5px 11px;border-radius:99px;color:var(--ink3);background:color-mix(in srgb,var(--ink) 4%,transparent);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ink) 25%,transparent)}
+.p4-o li.on{background:var(--ink);color:var(--ground);text-decoration:none;font-weight:500}
+.p4-c{margin:0;font-size:var(--x5);font-weight:500;color:var(--ink)}
+.p4-t{margin:0;font-size:var(--x6);color:var(--ink3)}
+/* explored small, final a little bigger, one row */
+.p4-v{display:grid;grid-template-columns:repeat(var(--a),minmax(0,1fr)) minmax(0,1.7fr);gap:14px;align-items:end;margin-top:6px}
+.p4-v[style*="--a:0"]{grid-template-columns:minmax(0,1fr);max-width:62%}
+.p4-f{margin:0;display:grid;gap:8px;min-width:0}
+.p4-f .zoom{display:block}
+.p4-im{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:color-mix(in srgb,var(--ink) 4%,var(--ground));padding:8px;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent)}
+.p4-im img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:6px;box-shadow:0 6px 18px -10px rgba(0,0,0,.25)}
+.p4-f.fin .p4-im{padding:12px;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.p4-f figcaption{font-size:var(--x6);line-height:1.35;color:var(--ink2)}
+.p4-f figcaption span,.p4-f figcaption b{display:block;font-size:13px;font-weight:500;color:var(--ink3)}
+.p4-f figcaption b{color:var(--ink)}
+.p4-w{display:grid;gap:var(--s-4)}
+.p4-wh{margin:0;font-size:var(--x6);font-weight:500;color:var(--ink3)}
+.v2 .p4-w .dm{margin:0}
+.v2 .p4-w .dm-h{grid-template-columns:minmax(0,1fr);gap:2px;margin-bottom:12px}
+.v2 .p4-w .dm-h small{font-size:var(--x6)}
+.v2 .p4-w .dm-h p{font-size:var(--x5);margin-top:2px}
+.v2 .p4-w .dm-v.stage{padding:0;background:none!important;border-radius:16px}
+.v2 .p4-w .dm-v .win{border-radius:16px;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 10%,transparent),0 24px 50px -36px rgba(0,0,0,.4)}
+.v2 .p4-w .dm-ch{margin-top:12px}
+.v2 .p4-w .dm-ch span,.v2 .p4-w .dm-ch small{font-size:var(--x6)}
+.cs.v2 .cmain .flow>.p4{margin-top:var(--s-5)}
+@media (max-width:899px){
+ .p4-ctx{grid-template-columns:1fr;gap:12px}
+ .p4-dec{padding-left:0}
+ .p4-v{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .p4-v .fin{grid-column:1/-1}
+ .p4-v[style*="--a:0"]{max-width:none}
+}
+@media (max-width:760px){
+ .v2 .p4-w .dm-ch{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;scrollbar-width:none;width:100%}
+ .v2 .p4-w .dm-ch li{border:0!important;flex:none;width:auto}
+ .v2 .p4-w .dm-ch button{display:block;width:auto;white-space:nowrap;position:static;padding:6px 12px;border-radius:99px;background:color-mix(in srgb,var(--ink) 5%,transparent)}
+ .v2 .p4-w .dm-ch li.on button{background:var(--ink)}.v2 .p4-w .dm-ch li.on span{color:var(--ground)}
+ .v2 .p4-w .dm-ch u,.v2 .p4-w .dm-ch small{display:none!important}
+ .p4{border-radius:18px;padding:18px 14px}.p4-s{padding:14px}
+}
+.v2 .p4,.v2 .p4-w,.v2 .p4-w .dm{min-width:0;max-width:100%}
+
+.p4-im{aspect-ratio:auto;padding:10px}
+.p4-im img{max-height:240px}
+.p4-f.fin .p4-im img{max-height:400px}
+.p4-v{align-items:start}
+.p4-v[style*="--a:0"]{max-width:none;grid-template-columns:minmax(0,1fr);justify-items:start}
+.p4-v[style*="--a:0"] .p4-f{max-width:min(100%,640px)}
+
+/* generation opener carries its problems */
+.gh-p2{grid-column:1/-1;list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.gh-p2 a{height:100%;box-sizing:border-box;display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:16px;background:rgba(255,255,255,.06);color:#F2F2F2;text-decoration:none;transition:background .3s}
+.gh-p2 a:hover{background:rgba(255,255,255,.12)}
+.gh-p2 i{font-style:normal;font-size:13px;color:rgba(242,242,242,.5)}
+.gh-p2 b{font-family:var(--font-body);font-size:15px;font-weight:600;line-height:1.3;color:#fff}
+.gh-p2 span{font-size:13px;line-height:1.4;color:rgba(242,242,242,.65)}
+.gh-p2 em{margin-top:auto;padding-top:8px;font-style:normal;font-size:13px;font-weight:500;color:#fff;display:flex;gap:6px;align-items:center}
+.gh-p2 em svg{width:10px;height:10px;flex:none}
+.gh .gh-s{display:none}
+/* research voice + flow inside problem cards */
+.p4-q{margin:0;padding:16px 20px;border-radius:16px;background:var(--ground);border-left:3px solid var(--ink)}
+.p4-q p{margin:0;font-size:var(--x4);line-height:1.45;color:var(--ink);font-weight:500}
+.p4-q cite{display:block;margin-top:6px;font-style:normal;font-size:var(--x6);color:var(--ink3)}
+.p4-fl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:0;border-radius:16px;background:var(--ground);overflow:hidden}
+.p4-fl li{position:relative;padding:14px 16px;display:grid;gap:2px;align-content:start}
+.p4-fl li+li{border-left:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
+.p4-fl li+li::before{content:"→";position:absolute;left:-7px;top:13px;font-size:13px;color:var(--ink3);background:var(--ground)}
+.p4-fl b{font-size:var(--x5);font-weight:600}
+.p4-fl span{font-size:var(--x6);color:var(--ink3);line-height:1.35}
+@media (max-width:760px){.p4-fl{grid-template-columns:1fr 1fr}.p4-fl li+li::before{display:none}.p4-fl li{border-left:0!important;border-top:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}}
+.gh-p2{grid-template-columns:repeat(var(--n),minmax(0,1fr))}
+@media (max-width:1099px){.gh-p2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:599px){.gh-p2{grid-template-columns:1fr}}
+
+/* ===== ZBrain v5: one face, argument-led ===== */
+.v2{--font-display:var(--font-body)}
+.v2 h1,.v2 .csec-h .stmt,.v2 .b-h3,.v2 .b-h3 span{font-family:var(--font-body)!important;font-weight:600;letter-spacing:-.03em}
+.v2 h1{font-size:clamp(40px,4.6vw,60px);line-height:1.02;max-width:16em}
+.v2 .csec-h .stmt{font-size:clamp(26px,2.6vw,36px);line-height:1.12;max-width:20em}
+/* diagrams */
+.dg svg{display:block;width:100%;height:auto;overflow:visible}
+.dg .dg-b{fill:var(--ground);stroke:color-mix(in srgb,var(--ink) 18%,transparent);stroke-width:1}
+.dg .dg-c{fill:color-mix(in srgb,var(--ink) 5%,var(--ground));stroke:color-mix(in srgb,var(--ink) 12%,transparent);stroke-width:1}
+.dg .dg-p{fill:color-mix(in srgb,var(--ink) 7%,var(--ground))}
+.dg .dg-k{fill:color-mix(in srgb,var(--ink) 78%,var(--ground))}
+.dg .dg-x{fill:var(--ground);stroke:var(--ink);stroke-width:1.2;stroke-dasharray:4 3}
+.dg .dg-g{fill:color-mix(in srgb,var(--ink) 18%,transparent)}
+.dg .dg-l{fill:none;stroke:var(--ink);stroke-width:1.2}
+.dg .dg-m{fill:none;stroke:var(--ink);stroke-width:2}
+.dg .dg-d{fill:none;stroke:var(--ink3);stroke-width:1.2;stroke-dasharray:3 3}
+.dg .dg-a,.dg .dg-n{fill:var(--ink)}
+.dg text{font-family:var(--font-body);fill:var(--ink)}
+.dg .dg-t{font-size:11px;font-weight:500}
+.dg .dg-h{font-size:11px;font-weight:600}
+.dg .dg-s{font-size:9px;fill:var(--ink2)}
+.dg .dg-tw{font-size:11px;font-weight:600;fill:var(--ground)}
+.dg .dg-sw{font-size:9px;fill:color-mix(in srgb,var(--ground) 75%,transparent)}
+/* call (flip) */
+.fl{border-top:1px solid var(--ink);padding-top:22px;display:grid;gap:22px;scroll-margin-top:calc(var(--navh) + 24px)}
+.fl header p{margin:0 0 6px;font-size:var(--x6);font-weight:500;color:var(--ink3)}
+.fl h4{margin:0;font-family:var(--font-body);font-size:var(--x2);font-weight:600;letter-spacing:-.02em;line-height:1.15}
+.fl-g{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fl-p{margin:0;display:grid;gap:12px}
+.fl-d{border-radius:20px;background:color-mix(in srgb,var(--ink) 3.5%,var(--ground));padding:clamp(16px,2.4vw,32px)}
+.fl-p.is-now .fl-d{background:color-mix(in srgb,var(--ink) 6%,var(--ground))}
+.fl-p figcaption,.hs-f figcaption{display:flex;gap:10px;align-items:center;font-size:var(--x5);font-weight:500;color:var(--ink)}
+.fl-p figcaption span,.hs-f figcaption span{font-size:13px;font-weight:600;letter-spacing:.04em;padding:3px 8px;border-radius:6px;background:color-mix(in srgb,var(--ink) 7%,transparent);color:var(--ink2)}
+.fl-p.is-now figcaption span,.hs-f .is-now figcaption span{background:var(--ink);color:var(--ground)}
+.fl-kv{margin:0;display:grid}
+.fl-kv div{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:24px;padding:14px 0;border-top:1px solid color-mix(in srgb,var(--ink) 10%,transparent)}
+.fl-kv dt{font-size:var(--x5);color:var(--ink3)}
+.fl-kv dd{margin:0;font-size:var(--x5);line-height:1.55;color:var(--ink)}
+.fl-s{margin:0;display:grid;gap:10px;max-width:760px}
+.fl-s .zoom{display:block;border-radius:14px;overflow:hidden;background:color-mix(in srgb,var(--ink) 3%,var(--ground));padding:12px;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent)}
+.fl-s img{display:block;max-width:100%;max-height:360px;width:auto;margin:0 auto;border-radius:6px}
+.fl-s figcaption{font-size:var(--x6);color:var(--ink2)}.fl-s figcaption span{color:var(--ink3);margin-right:8px}
+.cs.v2 .cmain .flow>.fl{margin-top:var(--s-6)}
+.cs.v2 .cmain .flow>.b-p+.fl{margin-top:var(--s-4)}
+/* history */
+.hs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hs-c{border-radius:24px;background:color-mix(in srgb,var(--ink) 3%,var(--ground));padding:clamp(18px,2.4vw,28px);display:grid;gap:10px;align-content:start}
+.hs-g{margin:0;font-size:var(--x6);font-weight:500;color:var(--ink3)}
+.hs-c h4{margin:0;font-family:var(--font-body);font-size:var(--x3);font-weight:600;letter-spacing:-.012em;line-height:1.2}
+.hs-m{margin:0;font-size:var(--x6);color:var(--ink2)}
+.hs-f{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0}
+.hs-f figure{margin:0;display:grid;gap:8px}
+.hs-f .dg{border-radius:14px;background:var(--ground);padding:10px}
+.hs-f figcaption{font-size:var(--x6);align-items:flex-start;line-height:1.35}
+.hs-d{margin:0;font-size:var(--x6);color:var(--ink2);line-height:1.5}
+/* small moments */
+.mo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 16px;min-width:0;max-width:100%}
+.fl-g>*,.hs>*,.mo>*{min-width:0}
+.mo-c{margin:0;display:grid;gap:12px;align-content:start}
+.mo-i{display:flex!important;align-items:center;justify-content:center;aspect-ratio:4/3;border-radius:16px;background:color-mix(in srgb,var(--ink) 4%,var(--ground));padding:16px;overflow:hidden}
+.mo-i img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 10px 24px -14px rgba(0,0,0,.3)}
+.mo-c figcaption{display:grid;gap:3px;font-size:var(--x6);line-height:1.45;color:var(--ink2)}
+.mo-c figcaption small{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink3)}
+.mo-c figcaption b{font-size:var(--x4);font-weight:600;color:var(--ink)}
+@media (max-width:899px){.fl-g,.hs,.hs-f{grid-template-columns:1fr}.fl-kv div{grid-template-columns:1fr;gap:4px}.mo{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.mo{grid-template-columns:1fr}}
+/* v6: review fixes */
+.v2 .csec-h .lbl small{background:color-mix(in srgb,var(--ink) 12%,transparent);color:var(--ink)!important}
+.fl{border-top-color:var(--rule)}
+.fl-p.is-now figcaption span,.hs-fn .is-now dt{background:color-mix(in srgb,var(--ink) 10%,transparent);color:var(--ink)}
+.fl-p.is-now .fl-d{background:color-mix(in srgb,var(--ink) 5%,var(--ground))}
+.dg .dg-k{fill:color-mix(in srgb,var(--ink) 78%,var(--ground))}
+@media (min-width:900px) and (max-width:1199px){.cs.v2 .b-h3.full span,.cs.v2 .b-h3.full small{grid-column:1/-1}.cs.v2 .b-h3.full{grid-template-columns:1fr}}
+@media (max-width:1199px){.toc{margin-top:56px}.toc+*,.cs .toc~.cmain .cov:first-child .cwhat{margin-top:32px}.cs .cwhat{border-top:0;padding-top:0;margin-top:40px}}
+/* glass snapshot */
+.gsnap{position:relative;margin-top:clamp(32px,4vw,56px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:clamp(14px,2vw,22px);border-radius:28px;isolation:isolate;overflow:hidden;
+ background:radial-gradient(60% 90% at 12% 10%,color-mix(in srgb,#8fa8ff 34%,transparent),transparent 70%),radial-gradient(55% 80% at 88% 90%,color-mix(in srgb,#ffb48a 30%,transparent),transparent 70%),radial-gradient(50% 70% at 55% 40%,color-mix(in srgb,#9fe0c8 22%,transparent),transparent 70%),color-mix(in srgb,var(--ink) 3%,var(--ground))}
+.gs-c{all:unset;box-sizing:border-box;cursor:pointer;display:grid;align-content:start;gap:10px;padding:18px 20px;border-radius:18px;background:color-mix(in srgb,var(--ground) 55%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ground) 70%,transparent),0 8px 24px -16px rgba(0,0,0,.25);transition:transform .3s var(--ease),background .3s}
+.gs-c:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--ground) 70%,transparent)}
+.gs-c:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.gs-c small{font-size:13px;font-weight:600;color:var(--ink2);letter-spacing:.02em}
+.gs-c p{margin:0;font-size:15px;line-height:1.45;color:var(--ink)}
+.gs-c ol{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:15px;color:var(--ink)}
+.gs-c ol b{font-weight:600;display:inline-block;min-width:44px}
+.gs-c dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gs-c dt{font-size:30px;font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.gs-c dd{margin:4px 0 0;font-size:13px;line-height:1.35;color:var(--ink2)}
+@media (max-width:899px){.gsnap{grid-template-columns:1fr}}
+/* history with screen */
+.hs{grid-template-columns:1fr;gap:16px}
+.hs-c{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,3vw,40px);align-items:center}
+.hs-t{display:grid;gap:10px;align-content:start}
+.hs-fn{margin:6px 0;display:grid;gap:8px}
+.hs-fn div{display:flex;gap:10px;align-items:baseline;font-size:var(--x5);line-height:1.4}
+.hs-fn dt{flex:none;font-size:13px;font-weight:600;letter-spacing:.04em;padding:3px 8px;border-radius:6px;background:color-mix(in srgb,var(--ink) 6%,transparent);color:var(--ink2)}
+.hs-fn dd{margin:0;color:var(--ink)}
+.hs-s{margin:0}
+.hs-s .zoom{display:block;width:100%;padding:0;border:0;cursor:zoom-in;border-radius:14px;overflow:hidden;background:var(--ground);box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent),0 18px 40px -24px rgba(0,0,0,.35)}
+.hs-s img{display:block;width:100%;height:auto}
+@media (max-width:899px){.hs-c{grid-template-columns:1fr}}
+/* v7: generation chapters */
+.gq .gs-c{gap:8px}.gq-q{font-size:17px!important;font-weight:600;line-height:1.3!important;letter-spacing:-.01em}
+.gq dl{display:grid;gap:6px;grid-template-columns:1fr!important;margin-top:4px}
+.gq dl div{display:flex;gap:8px;align-items:baseline}
+.gq dt{font-size:13px!important;font-weight:600;letter-spacing:.04em;color:var(--ink3)!important;min-width:46px;line-height:1.4!important}
+.gq dd{margin:0!important;font-size:14px!important;color:var(--ink)!important}
+.ch{border-radius:28px;background:color-mix(in srgb,var(--ink) 2.5%,var(--ground));padding:clamp(20px,3.2vw,44px);display:grid;gap:clamp(22px,2.6vw,34px);scroll-margin-top:calc(var(--navh) + 24px);min-width:0}
+.ch>*{min-width:0}
+.cs.v2 .cmain .flow>.ch{margin-top:var(--s-5)}
+.ch-h{display:grid;gap:10px;max-width:46em}
+.ch-k{margin:0;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:var(--x6);color:var(--ink3);align-items:center}
+.ch-k b{font-weight:600;color:var(--ink)}
+.ch-live{font-weight:600;color:var(--ink);padding:2px 8px;border-radius:6px;background:color-mix(in srgb,#2fa36b 16%,transparent)}
+.ch h4{margin:0;font-family:var(--font-body);font-size:var(--x2);font-weight:600;letter-spacing:-.03em;line-height:1.05}
+.ch-mk{margin:0;font-size:var(--x5);line-height:1.55;color:var(--ink2)}
+.ch-l{margin:0;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);display:flex;gap:6px;align-items:center}
+.ch-row{display:grid;align-items:start;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:clamp(14px,2vw,28px);padding-top:18px;border-top:1px solid var(--rule)}
+.ch-br{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.ch-br li{display:grid;gap:3px;align-content:start;padding:12px 14px;border-radius:14px;background:var(--ground);font-size:var(--x6);line-height:1.45;color:var(--ink2)}
+.ch-br b{font-size:var(--x5);font-weight:600;color:var(--ink);line-height:1.3}
+.ch-bt{display:grid;gap:10px}
+.ch-bt h5{margin:0;font-size:var(--x3);font-weight:600;letter-spacing:-.015em;line-height:1.25}
+.ch-bt p{margin:0;font-size:var(--x5);line-height:1.55;color:var(--ink2);max-width:40em}
+.ch-o{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.ch-o li{font-size:var(--x6);padding:4px 10px;border-radius:99px;color:var(--ink3);background:color-mix(in srgb,var(--ink) 4%,transparent);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ink) 22%,transparent)}
+.ch-o li.on{background:color-mix(in srgb,var(--ink) 10%,transparent);color:var(--ink);text-decoration:none;font-weight:600}
+.ch-bt .ch-c{font-size:var(--x6);color:var(--ink3)}
+.ch-v{display:grid;grid-template-columns:repeat(var(--a),minmax(0,2fr)) minmax(0,3fr);gap:12px;align-items:end}
+.ch-f{margin:0;display:grid;gap:8px;min-width:0}
+.ch-f .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.ch-im{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;border-radius:14px;background:var(--ground);padding:10px;overflow:hidden;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 7%,transparent)}
+.ch-f.fin .ch-im{box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent),0 16px 36px -22px rgba(0,0,0,.35)}
+.ch-im img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:6px}
+.ch-f figcaption{font-size:var(--x6);color:var(--ink2);display:flex;gap:8px;align-items:baseline;line-height:1.35}
+.ch-f figcaption span,.ch-f figcaption b{flex:none;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink3)}
+.ch-f figcaption b{color:var(--ink)}
+.ch .dm{margin:0}
+.ch-sg{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(16px,2.4vw,32px);align-items:center}
+.ch-sl{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.ch-sl li{font-size:var(--x5);line-height:1.45;padding-left:18px;position:relative}
+.ch-sl li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:1px;background:var(--ink2)}
+.ch-wd{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ch-wd>div{border-radius:18px;padding:18px 20px;display:grid;gap:10px;align-content:start;background:var(--ground)}
+.ch-wd .ok{box-shadow:inset 3px 0 0 color-mix(in srgb,#2fa36b 70%,transparent)}
+.ch-wd .no{box-shadow:inset 3px 0 0 color-mix(in srgb,#d0563b 70%,transparent)}
+.ch-wd .ok .ch-l i{color:#2fa36b;font-style:normal}.ch-wd .no .ch-l i{color:#d0563b;font-style:normal}
+.ch-wd ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.ch-wd li{font-size:var(--x5);line-height:1.5;color:var(--ink)}
+.ch-try{margin:4px 0 0;padding:12px 14px;border-radius:12px;background:color-mix(in srgb,var(--ink) 4%,transparent);font-size:var(--x6);line-height:1.5;color:var(--ink2);display:grid;gap:4px}
+.ch-try b{color:var(--ink);font-weight:600;font-size:var(--x6)}
+.ch-m{border-top:1px solid var(--rule);padding-top:16px}
+.ch-m summary{cursor:pointer;list-style:none;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;font-size:var(--x4);font-weight:600}
+.ch-m summary::-webkit-details-marker{display:none}
+.ch-m summary::before{content:"+";display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:color-mix(in srgb,var(--ink) 8%,transparent);font-weight:500;align-self:center}
+.ch-m[open] summary::before{content:"−"}
+.ch-m summary small{font-size:var(--x6);font-weight:400;color:var(--ink3)}
+.ch-mb{display:grid;gap:16px;margin-top:20px}
+.ch-mb .p4{background:var(--ground)}
+/* soften old problem cards */
+.p4-o li.on{background:color-mix(in srgb,var(--ink) 10%,transparent);color:var(--ink)}
+.p4-f.fin .p4-im{box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent),0 16px 36px -22px rgba(0,0,0,.35)}
+/* evolution strips */
+.evo{display:grid;gap:28px}
+.evo-r{display:grid;gap:12px}
+.evo-g{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center}
+.evo-g figure{margin:0;display:grid;gap:8px;min-width:0}
+.evo-g .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.evo-g .zoom span{display:block;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:var(--ground);box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent)}
+.evo-g img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block}
+.evo-g figure.is-now .zoom span{box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 14%,transparent),0 16px 36px -22px rgba(0,0,0,.35)}
+.evo-g figcaption{font-size:var(--x6);color:var(--ink2);line-height:1.4;display:grid;gap:2px}
+.evo-g figcaption b{font-weight:600;color:var(--ink)}
+.evo-a{font-style:normal;color:var(--ink3);font-size:18px;padding-bottom:36px}
+.kk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.kk-c{border-radius:18px;background:color-mix(in srgb,var(--ink) 3%,var(--ground));padding:18px 20px;display:grid;gap:10px;align-content:start}
+.kk-c ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.kk-c li{font-size:var(--x5);line-height:1.45}
+.kk-c:last-child{background:color-mix(in srgb,#8fa8ff 14%,var(--ground))}
+@media (max-width:899px){.ch-row,.ch-sg,.ch-wd,.kk{grid-template-columns:1fr}.ch-v{grid-template-columns:1fr 1fr}.ch-v .fin{grid-column:1/-1}.evo-g{grid-template-columns:1fr}.evo-a{transform:rotate(90deg);justify-self:center;padding:0}}
+/* v8: gen colours, legible explorations, routing */
+.ch{background:linear-gradient(180deg,color-mix(in srgb,var(--g) 7%,var(--ground)) 0,color-mix(in srgb,var(--ink) 2.5%,var(--ground)) 320px)}
+.ch-k b{color:var(--g);padding:2px 9px;border-radius:6px;background:color-mix(in srgb,var(--g) 12%,transparent)}
+.ch-bt h5::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--g);margin-right:10px;vertical-align:.15em}
+.ch-o li.on{background:color-mix(in srgb,var(--g) 14%,transparent);color:color-mix(in srgb,var(--g) 70%,var(--ink))}
+.ch-f.fin .ch-im{box-shadow:0 0 0 1.5px color-mix(in srgb,var(--g) 45%,transparent),0 16px 36px -22px rgba(0,0,0,.35)}
+.ch-f.fin figcaption b{color:var(--g)}
+.ch-m summary::before{background:color-mix(in srgb,var(--g) 14%,transparent);color:var(--g)}
+.gq .gs-c small{color:var(--g)!important;display:flex;align-items:center;gap:6px}
+.gq .gs-c small::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--g)}
+.ch-v{display:grid;grid-template-columns:1fr;gap:14px}
+.ch-ex{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ch-ex .ch-im{aspect-ratio:16/10;padding:0;display:block}
+.ch-ex .ch-im img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:left top;border-radius:0}
+.ch-v>.ch-f.fin{max-width:780px}
+.ch-v>.ch-f.fin .ch-im{aspect-ratio:auto;max-height:440px;padding:14px}
+.ch-v>.ch-f.fin .ch-im img{max-height:412px}
+.evo-g figcaption b{color:var(--g)}
+.evo-g .zoom span{aspect-ratio:var(--ar)}
+.evo-g figure.is-now .zoom span{box-shadow:0 0 0 1.5px color-mix(in srgb,var(--g) 45%,transparent),0 16px 36px -22px rgba(0,0,0,.35)}
+.rt{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.rt li{display:grid;grid-template-columns:minmax(0,4fr) auto minmax(0,5fr) auto;gap:14px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--ground)}
+.rt-q{font-size:var(--x5);font-weight:500;line-height:1.35}
+.rt-a{font-style:normal;color:var(--g)}
+.rt-w{display:grid;gap:2px;font-size:var(--x5);line-height:1.35}
+.rt-w s{font-size:var(--x6);color:var(--ink3);text-decoration-color:#d0563b}
+.rt-w b{font-weight:600}
+.rt-w small{font-size:var(--x6);color:var(--ink2)}
+.rt-s{font-style:normal;font-size:13px;font-weight:600;letter-spacing:.03em;padding:3px 9px;border-radius:99px;white-space:nowrap}
+.st-live{background:color-mix(in srgb,#2fa36b 16%,transparent);color:#1f7a4f}
+.st-in-progress{background:color-mix(in srgb,#e3a008 20%,transparent);color:#8a6100}
+.st-planned{background:color-mix(in srgb,var(--ink) 8%,transparent);color:var(--ink2)}
+@media (max-width:899px){.ch-ex{grid-template-columns:1fr 1fr}.rt li{grid-template-columns:1fr auto;gap:6px 10px}.rt-a{display:none}.rt-w{grid-column:1}.rt-s{grid-row:1;grid-column:2;align-self:start}}
+/* v9 */
+.ch-dg{display:grid;gap:12px;padding-top:18px;border-top:1px solid var(--rule)}
+.rtd{width:100%;height:auto;display:block;border-radius:18px;background:var(--ground);padding:8px}
+.rtd .n{fill:var(--ground);stroke:color-mix(in srgb,var(--ink) 16%,transparent);stroke-width:1.2}
+.rtd .n-b{fill:color-mix(in srgb,var(--ink) 5%,var(--ground))}
+.rtd .n-new{stroke:#0f9f8f;stroke-width:1.8;fill:color-mix(in srgb,#0f9f8f 7%,var(--ground))}
+.rtd .n-p{stroke-dasharray:4 3}
+.rtd text{font-family:var(--font-body);fill:var(--ink);text-anchor:middle}
+.rtd .t{font-size:15px;font-weight:600}
+.rtd .s{font-size:12px;fill:var(--ink2)}
+.rtd .l{font-size:12.5px;font-weight:500;fill:var(--ink2)}
+.rtd .l-new{fill:#0b7d71;font-weight:600}
+.rtd .l-old{fill:#b2452d}
+.rtd path{fill:none;stroke-width:1.6}
+.rtd .e-live,.rtd .e-plan{stroke:#8a8a8a}
+.rtd .e-plan{stroke-dasharray:4 3}
+.rtd .e-old{stroke:#d0563b;stroke-dasharray:5 4;opacity:.8}
+.rtd .e-new{stroke:#0f9f8f;stroke-width:2.6}
+.rtd .x{fill:var(--ground);stroke:#d0563b;stroke-width:1.4}.rtd .xm{stroke:#d0563b;stroke-width:1.6}
+.rtd .lo{text-anchor:start}.rtd .c{stroke:none}.rtd .ct{font-size:11px;font-weight:600}
+.rtd .c-live{fill:color-mix(in srgb,#2fa36b 18%,transparent)}.rtd .c-live+.ct{fill:#1f7a4f}
+.rtd .c-prog{fill:color-mix(in srgb,#e3a008 22%,transparent)}.rtd .c-prog+.ct{fill:#8a6100}
+.rtd .c-plan{fill:color-mix(in srgb,var(--ink) 8%,transparent)}.rtd .c-plan+.ct{fill:var(--ink2)}
+.ch-rt{display:none}
+@media (max-width:720px){.ch-dg{display:none}.ch-rt{display:grid}}
+.md-c{display:grid;gap:4px;padding:18px 20px;border-radius:18px;background:var(--ground)}
+.md-h{display:grid;gap:4px;padding-bottom:10px}
+.md-h h6{margin:0;font-size:var(--x4);font-weight:600;letter-spacing:-.01em}
+.md-h p{margin:0;font-size:var(--x6);line-height:1.5;color:var(--ink2)}
+.md-h p span{color:var(--ink);font-weight:500}
+.md-s{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:12px 0;border-top:1px solid var(--rule)}
+.md-t{display:grid;gap:3px}
+.md-t b{font-size:var(--x5);font-weight:600}
+.md-ch{margin:0;font-size:var(--x6);color:color-mix(in srgb,var(--g) 70%,var(--ink));font-weight:500}
+.md-x{margin:0;font-size:var(--x6);color:var(--ink3)}
+.md-th{display:flex;gap:6px}
+.md-tn{display:block;width:96px;aspect-ratio:4/3;padding:0;border:0;border-radius:8px;overflow:hidden;cursor:zoom-in;background:color-mix(in srgb,var(--ink) 4%,var(--ground));box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent);opacity:.85}
+.md-tn.fin{width:128px;opacity:1;box-shadow:0 0 0 1.5px color-mix(in srgb,var(--g) 50%,transparent)}
+.md-tn img{width:100%;height:100%;object-fit:cover;object-position:left top;display:block}
+.md-d{margin-top:10px}
+.ch-mb{gap:10px}
+@media (max-width:899px){.md-s{grid-template-columns:1fr}.md-th{flex-wrap:wrap}}
+.md-h small{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--g)}
+.md-h h6{font-size:var(--x3)!important;letter-spacing:-.015em!important;line-height:1.2}
+.md-t b{font-size:var(--x5);font-weight:500!important;display:flex;gap:10px;align-items:baseline}
+.md-t b span{flex:none;font-size:13px;font-weight:600;color:var(--ink3);font-variant-numeric:tabular-nums;min-width:24px}
+.md-t .md-ch,.md-t .md-x{padding-left:34px}
+.md-s{grid-template-columns:1fr!important;gap:12px!important;align-items:start!important;padding:16px 0!important}
+.md-th{display:grid!important;grid-template-columns:minmax(0,3fr) repeat(3,minmax(0,2fr));gap:10px;align-items:end;max-width:none}
+.md-th:has(.md-tn:only-child){grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.md-tn{width:auto!important;aspect-ratio:16/10!important;opacity:1!important;padding:8px!important;border-radius:12px!important}
+.md-tn.fin{grid-row:1;grid-column:1}
+.md-tn img{object-fit:contain!important;object-position:center!important;border-radius:4px}
+@media (max-width:899px){.md-th{grid-template-columns:1fr 1fr!important}.md-tn.fin{grid-column:1/-1}}
+/* v10: no hard crops */
+.ch-ex .ch-im{aspect-ratio:16/10;padding:8px;display:flex}
+.ch-ex .ch-im img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;object-position:center;border-radius:4px}
+.evo-g .zoom span{padding:8px;background:color-mix(in srgb,var(--ink) 3%,var(--ground))}
+.evo-g img{object-fit:contain!important;object-position:center!important;border-radius:4px}
+.ch-v>.ch-f.fin .ch-im{max-height:none;padding:10px}
+.ch-v>.ch-f.fin .ch-im img{max-height:none;width:100%}
+.hs-s img,.ch-im img,.evo-g img,.md-tn img{image-rendering:auto}.ch-ex:has(>:only-child),.ch-ex:has(>:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+/* v11: synopsis + highlight carousel */
+.sy{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.sy-c{border-radius:18px;background:var(--ground);padding:18px 20px;display:grid;gap:10px;align-content:start}
+.sy-br,.sy-bet,.sy-sh{grid-column:span 2}.sy .ok,.sy .no{grid-column:span 3}
+.sy .ch-l i{font-style:normal;display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;font-size:10px;background:color-mix(in srgb,var(--g) 14%,transparent);color:var(--g)}
+.sy .ok .ch-l i{background:color-mix(in srgb,#2fa36b 16%,transparent);color:#1f7a4f}.sy .no .ch-l i{background:color-mix(in srgb,#d0563b 14%,transparent);color:#b2452d}
+.sy ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.sy li{font-size:var(--x5);line-height:1.45}
+.sy-br li{display:grid;gap:1px}.sy-br li b{font-weight:600}.sy-br li span{font-size:var(--x6);color:var(--ink2)}
+.sy-bet{background:color-mix(in srgb,var(--g) 8%,var(--ground));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--g) 22%,transparent)}
+.sy-bet h5{margin:0;font-size:var(--x4);font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.sy-bet p{margin:0;font-size:var(--x6);line-height:1.55;color:var(--ink2)}
+.sy-bet .sy-t{color:var(--ink3)}
+.sy-sh li{padding-left:16px;position:relative}.sy-sh li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:2px;background:color-mix(in srgb,var(--g) 55%,transparent)}
+.sy .ok{box-shadow:inset 3px 0 0 color-mix(in srgb,#2fa36b 70%,transparent)}
+.sy .no{box-shadow:inset 3px 0 0 color-mix(in srgb,#d0563b 70%,transparent)}
+.hl{display:grid;gap:12px}
+.hl-hd{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.hl-hd small{font-size:var(--x6);color:var(--ink3)}
+.hl-v{overflow:hidden;border-radius:20px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 40px,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,transparent 0,#000 40px,#000 calc(100% - 40px),transparent)}
+.hl-t{display:flex;gap:14px;width:max-content;padding:4px 0;animation:hlrun calc(var(--n) * 6s) linear infinite}
+.hl-v:hover .hl-t,.hl-v:focus-within .hl-t{animation-play-state:paused}
+@keyframes hlrun{to{transform:translateX(calc(-50% - 7px))}}
+.hl-s{margin:0;width:min(440px,72vw);display:grid;gap:8px;flex:none}
+.hl-s .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.hl-s .zoom span{display:flex;align-items:center;justify-content:center;aspect-ratio:16/10;border-radius:14px;background:var(--ground);padding:10px;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent)}
+.hl-s img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:6px;display:block}
+.hl-s figcaption{display:flex;gap:10px;align-items:baseline;font-size:var(--x6);line-height:1.4;color:var(--ink2)}
+.hl-s figcaption b{flex:none;font-size:13px;font-weight:600;color:var(--g)}
+@media (prefers-reduced-motion:reduce){.hl-t{animation:none}.hl-v{overflow-x:auto;scroll-snap-type:x mandatory}.hl-s{scroll-snap-align:start}.hl-s[aria-hidden]{display:none}}
+@media (max-width:899px){.sy{grid-template-columns:1fr}.sy-br,.sy-bet,.sy-sh,.sy .ok,.sy .no{grid-column:auto}.hl-hd small{display:none}}
+/* v12: visual synopsis */
+.ch{position:relative;overflow:hidden}
+.ch-h{position:relative}
+.ch-h::after{content:attr(data-num);position:absolute;right:-8px;top:-34px;font-size:clamp(140px,16vw,240px);font-weight:700;line-height:1;letter-spacing:-.06em;color:color-mix(in srgb,var(--g) 13%,transparent);pointer-events:none;z-index:0}
+.ch-h>*{position:relative;z-index:1}
+.ch::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:linear-gradient(90deg,var(--g),color-mix(in srgb,var(--g) 30%,transparent))}
+.sy2{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1.25fr) auto minmax(0,1fr);gap:14px;align-items:stretch}
+.s2-col{border-radius:20px;background:var(--ground);padding:22px;display:grid;gap:16px;align-content:start}
+.s2-l{margin:0;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3)}
+.s2-l span{font-size:22px;font-weight:600;letter-spacing:-.02em;text-transform:none;color:var(--ink)}
+.s2-ar{align-self:center;color:var(--g);width:24px}
+.s2-ar svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.s2-br ul,.s2-sh ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.s2-br li{display:flex;gap:10px;align-items:center;font-size:var(--x6);font-weight:500;line-height:1.3;padding:9px 12px;border-radius:12px;background:color-mix(in srgb,#d0563b 6%,var(--ground));color:var(--ink)}
+.s2-br li i{flex:none;width:18px;height:18px;color:#c0533a}
+.s2-br li i svg,.s2-sh li i svg{width:100%;height:100%;display:block}
+.s2-bet{background:linear-gradient(160deg,color-mix(in srgb,var(--g) 16%,var(--ground)),color-mix(in srgb,var(--g) 5%,var(--ground)));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--g) 25%,transparent),0 18px 40px -28px color-mix(in srgb,var(--g) 80%,transparent)}
+.s2-bet .s2-l{color:var(--g)}
+.s2-bet h5{margin:0;font-size:var(--x3);font-weight:600;line-height:1.2;letter-spacing:-.02em}
+.s2-dg{border-radius:14px;background:color-mix(in srgb,var(--ground) 85%,transparent);padding:12px}
+.s2-dg .dg-k{fill:var(--g)!important}
+.s2-t{margin:0;font-size:var(--x6);color:var(--ink2)}
+.s2-sh li{display:flex;gap:12px;align-items:center;font-size:var(--x5);line-height:1.3}
+.s2-sh li i{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:color-mix(in srgb,var(--g) 14%,transparent);color:var(--g);padding:8px}
+.vd{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vd-c{border-radius:20px;padding:20px 22px;display:grid;gap:12px;align-content:start}
+.vd-c.ok{background:color-mix(in srgb,#2fa36b 8%,var(--ground))}
+.vd-c.no{background:color-mix(in srgb,#d0563b 7%,var(--ground))}
+.vd-c .s2-l b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;font-size:13px;color:#fff}
+.vd-c.ok .s2-l b{background:#2fa36b}.vd-c.no .s2-l b{background:#d0563b}
+.vd-c ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.vd-c li{font-size:var(--x5);line-height:1.4;font-weight:500;padding-left:14px;position:relative}
+.vd-c li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%}
+.vd-c.ok li::before{background:#2fa36b}.vd-c.no li::before{background:#d0563b}
+.vd-try{margin:2px 0 0;display:flex;gap:10px;align-items:baseline;font-size:var(--x6);line-height:1.45;color:var(--ink2);padding:10px 12px;border-radius:12px;background:color-mix(in srgb,var(--ground) 70%,transparent)}
+.vd-try em{flex:none;font-style:normal;font-size:13px;font-weight:600;padding:2px 8px;border-radius:99px;background:color-mix(in srgb,#e3a008 22%,transparent);color:#8a6100}
+@media (max-width:1099px){.sy2{grid-template-columns:1fr}.s2-ar{justify-self:center;transform:rotate(90deg)}}
+@media (max-width:720px){.vd{grid-template-columns:1fr}.ch-h::after{font-size:120px;top:-20px}}
+/* v13: copy polish + request flow */
+.zc-src{margin:auto 0 0;padding-top:10px;font-size:13px;color:var(--ink3);line-height:1.4}
+.s2-t b{font-weight:600;color:var(--ink);margin-right:4px}
+.vd-try{display:block;font-weight:500;color:var(--ink)}
+.rf{display:grid;gap:12px;padding-top:18px;border-top:1px solid var(--rule)}
+.rf-b{position:relative;display:grid;grid-template-columns:150px minmax(0,1fr);column-gap:28px;border-radius:20px;background:var(--ground);padding:22px}
+.rf-src{grid-row:1/3;align-self:center;display:grid;justify-items:center;gap:4px;text-align:center;padding:18px 12px;border-radius:16px;background:color-mix(in srgb,var(--g) 10%,var(--ground));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--g) 25%,transparent);position:relative;z-index:1}
+.rf-src span{width:28px;height:28px;color:var(--g)}.rf-src span svg{width:100%;height:100%}
+.rf-src b{font-size:var(--x4);font-weight:600}.rf-src small{font-size:13px;color:var(--ink2)}
+.rf-hd,.rf-r{display:grid;grid-template-columns:minmax(0,1.3fr) 28px minmax(0,1.1fr) 28px minmax(0,1.2fr) 110px;align-items:center;gap:0 6px}
+.rf-hd{grid-column:2;padding:0 14px 8px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3)}
+.rf-hd span:nth-child(1){grid-column:1}.rf-hd span:nth-child(2){grid-column:3}.rf-hd span:nth-child(3){grid-column:5}.rf-hd span:nth-child(4){grid-column:6}
+.rf-rows{grid-column:2;margin:0;padding:0 0 0 0;list-style:none;display:grid;gap:10px;position:relative}
+.rf-rows::before{content:"";position:absolute;left:-28px;top:28px;bottom:28px;width:2px;background:color-mix(in srgb,var(--g) 35%,transparent);border-radius:2px}
+.rf-r{position:relative;padding:14px;border-radius:14px;background:color-mix(in srgb,var(--ink) 3%,var(--ground));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 7%,transparent)}
+.rf-r::before{content:"";position:absolute;left:-28px;top:50%;width:28px;height:2px;background:color-mix(in srgb,var(--g) 35%,transparent)}
+.rf-q{font-size:var(--x5);font-weight:500;line-height:1.35}
+.rf-w{display:grid;gap:2px}.rf-w b{font-size:var(--x5);font-weight:600;line-height:1.3}
+.rf-w s{font-size:13px;color:var(--ink3);text-decoration:none}
+.rf-p{font-size:var(--x6);line-height:1.4;color:var(--ink2)}
+.rf-a{height:2px;background:color-mix(in srgb,var(--ink) 22%,transparent);position:relative}
+.rf-a::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left:7px solid color-mix(in srgb,var(--ink) 30%,transparent);border-right:0}
+.rf-s{display:flex;align-items:center;gap:7px;font-size:var(--x6);font-weight:600;justify-self:end}
+.rf-s i{width:8px;height:8px;border-radius:50%}
+.rfs-live .rf-s{color:#1f7a4f}.rfs-live .rf-s i{background:#2fa36b}
+.rfs-in-progress .rf-s{color:#8a6100}.rfs-in-progress .rf-s i{background:#e3a008}
+.rfs-planned .rf-s{color:var(--ink2)}.rfs-planned .rf-s i{background:color-mix(in srgb,var(--ink) 30%,transparent)}
+.rfs-in-progress.rf-r{box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--g) 45%,transparent);background:color-mix(in srgb,var(--g) 6%,var(--ground))}
+.rfs-in-progress .rf-a{background:var(--g)}.rfs-in-progress .rf-a::after{border-left-color:var(--g)}
+.rfs-planned .rf-a{background:repeating-linear-gradient(90deg,color-mix(in srgb,var(--ink) 25%,transparent) 0 4px,transparent 4px 7px)}
+@media (max-width:1099px){.rf-b{grid-template-columns:1fr;row-gap:14px}.rf-src{grid-row:auto;justify-self:start;grid-auto-flow:column;align-items:center;gap:8px;padding:10px 14px}.rf-hd{display:none}.rf-rows{grid-column:1;padding-left:22px}.rf-rows::before{left:8px;top:-14px}.rf-r::before{left:-14px;width:14px}
+ .rf-r{grid-template-columns:1fr;gap:6px}.rf-a{display:none}.rf-s{justify-self:start}.rf-q::after{content:" →";color:var(--ink3)}}
+/* v14: warm palette for ZBrain (from the reference image) */
+.p-zbrain{--zp1:#f5f4f2;--zp2:#d7cfc9;--zp3:#c0b6b0;--zp4:#8e8580;--zam:#a37b48;--zgl:#d9c8ac;--zok:#5f8a63;--zno:#b5654b;
+ --zcard:linear-gradient(155deg,color-mix(in srgb,#fffdfa 55%,var(--ground)) 0%,color-mix(in srgb,var(--zp2) 22%,var(--ground)) 100%);
+ --zcard2:radial-gradient(120% 90% at 0% 0%,color-mix(in srgb,var(--zgl) 30%,transparent),transparent 60%),linear-gradient(160deg,color-mix(in srgb,var(--zp1) 70%,var(--ground)),color-mix(in srgb,var(--zp2) 30%,var(--ground)))}
+.p-zbrain .gsnap{background:radial-gradient(60% 90% at 12% 15%,color-mix(in srgb,var(--zp3) 45%,transparent),transparent 70%),radial-gradient(45% 70% at 55% 55%,color-mix(in srgb,var(--zgl) 55%,transparent),transparent 70%),radial-gradient(55% 80% at 90% 85%,color-mix(in srgb,var(--zp2) 60%,transparent),transparent 70%),color-mix(in srgb,var(--zp1) 80%,var(--ground))}
+.p-zbrain .gs-c{background:color-mix(in srgb,var(--ground) 62%,transparent)}
+.p-zbrain .ch{background:radial-gradient(70% 50% at 100% 0%,color-mix(in srgb,var(--g) 12%,transparent),transparent 70%),linear-gradient(180deg,color-mix(in srgb,var(--zp1) 75%,var(--ground)),color-mix(in srgb,var(--zp2) 28%,var(--ground)))}
+.p-zbrain .ch::before{background:linear-gradient(90deg,var(--g),color-mix(in srgb,var(--zgl) 70%,transparent),transparent)}
+.p-zbrain .s2-col,.p-zbrain .rf-b,.p-zbrain .md-c,.p-zbrain .hl-s .zoom span{background:var(--zcard);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--zp3) 28%,transparent)}
+.p-zbrain .s2-bet{background:radial-gradient(90% 70% at 85% 10%,color-mix(in srgb,var(--zgl) 45%,transparent),transparent 70%),linear-gradient(160deg,color-mix(in srgb,var(--g) 14%,var(--ground)),color-mix(in srgb,var(--g) 5%,var(--ground)));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--g) 30%,transparent),0 18px 40px -28px color-mix(in srgb,var(--zam) 70%,transparent)}
+.p-zbrain .s2-br li{background:linear-gradient(90deg,color-mix(in srgb,var(--zno) 9%,var(--ground)),color-mix(in srgb,var(--zp2) 14%,var(--ground)))}
+.p-zbrain .s2-br li i{color:var(--zno)}
+.p-zbrain .vd-c.ok{background:linear-gradient(160deg,color-mix(in srgb,var(--zok) 11%,var(--ground)),color-mix(in srgb,var(--zp2) 22%,var(--ground)))}
+.p-zbrain .vd-c.no{background:linear-gradient(160deg,color-mix(in srgb,var(--zno) 10%,var(--ground)),color-mix(in srgb,var(--zp2) 22%,var(--ground)))}
+.p-zbrain .vd-c.ok .s2-l b,.p-zbrain .vd-c.ok li::before{background:var(--zok)}
+.p-zbrain .vd-c.no .s2-l b,.p-zbrain .vd-c.no li::before{background:var(--zno)}
+.p-zbrain .zc-i,.p-zbrain .kk-c,.p-zbrain .cstats>div,.p-zbrain .nums>div,.p-zbrain .ft-c .fig,.p-zbrain .evo-g .zoom span{background:var(--zcard2)!important}
+.p-zbrain .kk-c:last-child{background:radial-gradient(100% 80% at 0% 0%,color-mix(in srgb,var(--zgl) 55%,transparent),transparent 70%),color-mix(in srgb,var(--zp1) 70%,var(--ground))!important}
+.p-zbrain .rf-src{background:linear-gradient(160deg,color-mix(in srgb,var(--zgl) 35%,var(--ground)),color-mix(in srgb,var(--zp2) 25%,var(--ground)));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--zam) 30%,transparent)}
+.p-zbrain .rfs-live .rf-s{color:var(--zok)}.p-zbrain .rfs-live .rf-s i{background:var(--zok)}
+.p-zbrain .refl{background:radial-gradient(60% 120% at 85% 20%,color-mix(in srgb,var(--zam) 45%,transparent),transparent 70%),linear-gradient(135deg,#2a2622,#3a332d)!important}
+.p-zbrain .csec-h .lbl{background:linear-gradient(90deg,color-mix(in srgb,var(--zgl) 40%,transparent),color-mix(in srgb,var(--zp2) 35%,transparent))}
+/* v15: numeral behind cards, richer warm palette */
+.p-zbrain .ch>*{position:relative;z-index:1}
+.p-zbrain .ch-h{position:static}
+.p-zbrain .ch-h::after{z-index:0;top:4px;right:28px;font-size:clamp(160px,17vw,260px);color:transparent;background:linear-gradient(180deg,color-mix(in srgb,var(--g) 26%,transparent),color-mix(in srgb,var(--g) 4%,transparent) 85%);-webkit-background-clip:text;background-clip:text}
+.p-zbrain .ch::before{z-index:2}
+.p-zbrain{--zcard:linear-gradient(165deg,color-mix(in srgb,#fffdf9 78%,var(--ground)) 0%,color-mix(in srgb,#efe7df 60%,var(--ground)) 100%)}
+.p-zbrain .s2-col,.p-zbrain .md-c,.p-zbrain .rf-b{box-shadow:inset 0 1px 0 color-mix(in srgb,#fff 70%,transparent),inset 0 0 0 1px color-mix(in srgb,#cdbfb2 40%,transparent),0 14px 30px -24px color-mix(in srgb,#6b5a4a 45%,transparent)}
+.p-zbrain .ch{background:radial-gradient(60% 45% at 100% 0%,color-mix(in srgb,var(--g) 16%,transparent),transparent 70%),radial-gradient(50% 40% at 0% 100%,color-mix(in srgb,#e8d2b0 30%,transparent),transparent 70%),linear-gradient(180deg,color-mix(in srgb,#f7f3ee 85%,var(--ground)),color-mix(in srgb,#ece4db 55%,var(--ground)))}
+.p-zbrain .s2-bet{background:radial-gradient(90% 70% at 85% 10%,color-mix(in srgb,#f0d9b5 55%,transparent),transparent 70%),linear-gradient(160deg,color-mix(in srgb,var(--g) 18%,var(--ground)),color-mix(in srgb,var(--g) 6%,var(--ground)))}
+.p-zbrain .s2-sh li i{background:linear-gradient(160deg,color-mix(in srgb,var(--g) 20%,transparent),color-mix(in srgb,#f0d9b5 35%,transparent))}
+.p-zbrain .ch-k b{background:color-mix(in srgb,var(--g) 15%,transparent)}
+/* v16: numeral fits header; request flow polish */
+.p-zbrain .ch-h::after{top:22px;right:44px;font-size:clamp(110px,11vw,168px);line-height:.82;letter-spacing:-.05em;background:linear-gradient(180deg,color-mix(in srgb,var(--g) 30%,transparent),color-mix(in srgb,var(--g) 8%,transparent));-webkit-background-clip:text;background-clip:text}
+@media (max-width:720px){.p-zbrain .ch-h::after{font-size:96px;top:14px;right:18px}}
+.p-zbrain .rf-b{grid-template-columns:150px 36px minmax(0,1fr);column-gap:0;padding:24px}
+.p-zbrain .rf-src{grid-column:1;grid-row:1/3}
+.p-zbrain .rf-b::before{content:"";grid-column:2;grid-row:2;align-self:center;height:2px;background:color-mix(in srgb,var(--zam) 45%,transparent)}
+.p-zbrain .rf-hd,.p-zbrain .rf-rows{grid-column:3}
+.p-zbrain .rf-rows{padding-left:24px}
+.p-zbrain .rf-rows::before{left:0;top:34px;bottom:34px;background:color-mix(in srgb,var(--zam) 45%,transparent)}
+.p-zbrain .rf-r::before{left:-24px;width:24px;background:color-mix(in srgb,var(--zam) 45%,transparent)}
+.p-zbrain .rf-hd{padding:0 16px 10px 40px}
+.p-zbrain .rf-hd,.p-zbrain .rf-r{grid-template-columns:minmax(0,1.15fr) 28px minmax(0,1.45fr) 28px minmax(0,1.1fr) 100px;column-gap:8px}
+.p-zbrain .ch-h{padding-right:clamp(0px,12vw,180px)}
+.p-zbrain .rf-r{padding:16px;background:linear-gradient(165deg,color-mix(in srgb,#fffdf9 85%,var(--ground)),color-mix(in srgb,#f1e9e1 70%,var(--ground)));box-shadow:inset 0 0 0 1px color-mix(in srgb,#cdbfb2 45%,transparent)}
+.p-zbrain .rfs-in-progress.rf-r{background:linear-gradient(165deg,color-mix(in srgb,#fbf1df 90%,var(--ground)),color-mix(in srgb,#f3e2c6 70%,var(--ground)));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--zam) 55%,transparent)}
+.p-zbrain .rf-w b{white-space:normal}
+.p-zbrain .rf-s{justify-self:start}
+.p-zbrain .rf-hd span:nth-child(4){justify-self:start}
+@media (max-width:1099px){.p-zbrain .rf-b{grid-template-columns:1fr}.p-zbrain .rf-b::before{display:none}.p-zbrain .rf-hd,.p-zbrain .rf-rows{grid-column:1}.p-zbrain .rf-src{grid-row:auto}.p-zbrain .rf-rows{padding-left:22px}.p-zbrain .rf-rows::before{left:8px;top:-14px}.p-zbrain .rf-r::before{left:-14px;width:14px}.p-zbrain .rf-r{grid-template-columns:1fr}}
 </style>
 
 <div class="cols" aria-hidden="true"><div class="wrap"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
@@ -1916,7 +2775,7 @@ body{font-family:var(--font-body);font-weight:400;letter-spacing:var(--ls-body);
 
 </script>
 <script>
-const DIM={"img/26-466.webp":[1400,1000],"img/70-75.webp":[1000,563],"img/8-102.webp":[1366,1024],"img/86-76.webp":[1000,562],"img/8-137-r.webp":[1000,563],"img/55-97-r.webp":[2400,1351],"img/26-251.webp":[1600,1381],"img/26-255.webp":[1600,762],"img/71-349.webp":[1000,563],"img/29-104.webp":[1000,563],"img/55-305-r.webp":[2400,968],"img/25-245.webp":[1600,1855],"img/55-266-r.webp":[2400,782],"img/53-12-r.webp":[1600,944],"img/26-56.webp":[1600,1161],"img/25-117.webp":[1000,632],"img/26-277.webp":[1600,900],"img/25-99.webp":[1600,1678],"img/29-137.webp":[1000,562],"img/55-221-r.webp":[2400,1413],"img/25-401.webp":[1600,1260],"img/70-79.webp":[1000,563],"img/25-299.webp":[1600,819],"img/29-115.webp":[1000,562],"img/55-101-r.webp":[2400,782],"img/29-47.webp":[1000,563],"img/25-333.webp":[1600,1638],"img/8-40.webp":[1600,925],"img/84-13.webp":[1600,657],"img/43-177-r.webp":[1000,563],"img/27-440.webp":[1600,1067],"img/8-60.webp":[1600,900],"img/43-131-r.webp":[1000,538],"img/27-474.webp":[1600,2149],"img/25-455.webp":[1000,630],"img/26-194.webp":[1600,972],"img/88-196.webp":[1000,562],"img/25-121.webp":[1000,648],"img/8-148.webp":[1000,563],"img/43-148.webp":[1600,410],"img/6-168.webp":[1600,900],"img/29-93.webp":[1000,563],"img/25-433.webp":[1600,1115],"img/26-137.webp":[1600,1384],"img/25-66.webp":[1600,968],"img/8-170.webp":[1000,563],"img/55-188-r.webp":[2400,1116],"img/55-208-r.webp":[2400,608],"img/43-312-r.webp":[1000,562],"img/55-89-r.webp":[2400,1418],"img/25-74.webp":[1600,613],"img/88-188.webp":[1000,562],"img/43-355-r.webp":[1600,1025],"img/26-226.webp":[1600,2026],"img/71-85.webp":[1600,956],"img/25-220.webp":[1600,1020],"img/6-61.webp":[1600,851],"img/29-25.webp":[1000,563],"img/25-78.webp":[1600,712],"img/26-205.webp":[1600,2517],"img/29-82.webp":[1000,562],"img/68-26.webp":[1600,956],"img/26-73.webp":[1600,1628],"img/6-101.webp":[1000,562],"img/55-179-r.webp":[2400,651],"img/27-107.webp":[1600,898],"img/43-195-r.webp":[1000,562],"img/6-81.webp":[1600,900],"img/29-14.webp":[1000,563],"img/55-270-r.webp":[2400,773],"img/70-68.webp":[1600,667],"img/29-36.webp":[1000,563],"img/6-121.webp":[1000,562],"img/25-316.webp":[1600,1733],"img/6-9.webp":[1600,800],"img/29-3.webp":[1000,564],"img/27-46.webp":[1600,912],"img/25-270.webp":[1000,724],"img/43-144-r.webp":[1000,504],"img/25-412.webp":[1600,1008],"img/71-68.webp":[915,554],"img/8-159-r.webp":[1000,563],"img/70-199.webp":[1000,564],"img/42-12-r.webp":[1600,900],"img/88-175.webp":[1000,562],"img/29-60.webp":[1000,562],"img/27-363.webp":[1600,900],"img/53-145-r.webp":[1000,580],"img/55-93-r.webp":[2400,1351],"img/43-169-r.webp":[1000,563],"img/25-185.webp":[1600,1568],"img/25-138.webp":[1600,1242],"img/29-126.webp":[1000,562],"img/6-118.webp":[1000,562],"img/25-10.webp":[1600,1362],"img/43-199-r.webp":[1000,562],"img/43-140-r.webp":[1000,258],"img/26-10.webp":[1600,950],"img/25-368.webp":[1600,1008],"img/70-203.webp":[1000,564],"img/88-159.webp":[1000,562],"img/87-125.webp":[1000,562],"img/29-71.webp":[1000,562],"img/88-179.webp":[1000,562],"img/43-173-r.webp":[1000,563],"img/88-164.webp":[1000,562],"img/43-135-r.webp":[1000,571],"img/25-451.webp":[1000,832],"img/43-347-r.webp":[1000,563],"img/89-3.webp":[1000,564],"img/55-217-r.webp":[2400,1414],"img/25-62.webp":[1600,1332],"img/27-232.webp":[1600,899],"img/88-40.webp":[1000,562],"img/88-44.webp":[1296,455],"img/55-121-r.webp":[2400,616],"img/27-262.webp":[1600,862],"img/27-466.webp":[1600,3226],"img/6-98.webp":[1000,562],"img/42-115-r.webp":[1600,565],"mock/zbrain-cover.webp":[1600,1200],"mock/zbrain-hero.webp":[2400,1350],"mock/squirrel-cover.webp":[1536,960],"mock/ce-agent-hero.webp":[1536,864],"mock/xplr-cover.webp":[1600,1200],"mock/crestos-cover.webp":[1366,1024],"mock/mdm-copilot-hero.webp":[1672,941],"mock/approach.webp":[1536,1024],"mock/principles-band.webp":[1536,768],"mock/ce-agent-cover.webp":[1366,1024],"mock/crestos-hero.webp":[1536,864],"mock/mdm-copilot-cover.webp":[1254,941],"mock/zbrain-closing.webp":[1672,941],"mock/xplr-hero.webp":[2400,1350],"mock/squirrel-hero.webp":[1536,864],"zb/v5-requests-builder.webp":[1400,837],"zb/v4-builder-v3.webp":[1000,563],"zb/v3-crew-canvas.webp":[1400,788],"zb/v4-modules-stages.webp":[1344,848],"zb/v4-github.webp":[1000,563],"zb/v5-violation.webp":[1400,788],"zb/v5-observatory.webp":[1400,837],"zb/v4-dashboard.webp":[1200,675],"zb/zb-v4-design.webp":[1280,720],"zb/zb-crew-test.webp":[1280,720],"zb/v4-compliance.webp":[1000,563],"zb/zb-v5-builder.webp":[1280,720],"zb/zb-v4-interview.webp":[1280,720],"zb/v5-github-unsynced.webp":[1400,837],"zb/v3-import-agent.webp":[1400,788],"zb/v3-ia.webp":[1526,556],"zb/v4-builder-v2.webp":[1000,563],"zb/v3-test-crew.webp":[1400,788],"zb/v3-control-tower.webp":[1000,610],"zb/zb-prompt-manage.webp":[1280,720],"zb/v4-dataset-builder.webp":[1000,563],"zb/v3-configure-bot.webp":[1400,1380],"zb/v5-editor-sessions.webp":[1400,788],"zb/zb-v5-console.webp":[1280,720],"zb/zb-v4-nav.webp":[1280,720],"zb/zb-crew-build.webp":[1280,720],"zb/v5-members.webp":[1400,788],"zb/zb-prompt-new.webp":[1280,720],"zb/v4-design-identity.webp":[1000,837],"zb/v4-gov-solution.webp":[1000,563],"zb/v4-builder-v0.webp":[1000,563],"zb/v3-prompt-manager.webp":[1400,788],"zb/v4-interview-data.webp":[1000,563],"zb/v5-computed-policy.webp":[1400,788],"zb/v5-ask-connection.webp":[1400,837],"zb/v4-builder-v1.webp":[1000,563],"zb/v5-toast.webp":[1400,837],"zb/v5-session-done.webp":[1400,788],"zb/v3-builder.webp":[1000,563],"zb/v5-requests-admin.webp":[1400,837],"x26/bc-generate.webp":[1920,1080],"x26/opp-detail.webp":[1920,1080],"x26/bc-update.webp":[1920,1080],"x26/eval-report.webp":[1920,1080],"x26/roi-v1.webp":[1920,1080],"x26/roi-v2.webp":[1920,1080],"x26/intake-session.webp":[1920,1080],"x26/process-diagram.webp":[1920,1080],"sq/ds-all.webp":[1364,1920],"sq/b-rank.webp":[1418,491],"sq/p-feedback.webp":[1920,1066],"sq/old-dash.webp":[1180,834],"sq/c-rank.webp":[380,393],"sq/new-notif.webp":[1920,1080],"sq/p-rtbs.webp":[1920,1457],"sq/new-jobs.webp":[1920,1080],"sq/b-jobs.webp":[1073,869],"sq/new-young.webp":[1920,1080],"sq/new-streak.webp":[1920,1080],"sq/new-dash.webp":[1920,1080],"sq/new-mood.webp":[1920,1080],"sq/b-learn.webp":[1562,687],"sq/p-survey.webp":[1920,1114],"sq/ds-buttons.webp":[1116,1920],"sq/p-cards.webp":[1883,968],"about/anime.webp":[720,900],"about/sea.webp":[720,900],"about/jaipur.webp":[720,900],"about/run.webp":[720,900],"about/paris.webp":[720,900],"about/tea.webp":[760,760],"x/pb/spread-hex.webp":[1920,1081],"x/pb/stage2.webp":[1920,1081],"x/pb/caps.webp":[1920,1172],"x/pb/stage1.webp":[1920,1081],"x/pb/layout-ch.webp":[1920,1081],"x/pb/specs.webp":[1920,1241],"x/pb/intro.webp":[1920,1108],"x/pb/spread-data.webp":[1920,1081],"x/pb/spread-intro.webp":[1920,1081],"x/pb/how.webp":[1920,1165],"x/pb/brief.webp":[1920,1110],"x/pb/contents.webp":[1920,1081],"x/pb/stage3.webp":[1920,1081],"x/pb/layout-ex.webp":[1920,1081],"x/cl/persona.webp":[1920,726],"x/cl/banner.webp":[1920,550],"x/cl/shelter.webp":[1920,1079],"x/cl/type.webp":[1920,918],"x/cl/brainstorm.webp":[1920,1093],"x/cl/explore.webp":[1920,800],"x/cl/logo.webp":[1920,1079],"x/cl/laptop.webp":[1920,1079],"x/cl/directions.webp":[1920,941],"x/cl/billboard.webp":[1920,1079],"x/de/logotype.webp":[1920,1498],"x/de/app.webp":[1920,1066],"x/de/palette.webp":[1920,1204],"x/de/totes.webp":[1920,982],"x/de/lineup.webp":[1920,895],"x/de/brief.webp":[1920,1539],"x/de/tee.webp":[1920,1023],"x/de/poster.webp":[1920,981],"x/de/social.webp":[1920,951],"x/de/billboard.webp":[1920,1142],"x/vd/spread-3.webp":[1920,1080],"x/vd/covers-spread.webp":[1920,1080],"x/vd/spread-1.webp":[1920,1080],"x/vd/chapter.webp":[1920,1080],"x/vd/hero.webp":[1079,689],"x/vd/spread-2.webp":[1920,1080],"x/vd/thumb.webp":[1000,562],"x/vd/covers.webp":[1920,1080],"x/sp/product.webp":[1920,1080],"x/sp/signage.webp":[1920,1080],"x/sp/logo.webp":[1079,689],"x/sp/campaign.webp":[1920,1080],"x/sp/brochure.webp":[1920,1080],"x/sp/thumb.webp":[1000,562],"x/sp/stationery.webp":[1920,1080],"x/rb/board-rules.webp":[1920,1080],"x/rb/cards-gold.webp":[1920,1080],"x/rb/box-open.webp":[1920,1080],"x/rb/divyastra.webp":[1920,1080],"x/rb/board-stand.webp":[1920,1080],"x/rb/cards-green.webp":[1920,1080],"x/rb/cards-purple.webp":[1920,1080],"x/rb/logo.webp":[1920,1080],"x/rb/card-close.webp":[1920,1080],"x/rb/board-top.webp":[1920,1920],"x/rb/box-art.webp":[1920,1080],"x/ac/poster3.webp":[1920,1185],"x/ac/poster1.webp":[1920,1186],"x/ac/process.webp":[1920,1803],"x/ac/brief.webp":[1920,854],"x/ac/poster2.webp":[1920,1186],"x/ac/kiosk.webp":[1920,1098],"x/ap/players.webp":[1920,888],"x/ap/objectives.webp":[1920,1351],"x/ap/story.webp":[1920,1078],"x/ap/rules.webp":[1920,541],"x/ap/box.webp":[1920,1078],"x/ap/flatlay.webp":[1920,1510],"x/ap/demons.webp":[1920,479],"x/uv/badge.webp":[1920,1080],"x/uv/letterhead.webp":[1920,1080],"x/uv/logo.webp":[1079,689],"x/uv/dots-blue.webp":[1920,1080],"x/uv/thumb.webp":[1000,562],"x/uv/cards.webp":[1920,1080],"x/uv/dots.webp":[1920,1080],"x/pp/values.webp":[1400,928],"x/pp/dir-street.webp":[1400,743],"x/pp/shelter.webp":[1400,791],"x/pp/can-hand.webp":[1400,807],"x/pp/process.webp":[1408,933],"x/pp/cans.webp":[1400,760],"x/pp/dir-grunge.webp":[1400,743],"x/pp/dir-pop.webp":[1400,743],"x/pp/social.webp":[1400,792],"x/pp/compare.webp":[1400,584],"x/pp/hoodie.webp":[1400,756],"x/pp/billboard.webp":[1400,1000]};
+const DIM={"zb/el/c-policies.webp":[1400,560],"zb/el/c-rules.webp":[660,292],"zb/el/f-cost-model.webp":[1380,905],"zb/el/b-activity.webp":[512,290],"zb/el/b-notif.webp":[558,177],"zb/el/b-plan-chat.webp":[900,645],"zb/el/b-plan.webp":[840,335],"zb/el/b-result.webp":[1000,389],"zb/el/b-worklog.webp":[511,524],"zb/el/c-ai-proto.webp":[868,655],"zb/el/c-b0.webp":[420,489],"zb/el/c-b1.webp":[619,489],"zb/el/c-b2.webp":[560,489],"zb/el/c-b3.webp":[504,685],"zb/el/c-click.webp":[720,430],"zb/el/c-computed.webp":[979,378],"zb/el/c-crew-alt.webp":[1216,576],"zb/el/c-crew.webp":[895,425],"zb/el/c-dataset.webp":[520,382],"zb/el/c-deploy.webp":[1392,449],"zb/el/c-design.webp":[700,426],"zb/el/c-frameworks.webp":[660,292],"zb/el/c-gov-agents.webp":[1184,468],"zb/el/c-graph.webp":[580,405],"zb/el/c-guardrails.webp":[672,482],"zb/el/c-ia.webp":[1526,556],"zb/el/c-import.webp":[447,551],"zb/el/c-integrations.webp":[1408,439],"zb/el/c-interview.webp":[860,354],"zb/el/c-kill.webp":[1392,430],"zb/el/c-mcp-settings.webp":[1440,342],"zb/el/c-model-price.webp":[728,275],"zb/el/c-obs-space.webp":[1218,426],"zb/el/c-overrides.webp":[900,270],"zb/el/c-playground.webp":[864,702],"zb/el/c-policies-old":[1136,477],"zb/el/c-rules.webp":[580,292],"zb/el/c-session.webp":[588,433],"zb/el/c-stages.webp":[1344,848],"zb/el/c-templates.webp":[640,236],"zb/el/c-test-crew.webp":[364,724],"zb/el/c-toast.webp":[392,184],"zb/el/c-topbar.webp":[744,216],"zb/el/c-tower.webp":[960,317],"zb/el/console-sidebar.webp":[183,700],"zb/el/create-agent.webp":[440,886],"zb/el/design-roi.webp":[367,700],"zb/el/mcp-edit.webp":[558,704],"zb/el/prompt-card.webp":[526,200],"zb/el/req-connected.webp":[360,800],"zb/el/req-form.webp":[360,800],"zb/el/req-pending.webp":[360,800],"zb/el/techbrain.webp":[438,700],"zb/el/tokens-chart.webp":[449,280],"zb/el/tools-library.webp":[558,604],"zb/f-from.webp":[1600,899],"zb/f-to.webp":[1600,956],"zb/f-g2-builder.webp":[1600,901],"zb/f-g2-gov.webp":[1600,901],"zb/f-alt-playground.webp":[1600,900],"zb/f-alt-mcp-settings.webp":[1600,900],"zb/f-alt-crew-canvas.webp":[1600,900],"zb/f-alt-builder.webp":[1400,788],"zb/f-g3-integrations.webp":[1600,956],"zb/f-g3-policies.webp":[1600,900],"zb/f-g3-deployments.webp":[1600,956],"zb/f-g3-ai-proto.webp":[1400,911],"zb/f-g2-ai-proto.webp":[1200,781],"zb/f-team-bugbash.webp":[1400,911],"zb/f-team-handover.webp":[1400,788],"zb/f-team-crit.webp":[1400,911],"zb/f-team-session.webp":[1200,781],"img/26-466.webp":[1400,1000],"img/70-75.webp":[1000,563],"img/8-102.webp":[1366,1024],"img/86-76.webp":[1000,562],"img/8-137-r.webp":[1000,563],"img/55-97-r.webp":[2400,1351],"img/26-251.webp":[1600,1381],"img/26-255.webp":[1600,762],"img/71-349.webp":[1000,563],"img/29-104.webp":[1000,563],"img/55-305-r.webp":[2400,968],"img/25-245.webp":[1600,1855],"img/55-266-r.webp":[2400,782],"img/53-12-r.webp":[1600,944],"img/26-56.webp":[1600,1161],"img/25-117.webp":[1000,632],"img/26-277.webp":[1600,900],"img/25-99.webp":[1600,1678],"img/29-137.webp":[1000,562],"img/55-221-r.webp":[2400,1413],"img/25-401.webp":[1600,1260],"img/70-79.webp":[1000,563],"img/25-299.webp":[1600,819],"img/29-115.webp":[1000,562],"img/55-101-r.webp":[2400,782],"img/29-47.webp":[1000,563],"img/25-333.webp":[1600,1638],"img/8-40.webp":[1600,925],"img/84-13.webp":[1600,657],"img/43-177-r.webp":[1000,563],"img/27-440.webp":[1600,1067],"img/8-60.webp":[1600,900],"img/43-131-r.webp":[1000,538],"img/27-474.webp":[1600,2149],"img/25-455.webp":[1000,630],"img/26-194.webp":[1600,972],"img/88-196.webp":[1000,562],"img/25-121.webp":[1000,648],"img/8-148.webp":[1000,563],"img/43-148.webp":[1600,410],"img/6-168.webp":[1600,900],"img/29-93.webp":[1000,563],"img/25-433.webp":[1600,1115],"img/26-137.webp":[1600,1384],"img/25-66.webp":[1600,968],"img/8-170.webp":[1000,563],"img/55-188-r.webp":[2400,1116],"img/55-208-r.webp":[2400,608],"img/43-312-r.webp":[1000,562],"img/55-89-r.webp":[2400,1418],"img/25-74.webp":[1600,613],"img/88-188.webp":[1000,562],"img/43-355-r.webp":[1600,1025],"img/26-226.webp":[1600,2026],"img/71-85.webp":[1600,956],"img/25-220.webp":[1600,1020],"img/6-61.webp":[1600,851],"img/29-25.webp":[1000,563],"img/25-78.webp":[1600,712],"img/26-205.webp":[1600,2517],"img/29-82.webp":[1000,562],"img/68-26.webp":[1600,956],"img/26-73.webp":[1600,1628],"img/6-101.webp":[1000,562],"img/55-179-r.webp":[2400,651],"img/27-107.webp":[1600,898],"img/43-195-r.webp":[1000,562],"img/6-81.webp":[1600,900],"img/29-14.webp":[1000,563],"img/55-270-r.webp":[2400,773],"img/70-68.webp":[1600,667],"img/29-36.webp":[1000,563],"img/6-121.webp":[1000,562],"img/25-316.webp":[1600,1733],"img/6-9.webp":[1600,800],"img/29-3.webp":[1000,564],"img/27-46.webp":[1600,912],"img/25-270.webp":[1000,724],"img/43-144-r.webp":[1000,504],"img/25-412.webp":[1600,1008],"img/71-68.webp":[915,554],"img/8-159-r.webp":[1000,563],"img/70-199.webp":[1000,564],"img/42-12-r.webp":[1600,900],"img/88-175.webp":[1000,562],"img/29-60.webp":[1000,562],"img/27-363.webp":[1600,900],"img/53-145-r.webp":[1000,580],"img/55-93-r.webp":[2400,1351],"img/43-169-r.webp":[1000,563],"img/25-185.webp":[1600,1568],"img/25-138.webp":[1600,1242],"img/29-126.webp":[1000,562],"img/6-118.webp":[1000,562],"img/25-10.webp":[1600,1362],"img/43-199-r.webp":[1000,562],"img/43-140-r.webp":[1000,258],"img/26-10.webp":[1600,950],"img/25-368.webp":[1600,1008],"img/70-203.webp":[1000,564],"img/88-159.webp":[1000,562],"img/87-125.webp":[1000,562],"img/29-71.webp":[1000,562],"img/88-179.webp":[1000,562],"img/43-173-r.webp":[1000,563],"img/88-164.webp":[1000,562],"img/43-135-r.webp":[1000,571],"img/25-451.webp":[1000,832],"img/43-347-r.webp":[1000,563],"img/89-3.webp":[1000,564],"img/55-217-r.webp":[2400,1414],"img/25-62.webp":[1600,1332],"img/27-232.webp":[1600,899],"img/88-40.webp":[1000,562],"img/88-44.webp":[1296,455],"img/55-121-r.webp":[2400,616],"img/27-262.webp":[1600,862],"img/27-466.webp":[1600,3226],"img/6-98.webp":[1000,562],"img/42-115-r.webp":[1600,565],"mock/zbrain-cover.webp":[1600,1200],"mock/zbrain-hero.webp":[2400,1350],"mock/squirrel-cover.webp":[1536,960],"mock/ce-agent-hero.webp":[1536,864],"mock/xplr-cover.webp":[1600,1200],"mock/crestos-cover.webp":[1366,1024],"mock/mdm-copilot-hero.webp":[1672,941],"mock/approach.webp":[1536,1024],"mock/principles-band.webp":[1536,768],"mock/ce-agent-cover.webp":[1366,1024],"mock/crestos-hero.webp":[1536,864],"mock/mdm-copilot-cover.webp":[1254,941],"mock/zbrain-closing.webp":[1672,941],"mock/xplr-hero.webp":[2400,1350],"mock/squirrel-hero.webp":[1536,864],"zb/v5-requests-builder.webp":[1400,837],"zb/v4-builder-v3.webp":[1000,563],"zb/v3-crew-canvas.webp":[1400,788],"zb/v4-modules-stages.webp":[1344,848],"zb/v4-github.webp":[1000,563],"zb/v5-violation.webp":[1400,788],"zb/v5-observatory.webp":[1400,837],"zb/v4-dashboard.webp":[1200,675],"zb/zb-v4-design.webp":[1280,720],"zb/zb-crew-test.webp":[1280,720],"zb/v4-compliance.webp":[1000,563],"zb/zb-v5-builder.webp":[1280,720],"zb/zb-v4-interview.webp":[1280,720],"zb/v5-github-unsynced.webp":[1400,837],"zb/v3-import-agent.webp":[1400,788],"zb/v3-ia.webp":[1526,556],"zb/v4-builder-v2.webp":[1000,563],"zb/v3-test-crew.webp":[1400,788],"zb/v3-control-tower.webp":[1000,610],"zb/zb-prompt-manage.webp":[1280,720],"zb/v4-dataset-builder.webp":[1000,563],"zb/v3-configure-bot.webp":[1400,1380],"zb/v5-editor-sessions.webp":[1400,788],"zb/zb-v5-console.webp":[1280,720],"zb/zb-v4-nav.webp":[1280,720],"zb/zb-crew-build.webp":[1280,720],"zb/v5-members.webp":[1400,788],"zb/zb-prompt-new.webp":[1280,720],"zb/v4-design-identity.webp":[1000,837],"zb/v4-gov-solution.webp":[1000,563],"zb/v4-builder-v0.webp":[1000,563],"zb/v3-prompt-manager.webp":[1400,788],"zb/v4-interview-data.webp":[1000,563],"zb/v5-computed-policy.webp":[1400,788],"zb/v5-ask-connection.webp":[1400,837],"zb/v4-builder-v1.webp":[1000,563],"zb/v5-toast.webp":[1400,837],"zb/v5-session-done.webp":[1400,788],"zb/v3-builder.webp":[1000,563],"zb/v5-requests-admin.webp":[1400,837],"x26/bc-generate.webp":[1920,1080],"x26/opp-detail.webp":[1920,1080],"x26/bc-update.webp":[1920,1080],"x26/eval-report.webp":[1920,1080],"x26/roi-v1.webp":[1920,1080],"x26/roi-v2.webp":[1920,1080],"x26/intake-session.webp":[1920,1080],"x26/process-diagram.webp":[1920,1080],"sq/ds-all.webp":[1364,1920],"sq/b-rank.webp":[1418,491],"sq/p-feedback.webp":[1920,1066],"sq/old-dash.webp":[1180,834],"sq/c-rank.webp":[380,393],"sq/new-notif.webp":[1920,1080],"sq/p-rtbs.webp":[1920,1457],"sq/new-jobs.webp":[1920,1080],"sq/b-jobs.webp":[1073,869],"sq/new-young.webp":[1920,1080],"sq/new-streak.webp":[1920,1080],"sq/new-dash.webp":[1920,1080],"sq/new-mood.webp":[1920,1080],"sq/b-learn.webp":[1562,687],"sq/p-survey.webp":[1920,1114],"sq/ds-buttons.webp":[1116,1920],"sq/p-cards.webp":[1883,968],"about/anime.webp":[720,900],"about/sea.webp":[720,900],"about/jaipur.webp":[720,900],"about/run.webp":[720,900],"about/paris.webp":[720,900],"about/tea.webp":[760,760],"x/pb/spread-hex.webp":[1920,1081],"x/pb/stage2.webp":[1920,1081],"x/pb/caps.webp":[1920,1172],"x/pb/stage1.webp":[1920,1081],"x/pb/layout-ch.webp":[1920,1081],"x/pb/specs.webp":[1920,1241],"x/pb/intro.webp":[1920,1108],"x/pb/spread-data.webp":[1920,1081],"x/pb/spread-intro.webp":[1920,1081],"x/pb/how.webp":[1920,1165],"x/pb/brief.webp":[1920,1110],"x/pb/contents.webp":[1920,1081],"x/pb/stage3.webp":[1920,1081],"x/pb/layout-ex.webp":[1920,1081],"x/cl/persona.webp":[1920,726],"x/cl/banner.webp":[1920,550],"x/cl/shelter.webp":[1920,1079],"x/cl/type.webp":[1920,918],"x/cl/brainstorm.webp":[1920,1093],"x/cl/explore.webp":[1920,800],"x/cl/logo.webp":[1920,1079],"x/cl/laptop.webp":[1920,1079],"x/cl/directions.webp":[1920,941],"x/cl/billboard.webp":[1920,1079],"x/de/logotype.webp":[1920,1498],"x/de/app.webp":[1920,1066],"x/de/palette.webp":[1920,1204],"x/de/totes.webp":[1920,982],"x/de/lineup.webp":[1920,895],"x/de/brief.webp":[1920,1539],"x/de/tee.webp":[1920,1023],"x/de/poster.webp":[1920,981],"x/de/social.webp":[1920,951],"x/de/billboard.webp":[1920,1142],"x/vd/spread-3.webp":[1920,1080],"x/vd/covers-spread.webp":[1920,1080],"x/vd/spread-1.webp":[1920,1080],"x/vd/chapter.webp":[1920,1080],"x/vd/hero.webp":[1079,689],"x/vd/spread-2.webp":[1920,1080],"x/vd/thumb.webp":[1000,562],"x/vd/covers.webp":[1920,1080],"x/sp/product.webp":[1920,1080],"x/sp/signage.webp":[1920,1080],"x/sp/logo.webp":[1079,689],"x/sp/campaign.webp":[1920,1080],"x/sp/brochure.webp":[1920,1080],"x/sp/thumb.webp":[1000,562],"x/sp/stationery.webp":[1920,1080],"x/rb/board-rules.webp":[1920,1080],"x/rb/cards-gold.webp":[1920,1080],"x/rb/box-open.webp":[1920,1080],"x/rb/divyastra.webp":[1920,1080],"x/rb/board-stand.webp":[1920,1080],"x/rb/cards-green.webp":[1920,1080],"x/rb/cards-purple.webp":[1920,1080],"x/rb/logo.webp":[1920,1080],"x/rb/card-close.webp":[1920,1080],"x/rb/board-top.webp":[1920,1920],"x/rb/box-art.webp":[1920,1080],"x/ac/poster3.webp":[1920,1185],"x/ac/poster1.webp":[1920,1186],"x/ac/process.webp":[1920,1803],"x/ac/brief.webp":[1920,854],"x/ac/poster2.webp":[1920,1186],"x/ac/kiosk.webp":[1920,1098],"x/ap/players.webp":[1920,888],"x/ap/objectives.webp":[1920,1351],"x/ap/story.webp":[1920,1078],"x/ap/rules.webp":[1920,541],"x/ap/box.webp":[1920,1078],"x/ap/flatlay.webp":[1920,1510],"x/ap/demons.webp":[1920,479],"x/uv/badge.webp":[1920,1080],"x/uv/letterhead.webp":[1920,1080],"x/uv/logo.webp":[1079,689],"x/uv/dots-blue.webp":[1920,1080],"x/uv/thumb.webp":[1000,562],"x/uv/cards.webp":[1920,1080],"x/uv/dots.webp":[1920,1080],"x/pp/values.webp":[1400,928],"x/pp/dir-street.webp":[1400,743],"x/pp/shelter.webp":[1400,791],"x/pp/can-hand.webp":[1400,807],"x/pp/process.webp":[1408,933],"x/pp/cans.webp":[1400,760],"x/pp/dir-grunge.webp":[1400,743],"x/pp/dir-pop.webp":[1400,743],"x/pp/social.webp":[1400,792],"x/pp/compare.webp":[1400,584],"x/pp/hoodie.webp":[1400,756],"x/pp/billboard.webp":[1400,1000]};
 const IMG=f=>f.includes("/")?f+".webp":"img/"+f+".webp";
 /* images with a larger version for the full-screen viewer */
 const HD=new Set(["55-101-r", "55-121-r", "55-179-r", "55-188-r", "55-208-r", "55-217-r", "55-221-r", "55-266-r", "55-270-r", "55-305-r", "55-89-r", "55-93-r", "55-97-r"]);
@@ -1933,168 +2792,7 @@ const S=(id,num,title,sub,body)=>({id,num,title,sub,body});
 
 const P=[
 /* ======================= ZBRAIN ======================= */
-{id:"zbrain",tier:1,name:"ZBrain",year:"2025–2026",cat:"Agentic AI platform · Product designer",
- short:"Three generations of an enterprise agentic AI platform",thumb:"71-349",hero:"68-26",
- title:"ZBrain: three generations of an enterprise agentic AI platform",
- what:["ZBrain is an enterprise platform for building and running AI agents: a company turns its documents, systems and rules into apps, automations and agent teams, then governs what runs. Built by LeewayHertz, a Hackett Group company.", "I joined when it was a proof of concept (May 2025) and designed the three generations since: Gen 1, Gen 2 and Gen 3, the latest."],
- lede:"I joined an existing product and designed it through three structural changes, as the question moved from “can we trust an agent?” to “can a whole enterprise build with them safely?”",
- meta:[["Role","Product designer, from problem framing to release follow-up, on a weekly release cycle"],["Team","PMs, engineering and QA, founders, solution consultants, client teams"],["Timeline","May 2025 to now. Gen 1, Gen 2 and Gen 3, after the proof of concept"],["Users","Scopers, builders, overseers and gatekeepers in enterprise AI teams"],["Product","ZBrain, by LeewayHertz, a Hackett Group company"],["Platform","Desktop web app at 1920 × 1080"]],
- ov:[["Identify", "Every solution passes through a scoper, a builder, an overseer and a gatekeeper. The problems sat in the hand-offs."], ["Iterate", "Gen 1: agent crews on a canvas. Gen 2: one path from scope to deploy. Gen 3: governed Spaces for every team."], ["Impact", "A global logistics leader built six native apps among its 80 AI solutions, and Hackett now deploys client workflows on ZBrain."]],
- snap:{
-  identify:{k:"The problem",p:"Enterprises wanted to build real work with AI agents. Every solution passes through four people, a scoper, a builder, an overseer and a gatekeeper, and the platform made each hand-off hard.",
-   l:["Work with several owners, forced into one straight line","No guardrails on answers and no view of cost","Planning, knowledge and test data lived outside the product","Every team shared one workspace, and approvals happened over email"]},
-  iterate:{k:"After the POC",l:[["Gen 1","Foundation","Agent crews on a canvas, guardrails, cost per run and a versioned Prompt Manager."],["Gen 2","Expansion","Five stages in the order work happens. Interview Agent, Design and Datasets feed a Solution Builder that plans before it builds."],["Gen 3","Maturity, latest","Governed Spaces for every team, an Admin Console, requests in context and a shared build workspace."]]},
-  impact:{k:"What it changed for clients",n:[["6","native apps built on ZBrain for a global logistics leader"],["80","AI solutions in the same programme, from 415+ use cases"]],
-   l:[["Clients:","Hackett’s engineers now design and deploy client agentic workflows on ZBrain."],["Partners:","with Celonis, AI XPLR finds the use cases and ZBrain delivers them."],["Builders:","one conversation from plan to deploy, and a request instead of a dead end."]]}},
- secs:[
- S("identify","01","Identify","The product, the people and the problems",[
-  ["h3","The problem","problem-zb","The problem"],
-  ["p","Enterprises wanted real work on AI agents, not demos. Every solution passes through four people, and the platform made each hand-off hard. Fixing one hand-off exposed the next."],
-  ["h4","What we kept hearing"],
-  ["cards",{c:3,items:[{"ic": "route", "k": "Client teams", "h": "Not sure where to start", "p": "Seven modules read as parts, not a path."}, {"ic": "scope", "k": "Scopers and PMs", "h": "Requirements got lost", "p": "The plan lived in a BRD outside the product."}, {"ic": "oversee", "k": "Consultants", "h": "Discovery was slowest", "p": "Discovery took weeks of workshops, and the notes lived with one person."}, {"ic": "build", "k": "Builders", "h": "Blocked, then waiting", "p": "Access approved over email, with no record."}, {"ic": "gate", "k": "Compliance and IT", "h": "Checking app by app", "p": "No account-wide policy, no global stop."}, {"ic": "target", "k": "Market reviews", "h": "Risk became the blocker", "p": "Gartner: 40%+ of agentic projects may be cancelled by 2027."}]}],
-  ["h4","Problems and direction, by generation"],
-  ["evo",[
-   {n:"Gen 1",g:"",d:"May 2025 – Jan 2026",t:"Foundation",
-    why:[["Inherited from the POC:","one agent in one straight line, with **no guardrails and no view of cost**."]],
-    probs:[["crew","Work with several owners","A linear wizard couldn’t model **write, check, approve, publish**.","Crew of agents on a canvas, with a pause for a person"],
-     ["shield","Unsafe, drifting answers","Nothing stopped a **jailbreak or a made-up answer**.","Guardrails at the points where risk comes in, and evaluations on a schedule"],
-     ["coin","Invisible cost, copied prompts","**No cost breakdown**, and prompts had no version history.","Credits shown per run and per step, and a Prompt Manager with versions"]],
-    comp:["Dify","Langflow","Flowise","Stack AI","Relevance AI","CrewAI"],bar:"Stand out on **crews, knowledge quality and cost per run**."},
-   {n:"Gen 2",g:"",d:"Feb – Sep 2026",t:"Expansion",
-    why:[["Buyer changed:","**enterprise AI programmes** after the 2024 acquisition."],["Expectations changed:","prompt-to-app made **“describe it, get it built”** the norm."],["Risk became the blocker:","Gartner, **40%+ of agentic projects** may be cancelled by 2027."]],
-    probs:[["route","Work lived outside the product","Planning, process knowledge and test data **sat outside ZBrain**.","Five stages in the order work happens, with Design, Interview Agent and Datasets feeding the Builder"],
-     ["sliders","Controls stopped at each app","**No account-wide policy**, no regulation mapping, no global stop.","Policy templates, compliance frameworks and a kill switch"]],
-    comp:["Copilot Studio","Gemini Enterprise","Agentforce","watsonx Orchestrate","OpenAI AgentKit"],bar:"Describe it, get it built, and show **how it’s governed**."},
-   {n:"Gen 3",g:"Latest",d:"Sep 2026 – now",t:"Maturity",
-    why:[["Scale across units:","finance, HR and sales needed **their own data, models and rules**."],["Agent sprawl:","Agent 365 made **governance a product category**."],["Separation of duties:","IT approves **without becoming a bottleneck**."]],
-    probs:[["spaces","One workspace for everyone","Each team needed its **own data, models, budget and rules**.","Spaces and roles frame every screen"],
-     ["noentry","“Not allowed” was a dead end","Approvals happened **over email, with no record**.","Builders ask for access where they need it, and admins answer from one queue"]],
-    comp:["Microsoft Agent 365","ServiceNow AI Control Tower","Gemini Enterprise"],bar:"**Design-to-deployment across clouds**, backed by Hackett’s process knowledge."}]],
-  ["h3","Who it serves","users-zb","Who it serves"],
-  ["cards",{c:4,flow:1,items:[
-   {ic:"scope",k:"Stage 1",h:"The Scoper",s:"Business Analyst · Product Manager",p:"Turn an AI idea into a scoped, costed solution",f:"Pain: requirements get lost between the BRD and the build"},
-   {ic:"build",k:"Stage 2",h:"The Builder",s:"AI development team",p:"Puts together agents, flows and knowledge, and makes them reliable",f:"Pain: blocked waiting on credentials and access"},
-   {ic:"oversee",k:"Stage 3",h:"The Overseer",s:"Architect · Project Manager",p:"Checks stage, risk and readiness, then approves or unblocks",f:"Pain: reviews happen in meetings, not the product"},
-   {ic:"gate",k:"Stage 4",h:"The Gatekeeper",s:"Super Admin · IT",p:"Grants exactly the access teams need",f:"Pain: requests arrive without context"}]}],
-  ["h3","How each feature gets built","process-zb","How each feature is built"],
-  ["cards",{c:3,items:[{"h": "Product audit", "p": "KT sessions, a POC walkthrough, a map of every module, role and entity."}, {"h": "Delivery-team input", "p": "Founders and PMs set direction, consultants explained client processes, and QA tested every release."}, {"h": "Market reading", "p": "Three rounds of benchmarking, plus Gartner and McKinsey."}]}],
-  ["loop",{items:[["Start","KT sessions, POC audit"],["Frame the problem","with PMs and consultants"],["Explore options","2 or 3 directions"],["Design every state","blank, error, filled"],["Review","founders, PMs, engineering"],["Rework","fixes and new needs"],["Hand off and build","specs and edge cases"],["Deploy","staging, then production"],["Log bugs and feedback","QA and client input"]],note:"Then back to framing. This loop repeated every release, on a weekly cycle"}],
-  ["kv",[["Consistency", "One list-page template for every Gen 2 stage, and a shared component library built before any Gen 3 screen."], ["Validation", "Design and feasibility reviews, client scenarios, staging regression, production smoke tests."]]],
-  ["h3","The product’s life so far","lifecycle-zb","Lifecycle"],
-  ["note","Before May 2025: a proof of concept with one agent in one straight line, no guardrails and no view of cost."],
-  ["cards",{c:3,items:[{"art": "g3", "k": "May 2025 – Jan 2026", "h": "Gen 1 · Foundation", "p": "An agent-first platform that proves, guards and prices what the AI does. I owned three of seven modules."}, {"art": "g4", "k": "Feb – Sep 2026", "h": "Gen 2 · Expansion", "p": "One path for a whole solution: plan, build by chat, govern. I owned the whole design."}, {"art": "g5", "k": "Latest · Sep 2026 – now", "h": "Gen 3 · Maturity", "p": "A governed workspace for every team. I own the user portal, and Indrajit owns the Admin Console."}]}],
- ]),
- S("iterate","02","Iterate","Three generations",[
-  ["h3","Principles that held across all three","principles-zb","Principles"],
-  ["cards",{c:3,items:[
-   {ic:"layers",h:"Depth per role, hide the rest",p:"A scoper never reads a prompt, and a gatekeeper never opens the canvas."},
-   {ic:"target",h:"Controls where risk enters",p:"On the input, the output, a step or a pause."},
-   {ic:"approve",h:"A person approves before the AI acts",p:"When unsure, the agent pauses instead of guessing. It plans, a person approves, then it builds."},
-   {ic:"fold",h:"Show the work, folded",p:"Every step visible and collapsed to one line."},
-   {ic:"tag",h:"Cost next to the choice",p:"Price sits beside the model."},
-   {ic:"info",h:"Explain every block",p:"A blocked action shows its rule, its prompt and a next step."}]}],
-  ["h3","Gen 1 · From configuration screens to an agent-first platform","v3","Gen 1 · Foundation"],
-  ["note","May 2025 to Jan 2026. I owned Agents and Crew, Apps and Guardrails, Monitor and Prompts. Screens use sample data."],
-  ["kv",[["Problems it solved", "Work with many owners became crews on a canvas. Unsafe answers got guardrails and evaluations. Hidden cost became credits per run, and prompts got versions."], ["Why this direction", "Stand out on crews, knowledge quality and cost per run."]]],
-  ["fig","zb/v3-ia","Gen 1 information architecture. A typical journey (blue) crosses four of the seven modules."],
-  ["h4","New features"],
-  ["dec",{n:"Decision 1",h:"A form or a canvas for a team of agents?",opts:"The POC’s linear wizard · a form per agent · a canvas showing who reports to whom",chose:"A short wizard to set the crew up, then a canvas to see and test it: agents under a supervisor, lines as reporting lines, and a pause for a person instead of a guess.",trade:"More to build than a form, but people can see and change how the work flows."}],
-  ["demo",{v:"zb/zb-crew-build",n:"01",k:"Agents · Crew setup",h:"Assemble a crew in four steps",p:"A supervisor plus agents, created new, reused from the library, or imported from Bedrock or Azure.",ch:[[0, "Overview", "Name, framework, model, access"], [6.2, "Queue", "Work from S3, Google Drive and more"], [9.4, "Structure", "Supervisor, tools and MCP servers"], [15.6, "Agents", "New, library or imported"]]}],
-  ["demo",{v:"zb/zb-crew-test",n:"02",k:"Agents · Crew canvas",h:"Test the team with a person in the loop",p:"The crew delivers, then pauses for a person instead of guessing.",ch:[[0, "Canvas", "Lines are reporting lines"], [4.6, "Brief", "Ask in plain words"], [13.4, "Deliver", "A Word file arrives"], [15.2, "Pause", "Waits for your response"], [20.4, "Rewire", "Drag a line, test again"]]}],
-  ["demo",{v:"zb/zb-prompt-new",n:"03",k:"Prompts · New prompt",h:"Prove a prompt before it ships",p:"Model and price side by side, platform variables, and evaluators that judge every run.",ch:[[0, "Model", "Price beside each model"], [4.4, "Tune", "Temperature, top-p, limits"], [16.6, "Variables", "User, date, knowledge base"], [28.8, "Evaluators", "Accuracy, bias, safety"], [31.8, "Run", "Output and a verdict"]]}],
-  ["demo",{v:"zb/zb-prompt-manage",n:"04",k:"Prompts · Prompt Manager",h:"One prompt, many apps",p:"Cost and runs come first. Every call can be traced, every version restored, and access is controlled.",ch:[[0, "Overview", "Runs, tokens, cost"], [6.4, "Edit", "Publish a new version"], [9.6, "Versions", "Restore any version"], [13, "Trace", "One call, end to end"], [21.4, "Access", "Who can change it"]]}],
-  ["figs",[["zb/v3-configure-bot", "Apps: orchestration, knowledge, golden questions and guardrails on one page."], ["70-75", "Automated reasoning: rules extracted from an HR policy."], ["70-79", "Knowledge graph beside chunks and retrieval testing."]],3],
-  ["mini",[["Guardrails where risk enters,", "as plain toggles in agent, app and flow setup."], ["Alerts reuse Flows,", "so any channel a flow reaches can carry a failed evaluation."]]],
-  ["done","Delivered.","17 public releases, May 2025 – Jan 2026."],
-
-  ["h3","Gen 2 · From the parts of an agent to the life of a solution","v4","Gen 2 · Expansion"],
-  ["note","Feb to Sep 2026. I owned the whole design."],
-  ["q","How might an enterprise team go from a business problem to a governed, deployed solution in one place?"],
-  ["kv",[["Problems it solved", "Work that happened outside the product moved into five stages that feed the Builder. Controls set app by app became one account-wide policy with a kill switch."], ["What carried on", "Every Gen 1 module, now a tab inside the stage where it’s used."], ["Why a new direction", "Enterprise buyers, prompt-to-app expectations, and risk as the blocker."]]],
-  ["h4","Why a new navigation"],
-  ["dec",{n:"Decision 2",h:"Keep seven modules, or order the menu by the work?",opts:"Keep the seven Gen 1 modules side by side · regroup them into stages in the order work happens",chose:"Five stages: Dashboard, Prepare, Build, Monitor, Configure. Every Gen 1 module became a tab inside its stage.",trade:"Existing users had to relearn where things live, but new teams know where to start."}],
-  ["fig","zb/v4-modules-stages","Seven modules became five stages, and each Gen 1 module became a tab inside one of them."],
-  ["demo",{v:"zb/zb-v4-nav",n:"01",k:"Navigation · Five stages",h:"The menu became the order of the work",p:"Seven modules read as parts. Five stages read left to right, so new teams know where to start.",ch:[[0, "Dashboard", "AI summary and ranked actions"], [4.8, "Prepare", "Design, knowledge, datasets"], [10, "Build", "Solutions, agents, flows"], [15.4, "Monitor", "Policy, audit, kill switch"], [17.2, "Configure", "Models, connections, MCP"]]}],
-  ["h4","How the journey is streamlined"],
-  ["note","Each step feeds the next. In Gen 1, every step started from scratch."],
-  ["wave",{nodes:[["Interview Agent","employees, by email"],["Knowledge","analysed and stored"],["Design","BRD, epics, user stories"],["Dataset","scenarios from the design"],["Solution Builder","plan, approve, build"],["Deploy","GitHub, staging, production"],["Monitor","policy, kill switch"],["Dashboard","ranked actions"]],
-   phases:[["Prepare: design and datasets feed the build",0,3],["Build, ship, govern, track",4,7]],
-   tail:"Configure: models, connections, MCP, variables, environments, database and storage"}],
-  ["h4","Interviews, scoping and test data"],
-  ["demo",{v:"zb/zb-v4-interview",n:"02",k:"Prepare · Interview Agent",h:"Knowledge from the people who do the work",p:"Replaces weeks of workshops: an agent interviews employees by voice and files answers against topics.",ch:[[0, "Source", "Import, or interview"], [3.6, "Brief", "Purpose, output, tone"], [9.3, "Topics", "What to ask, when it’s enough"], [16.4, "Style", "Branding and sharing"], [22.1, "Invite", "By name, team, role"], [31, "Interview", "Voice-first, resumable"]]}],
-  ["demo",{v:"zb/zb-v4-design",n:"03",k:"Prepare · Design",h:"Scope the solution before anyone builds",p:"A brief or PRD becomes a numbered scope: workflows, architecture, personas, epics and stories.",ch:[[0, "Project", "Client and team"], [6.4, "Describe", "Brief plus PRD or RFP"], [17.3, "Workspace", "Knowledge and questions"], [21.8, "Deliverables", "Diagrams, schema, stories, BRD"]]}],
-  ["fig","zb/v4-dataset-builder","Datasets: scenarios generated from the approved scope (happy path, edge cases, complex), each with its files, rerun as a regression suite after every change."],
-  ["h4","Solution Builder: plan, approve, build"],
-  ["chain",{items:[["Describe it","attach files, a Design or a dataset"],["Plan","the Builder writes one"],["Approve","“I approve the plan”"],["Build","steps fold to one line"],["Preview","the live app"],["Change","by chat"],["Publish",""]]}],
-  ["dec",{n:"Decision 3",h:"Should the AI build the app, or help the builder build it?",opts:"Forms · guided chat · chat with preview and code · plan, approve, then build",chose:"Plan first. Nothing is built until a person approves the plan.",trade:"Slower than one-shot generation, but builders understand and can fix what was built.",why:"Enterprises wanted prompt-to-app speed with every step visible."}],
-  ["figs",[["zb/v4-builder-v0","v0. Tabs to fill in, which only regrouped the same assembly work."],["zb/v4-builder-v1","v1. Guided chat. Slow, and nothing visible until the end."],["zb/v4-builder-v2","v2. Chat, preview and code. Too technical, too early."]],3],
-  ["dec",{n:"Decision 4",h:"How much of the AI’s work should the builder see?",opts:"Final code only · every raw log · one line per step beside the live app",chose:"One line per step, with counts, beside the live app.",trade:"The first run takes longer, but everything the AI makes stays visible and editable."}],
-  ["fig","zb/v4-builder-v3","Chosen: the approved plan with each step folded to one line, beside the live app."],
-  ["dec",{n:"Decision 5",h:"How do builders change what the AI built?",opts:"Describe every change in chat · click the part in the live preview",chose:"Click and edit, with the model picker beside the prompt. Publishing becomes a request when policy requires it.",trade:"Harder to build, but people can make precise changes without rewriting prompts."}],
-  ["fig","71-85","Chosen: click part of the live app. The selection is attached to the prompt, so the change lands exactly there."],
-  ["fig","zb/v4-github","Connect to Git: import a repository and deploy through GitHub, with access explained first."],
-  ["h4","Governance: policy at four levels"],
-  ["tbl",["Level","What can be set there"],[["Organisation","Policy templates, compliance frameworks, blocked patterns, roles, audit settings, a global kill switch"],["Space","Policies attached when a Space is created, and a role for each person"],["Solution","Account rules are locked, and solution rules sit on top"],["Agent","Trust score, privilege ring, health, with kill or suspend"]]],
-  ["dec",{n:"Decision 6",h:"How much should agents be allowed to do on their own?",opts:"An on/off switch per agent · templates, access levels, trust scores, human approval and an emergency stop",chose:"The full set, in one Observatory: health, trust score, what was blocked, and Kill on every agent.",trade:"More for admins to learn, but the controls match how enterprises already manage risk.",why:"Gartner tied agentic project cancellations to weak risk controls."}],
-  ["figs",[["70-203", "Chosen: start from a policy template (Strict, Balanced or Audit only)."], ["zb/v4-gov-solution", "Account rules are locked. A solution can only add stricter ones."], ["zb/v4-compliance", "Frameworks add rules to a coverage score."], ["70-199", "The emergency stop: kill switch settings."]],2],
-  ["mini",[["Every block is explained:","what the agent tried, the prompt and the rule it hit."]]],
-  ["note","Also a tailored Gen 2 build for a global test and measurement company: global variables, agent groups with telemetry, flows created by describing them."],
-  ["done","Delivered.","Four production releases, 14 Aug – 24 Sep 2026, including the Solution Builder and governance."],
-
-  ["h3","Gen 3 · From one team’s path to a governed workspace for every team","v5","Gen 3 · Maturity"],
-  ["note","Sep 2026 to now. I own the user portal and Indrajit owns the Admin Console. We designed the places where they meet together."],
-  ["q","How might business teams build their own AI solutions while IT keeps control, without IT becoming a bottleneck?"],
-  ["kv",[["Problems it solved", "One workspace for everyone became Spaces with roles. “Not allowed” stopped being a dead end: builders now ask for access in place, and admins answer from one queue."], ["What carried on", "The same three jobs (see, build, keep safe), plan-then-build and account policy, now per Space."], ["Why a new direction", "Many teams per account, agent sprawl, and IT approving without becoming a bottleneck."]]],
-  ["jobs",[
-   ["Seeing what is going on",[["zb/v3-control-tower","Gen 1 · Control Tower, a concept"],["zb/v4-dashboard","Gen 2 · Dashboard for one workspace"],["zb/v5-observatory","Gen 3 · Observatory per Space: risk first, with Kill on the agent’s row"]]],
-   ["Building",[["zb/v3-builder","Gen 1 · Chat Builder, a concept"],["zb/v4-builder-v3","Gen 2 · Solution Builder: plan, approve, build"],["zb/v5-editor-sessions","Gen 3 · Solution workspace with sessions"]]],
-   ["Keeping it safe",[["zb/v3-configure-bot","Gen 1 · Guardrails set inside each app"],["zb/v4-compliance","Gen 2 · Account-wide policy and frameworks"],["zb/v5-computed-policy","Gen 3 · Policy computed per solution"]]]]],
-  ["h4","Why a new navigation"],
-  ["dec",{n:"Decision 7",h:"One workspace with permissions, or a Space per team?",opts:"One shared workspace with permission filters · a Space per team, inside rules IT sets once",chose:"A Space per team. Its sidebar shows only that team’s solutions, models and budget, and its policy sits on every screen with Request a change.",trade:"One more layer to switch between, but finance never sees HR’s work and IT sets rules once."}],
-  ["demo",{v:"zb/zb-v5-console",n:"01",k:"Admin Console · Spaces",h:"IT sets the rules once, and every team works inside them",p:"Five stages assumed one team. Now IT works in the Console and each team in its own Space, with its policy on every screen.",ch:[[0, "Observatory", "Risk across all Spaces"], [7.6, "Spaces", "Policy, members, budget"], [9.3, "Access", "Sign-in and IP ranges"], [17.2, "Resources", "Models, connections, keys"], [19.4, "Governance", "Requests, policies, Kill"], [31.8, "Switch", "Into one team’s Space"]]}],
-  ["mini",[["The Space is the frame:", "finance sees finance work, and HR’s work isn’t there."], ["Role and grant are separate:", "what work you do, and on which solutions."]]],
-  ["h4","The Builder became a workspace"],
-  ["demo",{v:"zb/zb-v5-builder",n:"02",k:"Solution Builder · Workspace",h:"From one person’s chat to a team’s workspace",p:"Each builder works in a session, a branch of Main with its own preview, and merges by pull request.",ch:[[0, "Solutions", "Cost, runs, status"], [7.7, "Main", "Versions and pull requests"], [15, "Code", "The codebase beside the preview"], [21, "Session", "A branch with its own preview"], [27.7, "Tools", "MCPs, connectors, deployments"], [34.3, "Governance", "Policy, audit, violations"]]}],
-  ["chain",{items:[["Set up","Admin creates the solution and names the owner"],["Functional","Business user uploads the BRD or PRD and answers questions"],["Technical","AI developer designs the architecture from the scope"],["Architecture review","Architect or PM approves, or sends it back"],["Build and Dev","AI developer builds a prototype for the business user"],["Deployed","Live in Dev, with UAT and Production next"]],num:1,loop:"Review can send work back to Technical"}],
-  ["figs",[["71-68", "Artifacts: an architecture diagram edited by an AI assistant."], ["zb/v5-github-unsynced", "Out of sync: a state with a way forward."], ["zb/v5-session-done", "Unmerged: session changes not yet in Main."]],3],
-  ["h4","Governance where the work happens"],
-  ["figs",[["zb/v5-computed-policy", "Policy computed per solution: value, exception, source, action."], ["zb/v5-violation", "A violation explained, with false-positive and adjust options."]],2],
-  ["kv",[["Observatory", "Each Space leads with risk: agents at risk, violations and cost. Every agent’s row shows its trust score and a Kill button."], ["Outcome", "Kill, suspend and revive shipped on 4 Nov 2026, and trigger automatically below a trust score of 300. Every governance test passed in the Sep 2026 regression."]]],
-  ["h4","Requests: “not allowed” stopped being the end"],
-  ["chain",{rows:[
-    ["Builder · inside a Space",[["Hits a limit","no access to a tool"],["Sends a request","access tagged Read / Write"],["Sees the outcome","Connected or Denied"],["Keeps building","change applies to the Space"]]],
-    ["Admin Console",[["Gets notified","bell and email"],["Reviews the request","one queue, all Spaces"],["Approves or declines","the answer goes back to the builder"]]]],
-   tail:"The request goes to the admin, and their answer comes back to the builder’s Space"}],
-  ["dec",{n:"Decision 8",h:"When builders hit a rule, block them or let them ask?",opts:"Admins set everything up first, or builders act and admins audit later, or builders see the rules and ask in place",chose:"Ask in place. Each Space shows its policy, every integration shows Connected, Pending or Request, and admins approve from one queue.",trade:"Out-of-policy needs wait for an admin, but there is always a next step.",why:"Agent 365 moved policy templates and least-privilege access into the product (Nov 2025)."}],
-  ["figs",[["zb/v5-ask-connection", "Ask, from the blocked item."], ["zb/v5-toast", "Confirm where it went."], ["zb/v5-requests-builder", "Track every request."], ["zb/v5-requests-admin", "Admins: one queue across Spaces."]],2],
-  ["done","Delivered.","Core flows in production 10 Sep – 4 Nov 2026, at The Hackett Group and licensed client enterprises."],
- ]),
- S("impact","03","Impact","What changed, how it shipped, what I learned",[
-  ["h3","Outcomes","outcomes-zb","Outcomes"],
-  ["note","Impact here means what changed for clients and builders, not how many releases went out. Each claim names its source, and most are self-reported."],
-  ["kv",[["A global logistics leader", "415+ Gen AI use cases assessed, 80 AI solutions implemented, six native apps built on ZBrain. CIO Review, 2025."], ["Scrut", "Its clients query SOC 2, ISO 27001, GDPR and HIPAA material in plain language. LeewayHertz case study."], ["Hackett delivery", "Hackett engineers now design and deploy client workflows on AI XPLR and ZBrain (Q3 2026). Platform-led deals brought in over $30M (Q2 2026), and margins rose about 500 bps (Q1 2026)."], ["Partners", "Celonis (Aug 2025): AI XPLR finds use cases, ZBrain delivers them."]]],
-  ["tbl",["Outcome","Before","After","Evidence"],[
-   ["Navigation","Seven modules side by side","Five stages in work order, then a Space-scoped sidebar","Shipped 14 Aug 2026, with Spaces on 10 Sep 2026"],
-   ["Simpler workflows","Each part configured separately","One conversation: plan, approve, build, preview, deploy","Solution Builder is sold as a named product"],
-   ["Information visibility","Open Monitor, then each module","A ranked Dashboard, then a risk-first Observatory","Dashboard passed every regression case, Sep 2026"],
-   ["No dead ends","Blocked, with approval over email","A request where the builder is, answered from one admin queue","Shipped Sep – Nov 2026"],
-   ["Scalable architecture","One workspace for everyone","Spaces with a policy, roles and grants","Production 10 Sep 2026"],
-   ["Safety and control","Trust the model","Guardrails, four-level governance, kill and revive per agent","Shipped Jun 2025 – Nov 2026"]]],
-  ["note","Public record: Hackett acquired LeewayHertz in Sep 2024 and calls ZBrain its flagship. It is listed on AWS Marketplace as “The Governance-First Agentic AI Platform”."],
-  ["h3","Delivery","delivery-zb","Delivery"],
-  ["kv",[["Design systems", "Gen 1 set up tokens, components and dark mode. Gen 2 brought a new theme and an approved library. Gen 3 started with a shared library, built before the screens, with components for chat."], ["Beyond the product", "A marketing site with 17 industry pages, AI XPLR and agent-store landing pages, and an enterprise client build"]]],
-  ["nums",[["17","public releases carried my Gen 1 work","May 2025 – Jan 2026"],["30+","capabilities shipped from my three Gen 1 areas","Release notes"],["4","production releases delivered Gen 2 in six weeks","14 Aug – 24 Sep 2026"],["97%","of production smoke tests passed (170 of 175)","24 Sep 2026 release, internal QA"]]],
-  ["h3","Learnings","learnings-zb","Learnings"],
-  ["cards",{c:3,items:[
-   {k:"After Gen 1",p:"In enterprise AI, the design work that matters most is control and trust, not the chat box.",big:1},
-   {k:"After Gen 2",p:"Once AI can build the solution, design moves to the edges: context and plans before the build, policy and the ability to stop after it.",big:1},
-   {k:"After Gen 3",p:"Once AI can build almost anything, the problem becomes who is allowed to build what, and what happens when they are not.",big:1}]}],
-  ["kv",[["What’s next", "Bring agents built elsewhere into the same Spaces and policies, and track time from idea to deployment, time to approve a request, and how accurately policy blocks the right things."]]],
-  ["h4","Beyond Gen 3: ZBrain One"],
-  ["photo","mock/zbrain-closing","ZBrain One, unreleased: Discover puts tailor-made AI opportunities first, with ready-made solutions from the ZBrain library below."]
- ])],
- refl:"I took one product from configuration screens to a governed workspace where every team builds its own AI inside rules IT sets once. Each generation kept one idea: the agent proposes, a person decides.",
- src:["ZBrain Gen 1, Gen 2 and Gen 3 Figma working files, and ZBrain personas","ZBrain release notes, May 2025 – Nov 2026 (docs.zbrain.ai), and internal release notes","Internal leadership updates, Q2 2025–Q3 2026","zbrain.ai (checked 12 Nov 2026) and ZBrain on AWS Marketplace","The Hackett Group, “Strategic acquisition of LeewayHertz”, Business Wire, Sep 2024","The Hackett Group earnings calls: Q1 2026 (5 May), Q2 2026 results (4 Aug) and Q3 2026 (3 Nov)","CIO Review, “The Hackett Group: Orchestrating Enterprise Transformation”, 2025","LeewayHertz, “Scrut’s LLM-powered application” case study","The Hackett Group and Celonis partnership announcement, Aug 2025","Gartner, Jul 2024, Jun 2025 and Apr 2026","Petri, “Microsoft Agent 365”, Nov 2025"]},
+{"id": "zbrain", "tier": 1, "name": "ZBrain", "year": "2025–2026", "cat": "Agentic AI platform · Product designer", "short": "One product, three questions the market asked", "thumb": "71-349", "hero": "68-26", "title": "ZBrain: one product, three questions the market asked", "what": ["The Hackett Group’s platform for taking a company from an AI idea to a working, governed AI solution: agents, workflows, integrations and the app around them.", "I joined in May 2025 and have owned the user portal through all three generations since."], "lede": "I’ve designed ZBrain’s user portal through three generations, as the market’s question moved from “can we trust an agent?” to “can every team build, safely?” Here is what I bet on each time, what worked, and what didn’t.", "meta": [["Role", "Product designer, owner of the user portal"], ["Team", "PMs, engineering, QA, founders, consultants; Indrajit on the Admin Console"], ["Timeline", "May 2025 – now"], ["Users", "Scopers, builders, overseers, IT"], ["Product", "ZBrain · The Hackett Group"], ["Platform", "Desktop web"]], "snap": {"gens": [["Gen 1", "2025", "Can we trust an agent?", "Crews of agents", "Agent Crew is still core"], ["Gen 2", "2026", "Can AI build a whole solution?", "Plan, approve, build", "Became Solution Builder"], ["Gen 3", "Now", "Can every team build, safely?", "Spaces, ask in place", "Governance leads the product"]], "identify": {"k": "The problem", "p": "Enterprises couldn’t get AI agents into real work.", "l": ["Use cases picked by hype", "Idea to production too slow", "Agents with no one view", "Risk blocked adoption"]}, "iterate": {"k": "Three generations", "l": [["Gen 1", "Foundation", "Crews, guardrails, cost, prompts."], ["Gen 2", "Expansion", "Five stages, plan-first builder, policy."], ["Gen 3", "Maturity", "Spaces, team builder, Observatory."]]}, "impact": {"k": "What it changed", "n": [["6", "native apps for a global logistics leader"], ["80", "AI solutions in the same programme"]], "l": [["In production:", "URC’s dealer support assistant runs on ZBrain."], ["Hackett:", "engineers deploy client workflows on ZBrain."]]}}, "secs": [{"id": "identify", "num": "01", "title": "Identify", "sub": "What ZBrain is, who uses it, and what I own", "body": [["h3", "From a document chatbot to a workspace for every team", "from-to-zb", "From → To"], ["fromto", {"from": ["zb/f-from", "2023", "May 2023: chat apps on a company’s own data."], "to": ["zb/hq-g3-space-obs", "Now · Gen 3", "Every team builds AI in its own governed Space."], "steps": [["2023", "Document chat"], ["Gen 1", "Can we trust an agent?"], ["Gen 2", "Can AI build a whole solution?"], ["Gen 3", "Can every team build, safely?"]]}], ["p", "Four kinds of people use it: scopers (BAs and PMs) shape and cost the idea, builders make the agents and flows, overseers review risk before launch, and IT sets the rules everyone builds within."], ["h3", "What I own", "own-zb", "What I own"], ["kv", [["Scope", "The user portal end to end, across all three generations: navigation, the builder, and governance where builders meet it. Indrajit owns the Admin Console; we design the seams between them together."], ["Cadence", "Weekly releases. 17 public releases carried my Gen 1 work."], ["Signals", "Our own builds, bug bashes and client feedback."], ["Prototyping", "Multi-role flows are prototyped with AI before they reach Figma."]]], ["figs", [["zb/f-team-crit", "Crit with my manager and Indrajit."]], 2]]}, {"id": "iterate", "num": "02", "title": "Iterate", "sub": "Three questions the market asked, one bet each, and what worked", "body": [["h3", "Before I joined", "gen0-zb", "Before I joined"], ["p", "When I joined, ZBrain was fast, private and free of model lock-in. But it ran one agent in a straight line, with no guardrails, no view of cost and no way to manage prompts."], ["chapter", {"n": "Gen 1", "when": "May 2025 – Jan 2026", "m": "17 public releases", "q": "Can we trust an agent?", "mk": "Teams of agents became the norm (AWS multi-agent, CrewAI, LangGraph), but Gartner expected 30% of gen-AI projects to be dropped after the proof of concept, partly for weak risk controls.", "broke": [["One agent couldn’t do team work", "Real work has several owners."], ["Answers weren’t safe", "Jailbreaks and made-up answers got through."], ["Cost was invisible", "Nobody knew what a run cost until the bill."], ["Prompts were unmanaged", "Copied into many apps, with no versions."]], "bet": {"h": "Crews of agents, with a supervisor and a person in the loop", "p": "Work moved from one agent in a straight line to a crew on a canvas: a supervisor hands out tasks, and the crew pauses for a person instead of guessing.", "opts": ["Linear wizard", "Form per agent", "Wizard, then canvas"], "pick": 2, "cost": "More to build than a form.", "ex": [["zb/f-alt-crew-canvas", "Canvas with triggers and a library"]], "fin": ["zb/hq-g1-crew", "Supervisor and reporting lines"], "demo": {"v": "zb/zb-crew-test", "n": "02", "k": "Crew canvas", "h": "A person in the loop", "p": "The crew pauses for a person instead of guessing.", "ch": [[0, "Canvas", "Reporting lines"], [4.6, "Brief", "Plain words"], [13.4, "Deliver", "A file arrives"], [15.2, "Pause", "Waits for you"], [20.4, "Rewire", "Drag, retest"]]}}, "ship": {"l": ["Agent crews on a canvas", "Guardrails where risk enters", "Price beside every model", "One Prompt Manager"], "shot": ["zb/v3-prompt-manager", "Gen 1 Prompt Manager"]}, "ok": ["Crews became the core. ZBrain Builder still runs multi-agent work through Agent Crew.", "Guardrails, price beside the model and the Prompt Manager carried into every later generation."], "no": ["Seven modules sat side by side with no starting point. We hit it in our own builds and bug bashes, and clients said so. Gen 2 regrouped them into stages.", "Control Tower, a view of every agent, stayed a concept. It came back in Gen 3, once governance data could feed it."], "more": [{"id": "g1-1", "n": "Gen 1 · Problem 1", "h": "One agent couldn’t do team work", "p": "Real work has several owners, but one agent ran in a straight line.", "why": "Teams of agents became the norm: AWS multi-agent, CrewAI, LangGraph.", "f": "Agent crews on a canvas, with a supervisor.", "subs": [{"t": "Where do tools and MCP servers connect?", "cost": "Panels repeat some settings.", "ex": [["zb/f-alt-mcp-settings", "In Settings, before building"], ["zb/v3-import-agent", "Import from Bedrock"]], "fin": ["zb/el/create-agent", "Inside the agent, where they’re used"], "opts": ["In Settings", "Inside the crew"], "pick": 1}], "demos": []}, {"id": "g1-2", "n": "Gen 1 · Problem 2", "h": "Answers weren’t safe", "p": "Jailbreaks and made-up answers got through.", "why": "Gartner: 30% of gen-AI projects dropped after the POC, for weak risk controls.", "f": "Guardrails where risk enters, and evaluators.", "subs": [{"t": "Where do safety controls live?", "cost": "Spread across setup screens.", "ex": [["img/70-75", "Rules pulled from a policy"], ["img/70-79", "Retrieval testing"]], "fin": ["zb/v3-configure-bot", "Input and output checks in app setup"], "chose": "As toggles where risk enters: input, output, a risky step."}], "demos": []}, {"id": "g1-3", "n": "Gen 1 · Problem 3", "h": "Cost was invisible", "p": "Nobody knew what a run cost until the bill.", "why": "Model prices fell fast (DeepSeek), and buyers wanted cost per run.", "f": "Credits per run, price beside the model.", "subs": [{"t": "When do people see cost?", "cost": "One more number on setup.", "ex": [], "fin": ["zb/v3-prompt-manager", "Price beside the model"], "chose": "While choosing the model, not after the run."}], "demos": [{"v": "zb/zb-prompt-new", "n": "03", "k": "New prompt", "h": "Price beside the model", "p": "Compare models and cost, then test before shipping.", "ch": [[0, "Model", "With price"], [4.4, "Tune", "Settings"], [16.6, "Variables", "Context"], [28.8, "Evaluators", "Quality checks"], [31.8, "Run", "Verdict"]]}]}, {"id": "g1-4", "n": "Gen 1 · Problem 4", "h": "Prompts were unmanaged", "p": "The same prompt copied into many apps, with no versions.", "why": "AI governance ranked #2 for 2025; the EU AI Act took effect.", "f": "One Prompt Manager: versions, traces, access.", "subs": [{"t": "How are prompts tested and managed?", "cost": "Testing moved out of a separate playground.", "ex": [["zb/f-alt-playground", "A separate playground"]], "fin": ["zb/el/prompt-card", "Runs, cost and last change on each prompt"], "opts": ["Separate playground", "Cost and runs first"], "pick": 1}], "demos": [{"v": "zb/zb-prompt-manage", "n": "04", "k": "Prompt Manager", "h": "One prompt, many apps", "p": "Trace any call, restore any version.", "ch": [[0, "Overview", "Runs, cost"], [6.4, "Edit", "New version"], [9.6, "Versions", "Restore"], [13, "Trace", "End to end"], [21.4, "Access", "Who can edit"]]}]}], "c": "#7a6e8c", "hl": [["zb/hq-g1-crew", "Crews on a canvas: a supervisor hands out the work"], ["zb/hq-g1-crew-flow", "Triggers in, output out, with each agent’s tools"], ["zb/el/create-agent", "Tools and MCP servers connect inside the agent"], ["zb/hq-g1-playground", "Test a prompt across models, with the cost of each run"]], "v": {"num": "1", "bi": ["crew", "shield", "coin", "tag"], "si": ["crew", "shield", "coin", "tag"], "dg": "g1now", "ok": ["Agent Crew is still the core of ZBrain Builder", "Guardrails, pricing and Prompt Manager carried forward"], "no": ["Seven side-by-side modules had no starting point", "Control Tower stayed a concept, until Gen 3"]}}, "g1-zb", "Gen 1 · Trust"], ["chapter", {"n": "Gen 2", "when": "Feb – Sep 2026", "m": "4 releases in six weeks", "q": "Can AI build a whole solution?", "mk": "Lovable and v0 made “describe it, get it built” the norm, while MIT found 95% of gen-AI pilots showed no measurable return.", "broke": [["No clear path", "Seven modules, no starting point."], ["Building was too slow", "Apps were assembled part by part."], ["AI lacked business context", "Process knowledge lived in people’s heads."], ["No plan or test data", "Specs and tests lived outside the product."], ["Controls stopped at each app", "No company-wide policy or stop."]], "bet": {"h": "Plan, approve, then build", "p": "Builders describe the outcome, the AI proposes a plan, a person approves it, and only then does it build, with every step folded into one line.", "opts": ["Forms", "Guided chat", "Chat and code", "Plan, approve, build"], "pick": 3, "cost": "Slower than one-shot generation.", "ex": [["zb/v4-builder-v0", "v0 · Tabs"], ["zb/v4-builder-v1", "v1 · Guided chat"], ["zb/v4-builder-v2", "v2 · Chat and code"]], "fin": ["zb/el/b-plan-chat", "A plan to approve first"]}, "ship": {"l": ["Five stages in the order of the work", "A builder that plans, then builds", "An Interview Agent for process knowledge", "Account-wide policy with Kill"], "shot": ["zb/hq-g2-builder", "Gen 2 Solution Builder"], "demo": {"v": "zb/zb-v4-nav", "n": "05", "k": "Navigation", "h": "The menu follows the work", "p": "Dashboard, Prepare, Build, Monitor, Configure.", "ch": [[0, "Dashboard", ""], [4.8, "Prepare", ""], [10, "Build", ""], [15.4, "Monitor", ""], [17.2, "Configure", ""]]}}, "ok": ["Plan, approve, build became Solution Builder, now sold as its own product.", "Five stages gave new users a place to start."], "no": ["The first builders missed. Tabs, guided chat, then chat and code all came before plan, approve, build landed.", "The five-stage top bar ran out of room for Spaces and roles.", "The Dashboard put usage first, so violations sat below the fold and were slow to act on."], "more": [{"id": "g2-2", "n": "Gen 2 · Problem 2", "h": "Building was too slow", "p": "Apps were assembled part by part.", "why": "Lovable and v0 made “describe it, get it built” the norm.", "f": "A builder that plans, then builds.", "subs": [{"t": "How much of the AI’s work to show?", "cost": "The first run takes longer.", "ex": [["zb/f-alt-builder", "Raw activity and code"], ["zb/el/b-activity", "Expanded steps"]], "fin": ["zb/el/b-worklog", "One line per step, folded"], "opts": ["Final code only", "Every raw log", "One line per step"], "pick": 2}, {"t": "How do builders change what was built?", "cost": "Harder to build.", "ex": [], "fin": ["zb/el/c-click", "Select a part, then describe the change"], "opts": ["Describe it in chat", "Click it in the preview"], "pick": 1}], "demos": []}, {"id": "g2-1", "n": "Gen 2 · Problem 1", "h": "No clear path", "p": "Seven modules, no starting point.", "why": "Buyers ran whole AI programmes and needed one path.", "f": "Five stages in the order of the work.", "subs": [{"t": "Modules or stages?", "cost": "Existing users relearned the menu.", "ex": [["zb/v3-ia", "Gen 1: seven modules"]], "fin": ["zb/v4-modules-stages", "Five stages, each module a tab"], "opts": ["Keep seven modules", "Regroup into stages"], "pick": 1}], "demos": []}, {"id": "g2-3", "n": "Gen 2 · Problem 3", "h": "AI lacked business context", "p": "Process knowledge lived in people’s heads.", "why": "MIT: 95% of gen-AI pilots showed no measurable return.", "f": "An agent that interviews employees.", "subs": [{"t": "How do we collect process knowledge?", "cost": "Answers need a review.", "ex": [], "fin": ["zb/v4-interview-data", "Answers filed by topic"], "chose": "An agent interviews the people who do the work."}], "demos": [{"v": "zb/zb-v4-interview", "n": "06", "k": "Interview Agent", "h": "Knowledge from the people who do the work", "p": "Voice interviews replace weeks of workshops.", "ch": [[0, "Source", ""], [3.6, "Brief", ""], [9.3, "Topics", ""], [16.4, "Style", ""], [22.1, "Invite", ""], [31, "Interview", ""]]}]}, {"id": "g2-4", "n": "Gen 2 · Problem 4", "h": "No plan or test data", "p": "BRDs and tests lived outside the product.", "why": "Spec-first tools like Kiro and Spec Kit took off.", "f": "Design to scope, Datasets to test.", "subs": [{"t": "Where does planning happen?", "cost": "A step before anyone builds.", "ex": [["zb/v4-design-identity", "Solution identity"], ["zb/el/design-roi", "Benefit case from the brief"]], "fin": ["zb/v4-dataset-builder", "Test scenarios from the scope"], "chose": "Inside ZBrain, before the build."}], "demos": [{"v": "zb/zb-v4-design", "n": "07", "k": "Design", "h": "Scope before building", "p": "A brief becomes workflows, stories and a BRD.", "ch": [[0, "Project", ""], [6.4, "Describe", ""], [17.3, "Workspace", ""], [21.8, "Deliverables", ""]]}]}, {"id": "g2-5", "n": "Gen 2 · Problem 5", "h": "Controls stopped at each app", "p": "No company-wide policy or stop.", "why": "Gartner: 40%+ of agentic projects may be cancelled.", "f": "Policy at four levels, with Kill.", "subs": [{"t": "How much can agents do alone?", "cost": "More for admins to learn.", "ex": [["img/70-203", "Policy templates"], ["zb/hq-g2-governance", "Solution overrides"], ["zb/v4-compliance", "Compliance frameworks"]], "fin": ["zb/f-g2-gov", "Trust score and Kill per agent"], "opts": ["On/off per agent", "Templates, trust, approvals, Kill"], "pick": 1}], "demos": []}], "c": "#a46b4e", "hl": [["zb/v4-modules-stages", "Seven modules became five stages in work order"], ["zb/hq-g2-design", "Scope first: questions, deliverables and the agent workflow"], ["zb/hq-g2-knowledge", "Knowledge from documents and Interview Agent sessions"], ["zb/hq-g2-solution-chat", "Describe it, and the builder recommends the agents"], ["zb/hq-g2-builder", "Approve the plan, then it builds with a live preview"], ["zb/hq-g2-governance", "Trust score and Kill on every agent"], ["zb/hq-g2-spend", "Spend by model, across every solution"]], "v": {"num": "2", "bi": ["route", "build", "info", "scope", "gate"], "si": ["route", "approve", "info", "gate"], "dg": "g2now", "ok": ["Plan → approve → build became Solution Builder, a product", "Five stages gave new users a place to start"], "no": ["The first builders, tabs and then guided chat, missed", "The top bar ran out of room for Spaces", "A usage-first dashboard buried risk"]}}, "g2-zb", "Gen 2 · Whole solutions"], ["chapter", {"n": "Gen 3", "when": "Sep 2026 – now", "m": "Kill switch live 4 Nov 2026", "now": 1, "q": "Can every team build, safely?", "mk": "Gartner expects 150,000+ agents per Fortune 500 company by 2028, and 82% of CIOs say employees build agents faster than IT can govern them.", "broke": [["One workspace for everyone", "No room for teams or roles."], ["The builder was solo", "One person, and dead ends on access."], ["Policies set one by one", "No place to set rules for a team."], ["Problems were hard to spot", "Violations were buried."], ["Build and deploy were apart", "Code and environments lived apart."]], "bet": {"h": "A Space per team, and ask in place when blocked", "p": "Each team builds in its own Space, inside rules IT sets once. When a builder hits a rule, they request access right there, and admins answer from one queue.", "opts": ["One workspace, filters", "A Space per team"], "pick": 1, "cost": "One more layer to switch between, and some work waits for an admin.", "ex": [["zb/v4-dashboard", "Gen 2: one shared workspace"], ["zb/fx-integrations", "Connect or request"]], "fin": ["zb/fx-observatory", "Space switcher, with its policy"], "demo": {"v": "zb/zb-v5-console", "n": "08", "k": "Admin Console", "h": "IT sets rules once", "p": "Each team works inside its own Space.", "ch": [[0, "Observatory", ""], [7.6, "Spaces", ""], [9.3, "Access", ""], [17.2, "Resources", ""], [19.4, "Governance", ""], [31.8, "Switch", ""]]}}, "ship": {"l": ["Spaces with roles, in a sidebar", "Sessions that branch from Main and merge back", "Requests in place, one admin queue", "A risk-first Observatory with Kill"], "shot": ["zb/v5-editor-sessions", "Gen 3 builder with sessions"]}, "ok": ["The company now leads with governance: zbrain.ai calls itself a governance-first platform.", "Control Tower came back as the Observatory: risk first, fed by governance data, with Kill on every agent.", "Builders ask for access where they’re blocked, instead of over email."], "no": ["Sessions confuse people. Opening someone else’s session should be view-only, and editing it should mean asking for access. But those requests went to IT admins, when the person who can grant it is the product manager or solution admin.", "Sessions stay: different developers build different features in parallel and deploy them separately."], "try": "Session requests go to the solution admin, and a notification panel in the solution view lets solution admins, not only IT, see and answer them. In progress.", "more": [{"id": "g3-1", "n": "Gen 3 · Problem 1", "h": "One workspace for everyone", "p": "No room for Spaces or roles.", "why": "Gartner: 150,000+ agents per Fortune 500 by 2028.", "f": "A Space per team, in a sidebar.", "subs": [{"t": "Permissions, or a Space per team?", "cost": "One more layer to switch.", "ex": [["zb/v4-dashboard", "Gen 2: one shared workspace"]], "fin": ["zb/fx-observatory", "Space switcher and its policy"], "opts": ["One workspace, filters", "A Space per team"], "pick": 1}, {"t": "Top bar or sidebar?", "cost": "Takes width, so it folds away.", "ex": [], "fin": ["zb/el/console-sidebar", "Sidebar by role and section"], "opts": ["Keep the top bar", "A collapsible sidebar"], "pick": 1}], "demos": []}, {"id": "g3-2", "n": "Gen 3 · Problem 2", "h": "The builder was solo", "p": "One person, and dead ends on access.", "why": "82% of CIOs say users build agents faster than IT can govern.", "f": "Shared sessions, and requests in place.", "subs": [{"t": "Block builders, or let them ask?", "cost": "Some work waits for an admin.", "ex": [["zb/f-g3-ai-proto", "AI prototype of the roles"], ["zb/fx-integrations", "Connect or request"]], "fin": ["zb/el/req-form", "Request access in place"], "opts": ["Set up everything first", "Audit later", "Ask in place"], "pick": 2}, {"t": "How do builders see where a request stands?", "cost": "A status to design per integration.", "ex": [["zb/el/req-pending", "Pending"], ["zb/v5-toast", "Sent"]], "fin": ["zb/el/req-connected", "Connected"], "chose": "Status lives on the integration itself."}], "demos": [{"v": "zb/zb-v5-builder", "n": "09", "k": "Builder", "h": "A team’s workspace", "p": "Each builder works in a session and merges to Main.", "ch": [[0, "Solutions", ""], [7.7, "Main", ""], [15, "Code", ""], [21, "Session", ""], [27.7, "Tools", ""], [34.3, "Governance", ""]]}]}, {"id": "g3-3", "n": "Gen 3 · Problem 3", "h": "Policies set one by one", "p": "No place to set rules for a team.", "why": "Only 13% of companies think their agent governance is right.", "f": "Policies in the Admin Console, per Space.", "subs": [{"t": "Where do rules live?", "cost": "Exceptions need an admin.", "ex": [["zb/v5-computed-policy", "Computed per solution"]], "fin": ["zb/f-g3-policies", "Mapped to Spaces"], "chose": "Above the solution, so one Space policy covers every solution in it. Designed with Indrajit."}], "demos": []}, {"id": "g3-4", "n": "Gen 3 · Problem 4", "h": "Problems were hard to spot", "p": "Violations were buried, and slow to act on.", "why": "Microsoft Agent 365 made agent governance a product category.", "f": "Risk first, Kill on every agent.", "subs": [{"t": "What comes first on the screen?", "cost": "Less room for usage detail.", "ex": [["zb/v3-control-tower", "Gen 1: Control Tower"]], "fin": ["zb/fx-observatory", "Agents at risk, with Kill"], "chose": "Risk: agents at risk and violations, then usage."}], "demos": []}, {"id": "g3-5", "n": "Gen 3 · Problem 5", "h": "Build and deploy were apart", "p": "Code and environments lived apart.", "why": "Bans failed; teams build inside controlled environments.", "f": "Git and approved deployments in the builder.", "subs": [{"t": "Who can deploy?", "cost": "A wait for approval.", "ex": [["zb/el/b-notif", "Out of sync with GitHub"], ["zb/v5-session-done", "Session not merged"]], "fin": ["zb/hq-g3-deploy", "Every release by Space"], "chose": "Builders request, admins approve, builders deploy."}], "demos": []}], "c": "#b8862f", "route": {"h": "Where a builder’s request goes", "rows": [["Use a model, integration or data source", "IT admin", "", "Admin Console request queue", "Live"], ["Edit a teammate’s session", "Solution admin or PM", "Until now, this went to IT", "Notification panel in the solution view", "In progress"], ["Open a teammate’s session", "No approval needed", "", "Opens view-only", "Planned"]]}, "hl": [["zb/hq-g3-space-obs", "Each Space opens on what needs attention, under its own policy"], ["zb/fx-integrations", "Every integration shows connected, pending or request"], ["zb/hq-g3-request", "Ask for access where you’re blocked"], ["zb/v5-editor-sessions", "Sessions branch from Main and merge back"], ["zb/fx-observatory", "Admins see every Space at once, with Kill on every agent"], ["zb/hq-g3-deploy", "Every release: which version, where, approved by whom"]], "v": {"num": "3", "bi": ["spaces", "crew", "sliders", "oversee", "layers"], "si": ["spaces", "fold", "approve", "oversee"], "dg": "c1now", "ok": ["ZBrain now leads with governance", "Control Tower returned as the Observatory", "Access is asked for in place, not by email"], "no": ["Requests to edit a teammate’s session went to IT, not to the solution admin who can grant them", "Sessions have to stay, so developers can build features in parallel and deploy them separately"], "try": "Next: send session requests to the solution admin, with a notification panel in the solution view."}}, "g3-zb", "Gen 3 · Every team"], ["h3", "Kept, killed, brought back", "evo-zb", "Kept, killed, brought back"], ["p", "The same jobs, redesigned three times. Some ideas were wrong; some were only early."], ["evostrip", [{"h": "Seeing what’s going on", "items": [["zb/v3-control-tower", "Gen 1", "Control Tower, a concept that didn’t ship"], ["zb/v4-dashboard", "Gen 2", "Dashboard, usage first"], ["zb/hq-g3-space-obs", "Gen 3", "Observatory, risk first, with Kill"]], "ar": "16/10"}, {"h": "Building", "items": [["zb/v3-builder", "Gen 1", "Chat builder, a concept"], ["zb/hq-g2-builder", "Gen 2", "Plan, approve, build"], ["zb/v5-editor-sessions", "Gen 3", "Sessions that merge into Main"]], "ar": "16/10"}]], ["kk", [["Kept", ["The agent proposes, a person decides", "Guardrails where risk enters", "Price beside the model", "Plan, approve, then build"]], ["Killed", ["Seven modules side by side", "The five-stage top bar", "Usage-first monitoring", "Approvals over email"]], ["Brought back", ["Control Tower, as the Observatory, once governance data existed"]]]], ["h3", "Moving users each time", "move-zb", "Moving users each time"], ["kv", [["Told them", "Release notes and announcements explained what changed and why."], ["Showed them", "In-product guidance pointed to where things moved."], ["Carried their work", "Existing agents, apps and prompts moved into the new structure without being rebuilt."]]]]}, {"id": "impact", "num": "03", "title": "Impact", "sub": "What shipped, what the market adopted, and what’s still open", "body": [["nums", [["6", "native apps built on ZBrain for a global logistics leader", "CIO Review, 2025"], ["80", "AI solutions in the same programme", "CIO Review, 2025"], ["17", "public releases carried my Gen 1 work", "Release notes"], ["97%", "production smoke tests passed", "Sep 2026, internal QA"]]], ["h3", "In production", "prod-zb", "In production"], ["cards", {"c": 3, "items": [{"k": "URC", "h": "Dealer support assistant", "p": "A ZBrain-powered assistant answers dealers’ technical questions from past tickets, Jira and CRM data, with voice and hand-off to a person. URC upgraded it in Sep 2025 and reports rising dealer use.", "src": "URC Automation, Sep 2025 · LeewayHertz case study"}, {"k": "Global logistics leader", "h": "80 solutions, 6 native apps", "p": "From 415+ use cases assessed, 80 AI solutions were implemented, six of them built as native apps on ZBrain.", "src": "CIO Review, 2025"}, {"k": "The Hackett Group", "h": "Engineers deploy on ZBrain", "p": "Hackett now designs and deploys client agentic workflows on AI XPLR and ZBrain, with XPLR finding the use cases and ZBrain building them.", "src": "Hackett earnings call, Q3 2026"}]}], ["h3", "What the market adopted", "adopt-zb", "What the market adopted"], ["cards", {"c": 3, "items": [{"k": "Gen 1", "h": "Agent Crew is core", "p": "ZBrain Builder’s public page still describes multi-agent work through Agent Crew.", "src": "zbrain.ai, ZBrain Builder page"}, {"k": "Gen 2", "h": "Solution Builder is a product", "p": "Marketed on its own as a governance-first build environment, with agent crews generated for you.", "src": "zbrain.ai, Solution Builder page"}, {"k": "Gen 3", "h": "Governance leads", "p": "ZBrain now calls itself the governance-first agentic AI platform.", "src": "zbrain.ai, home page"}]}], ["h3", "For The Hackett Group", "hackett-zb", "For Hackett"], ["nums", [["$30M+", "platform-led wins, late Q2 2026", "Q2 2026 results"], ["+230 bps", "adjusted gross margin, Q3 2026, year over year", "Q3 2026 call"], ["$10M", "committed to ZBrain development, at most", "SEC filing"]]], ["note", "Hackett-wide figures, shown for context. Management credits its XT and AIX platforms most for the margin gains, and licensing ZBrain through the joint venture is still ahead."], ["h3", "In the product", "product-zb", "In the product"], ["tbl", ["", "Before", "After"], [["Navigation", "Seven modules", "Stages, then Spaces"], ["Building", "Part by part", "Plan, approve, build"], ["Access", "Email approvals", "Requests in place"], ["Monitoring", "Usage first", "Risk first, with Kill"]]], ["h3", "What I’d track next", "next-zb", "What I’d track next"], ["kv", [["Time to build", "From idea to a deployed solution, per Space."], ["Time to yes", "From request to answer, for IT and solution admins."], ["Policy accuracy", "Blocks that were right, versus false alarms."]]], ["h3", "What I learned", "learnings-zb", "What I learned"], ["cards", {"c": 3, "items": [{"k": "Gen 1", "p": "Trust matters more than the chat box.", "big": 1}, {"k": "Gen 2", "p": "Design moves to before and after the build.", "big": 1}, {"k": "Gen 3", "p": "Who can grant access is a design decision, not an IT setting.", "big": 1}]}]]}], "refl": "Owning one product through three generations taught me to design each one so the next can replace it, and to tell an idea that was wrong from one that was only early.", "src": ["ZBrain Figma files and release notes, 2025–2026", "Product Hunt, ZBrain launch, May 2023", "zbrain.ai: home, ZBrain Builder and Solution Builder pages, 2026", "The Hackett Group, Q2 and Q3 2026 results and earnings calls", "The Hackett Group SEC filings, 2026", "URC Automation, Sep 2025, and LeewayHertz URC case study", "CIO Review, 2025", "Gartner, 2024–2026; MIT NANDA, 2025"], "v2": 1},
 /* ======================= XPLR ======================= */
 {id:"xplr",tier:1,name:"AI XPLR",year:"2025–2026",cat:"AI opportunity discovery · Product designer",
  short:"Deciding which AI to build, and proving it will pay",thumb:"89-3",hero:"84-13",
@@ -2547,7 +3245,8 @@ const HERO=id=>MOCK[id]?`mock/${id}-hero`:null;
 const BOARD=new Set(["zb/v3-ia","zb/v4-modules-stages","25-66","25-412","25-455","26-194","8-40","25-299","6-61","43-355-r","70-68","25-270","26-56"]);
 const TABLET=new Set(["8-102"]);
 const BARE=new Set(["sq/c-rank","sq/b-rank","sq/b-learn","sq/b-jobs"]);
-const SIZE={"zb/v3-builder": 1.78, "zb/v3-configure-bot": 1.01, "zb/v3-control-tower": 1.64, "zb/v3-crew-canvas": 1.78, "zb/v3-ia": 2.74, "zb/v3-import-agent": 1.78, "zb/v3-prompt-manager": 1.78, "zb/v3-test-crew": 1.78, "zb/v4-builder-v0": 1.78, "zb/v4-builder-v1": 1.78, "zb/v4-builder-v2": 1.78, "zb/v4-builder-v3": 1.78, "zb/v4-compliance": 1.78, "zb/v4-dashboard": 1.78, "zb/v4-dataset-builder": 1.78, "zb/v4-design-identity": 1.19, "zb/v4-github": 1.78, "zb/v4-gov-solution": 1.78, "zb/v4-interview-data": 1.78, "zb/v4-modules-stages": 1.58, "zb/v5-ask-connection": 1.67, "zb/v5-computed-policy": 1.78, "zb/v5-editor-sessions": 1.78, "zb/v5-github-unsynced": 1.67, "zb/v5-members": 1.78, "zb/v5-observatory": 1.67, "zb/v5-requests-admin": 1.67, "zb/v5-requests-builder": 1.67, "zb/v5-session-done": 1.78, "zb/v5-toast": 1.67, "zb/v5-violation": 1.78, "70-48": 1.78, "70-68": 2.4, "70-75": 1.78, "70-79": 1.78, "70-84": 1.78, "70-88": 1.64, "70-149": 1.78, "70-170": 1.77, "70-174": 1.77, "70-194": 1.41, "70-199": 1.77, "70-203": 1.77, "71-40": 1.67, "71-44": 1.67, "71-64": 1.67, "71-68": 1.65, "71-85": 1.67, "71-94": 1.78, "88-159": 1.78, "88-164": 1.78, "88-170": 1.78, "86-72": 1.78, "86-76": 1.78, "86-81": 1.78, "88-175": 1.78, "88-179": 1.78, "88-183": 1.78, "87-125": 1.78, "88-188": 1.78, "88-196": 1.78, "88-40": 1.78, "88-44": 2.85, "53-145-r": 1.72, "55-305-r": 2.48, "55-89-r": 1.69, "55-93-r": 1.78, "55-97-r": 1.78, "55-101-r": 3.07, "55-121-r": 3.89, "55-179-r": 3.69, "55-188-r": 2.15, "55-208-r": 3.95, "55-217-r": 1.7, "55-221-r": 1.7, "55-266-r": 3.07, "55-270-r": 3.11, "42-115-r": 2.83, "43-131-r": 1.86, "43-135-r": 1.75, "43-140-r": 3.88, "43-144-r": 1.98, "43-148": 3.9, "43-169-r": 1.78, "43-173-r": 1.78, "43-177-r": 1.78, "43-195-r": 1.78, "43-199-r": 1.78, "43-307-r": 4.78, "43-312-r": 1.78, "43-320-r": 1.78, "43-338-r": 1.77, "43-347-r": 1.78, "43-355-r": 1.56, "25-245": 0.86, "25-270": 1.38, "25-299": 1.95, "25-316": 0.92, "25-333": 0.98, "6-61": 1.88, "6-81": 1.78, "6-98": 1.78, "6-101": 1.78, "6-118": 1.78, "6-121": 1.78, "6-168": 1.78, "25-62": 1.2, "25-66": 1.65, "25-74": 2.61, "25-78": 2.25, "25-99": 0.95, "25-117": 1.58, "25-121": 1.54, "25-138": 1.29, "25-185": 1.02, "25-401": 1.27, "25-412": 1.59, "25-433": 1.43, "25-451": 1.2, "25-455": 1.59, "26-56": 1.38, "26-73": 0.98, "26-137": 1.16, "8-40": 1.73, "8-60": 1.78, "8-76": 1.78, "8-102": 1.33, "26-194": 1.65, "26-205": 0.64, "26-226": 0.79, "26-251": 1.16, "26-308": 1.78, "26-312": 1.78, "26-333": 1.78, "26-351": 1.78, "26-367": 1.0, "27-54": 1.78, "27-58": 1.78, "27-63": 1.78, "27-67": 1.78, "27-141": 0.77, "27-153": 1.78, "27-157": 1.27, "26-459": 1.85, "26-471": 1.77, "26-475": 1.76, "27-225": 1.07, "27-237": 1.78, "27-241": 1.78, "27-309": 2.75, "27-326": 1.4, "27-393": 1.13, "27-401": 0.9, "27-405": 1.57, "27-466": 0.5, "27-474": 0.74};
+const PHOTO=new Set(["zb/f-team-crit","zb/f-team-handover","zb/f-team-bugbash","zb/f-team-session","zb/f-g2-ai-proto","zb/f-g3-ai-proto"]);
+const SIZE={"zb/f-from":1.78,"zb/f-to":1.67,"zb/f-g2-builder":1.78,"zb/f-g2-gov":1.78,"zb/f-alt-playground":1.78,"zb/f-alt-mcp-settings":1.78,"zb/f-alt-crew-canvas":1.78,"zb/f-alt-builder":1.78,"zb/f-g3-integrations":1.67,"zb/f-g3-policies":1.78,"zb/f-g3-deployments":1.67,"zb/v3-builder": 1.78, "zb/v3-configure-bot": 1.01, "zb/v3-control-tower": 1.64, "zb/v3-crew-canvas": 1.78, "zb/v3-ia": 2.74, "zb/v3-import-agent": 1.78, "zb/v3-prompt-manager": 1.78, "zb/v3-test-crew": 1.78, "zb/v4-builder-v0": 1.78, "zb/v4-builder-v1": 1.78, "zb/v4-builder-v2": 1.78, "zb/v4-builder-v3": 1.78, "zb/v4-compliance": 1.78, "zb/v4-dashboard": 1.78, "zb/v4-dataset-builder": 1.78, "zb/v4-design-identity": 1.19, "zb/v4-github": 1.78, "zb/v4-gov-solution": 1.78, "zb/v4-interview-data": 1.78, "zb/v4-modules-stages": 1.58, "zb/v5-ask-connection": 1.67, "zb/v5-computed-policy": 1.78, "zb/v5-editor-sessions": 1.78, "zb/v5-github-unsynced": 1.67, "zb/v5-members": 1.78, "zb/v5-observatory": 1.67, "zb/v5-requests-admin": 1.67, "zb/v5-requests-builder": 1.67, "zb/v5-session-done": 1.78, "zb/v5-toast": 1.67, "zb/v5-violation": 1.78, "70-48": 1.78, "70-68": 2.4, "70-75": 1.78, "70-79": 1.78, "70-84": 1.78, "70-88": 1.64, "70-149": 1.78, "70-170": 1.77, "70-174": 1.77, "70-194": 1.41, "70-199": 1.77, "70-203": 1.77, "71-40": 1.67, "71-44": 1.67, "71-64": 1.67, "71-68": 1.65, "71-85": 1.67, "71-94": 1.78, "88-159": 1.78, "88-164": 1.78, "88-170": 1.78, "86-72": 1.78, "86-76": 1.78, "86-81": 1.78, "88-175": 1.78, "88-179": 1.78, "88-183": 1.78, "87-125": 1.78, "88-188": 1.78, "88-196": 1.78, "88-40": 1.78, "88-44": 2.85, "53-145-r": 1.72, "55-305-r": 2.48, "55-89-r": 1.69, "55-93-r": 1.78, "55-97-r": 1.78, "55-101-r": 3.07, "55-121-r": 3.89, "55-179-r": 3.69, "55-188-r": 2.15, "55-208-r": 3.95, "55-217-r": 1.7, "55-221-r": 1.7, "55-266-r": 3.07, "55-270-r": 3.11, "42-115-r": 2.83, "43-131-r": 1.86, "43-135-r": 1.75, "43-140-r": 3.88, "43-144-r": 1.98, "43-148": 3.9, "43-169-r": 1.78, "43-173-r": 1.78, "43-177-r": 1.78, "43-195-r": 1.78, "43-199-r": 1.78, "43-307-r": 4.78, "43-312-r": 1.78, "43-320-r": 1.78, "43-338-r": 1.77, "43-347-r": 1.78, "43-355-r": 1.56, "25-245": 0.86, "25-270": 1.38, "25-299": 1.95, "25-316": 0.92, "25-333": 0.98, "6-61": 1.88, "6-81": 1.78, "6-98": 1.78, "6-101": 1.78, "6-118": 1.78, "6-121": 1.78, "6-168": 1.78, "25-62": 1.2, "25-66": 1.65, "25-74": 2.61, "25-78": 2.25, "25-99": 0.95, "25-117": 1.58, "25-121": 1.54, "25-138": 1.29, "25-185": 1.02, "25-401": 1.27, "25-412": 1.59, "25-433": 1.43, "25-451": 1.2, "25-455": 1.59, "26-56": 1.38, "26-73": 0.98, "26-137": 1.16, "8-40": 1.73, "8-60": 1.78, "8-76": 1.78, "8-102": 1.33, "26-194": 1.65, "26-205": 0.64, "26-226": 0.79, "26-251": 1.16, "26-308": 1.78, "26-312": 1.78, "26-333": 1.78, "26-351": 1.78, "26-367": 1.0, "27-54": 1.78, "27-58": 1.78, "27-63": 1.78, "27-67": 1.78, "27-141": 0.77, "27-153": 1.78, "27-157": 1.27, "26-459": 1.85, "26-471": 1.77, "26-475": 1.76, "27-225": 1.07, "27-237": 1.78, "27-241": 1.78, "27-309": 2.75, "27-326": 1.4, "27-393": 1.13, "27-401": 0.9, "27-405": 1.57, "27-466": 0.5, "27-474": 0.74};
 const GROUP={zbrain:"agentic",xplr:"agentic","ce-agent":"copilots","mdm-copilot":"copilots","advanced-hunting":"security",cipherstar:"security","watchtower-onboarding":"security",crestos:"tools",loom:"tools",squirrel:"product",chaperone:"product"};
 const grp=p=>p.tier===3?"craft":GROUP[p.id];
 const OUT={
@@ -2635,7 +3334,7 @@ function figure(f,c,pid,small){
   const craft=byId[pid]?.tier===3;
   const img=`<img src="${IMG(f)}"${SS(IMG(f),small?SZ_HALF:SZ_FULL)} alt="${esc(c)}" loading="lazy" decoding="async">`;
   let inner;
-  if(craft) inner=`<div class="photo rv-img">${img}</div>`;
+  if(craft||PHOTO.has(f)) inner=`<div class="photo rv-img">${img}</div>`;
   else if(BARE.has(f)) inner=`<div class="stage th-${THEME[pid]||"stone"} bare rv-img">${img}</div>`;
   else if(TABLET.has(f)) inner=`<div class="stage th-${THEME[pid]||"stone"} rv-img"><div class="tab">${img}</div></div>`;
   else{
@@ -2714,6 +3413,66 @@ const ICON=(()=>{ const w=d=>`<svg viewBox="0 0 24 24" fill="none" stroke="curre
   tag:w('<path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1 1 0 0 1 0 1.4l-7.3 7.3a1 1 0 0 1-1.4 0z"/><circle cx="8" cy="8" r="1.5"/>'),
   info:w('<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8v.4"/>'),
   gate:w('<rect x="5" y="10.5" width="14" height="10" rx="1.6"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/><path d="M12 14.5v2.5"/>')}; })();
+/* before/after diagrams, drawn in the site's ink */
+const DG=(()=>{
+ const W=(d,l)=>`<svg viewBox="0 0 320 180" role="img" aria-label="${l}">${d}</svg>`;
+ const box=(x,y,w,h,c="dg-b",r=8)=>`<rect class="${c}" x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}"/>`;
+ const tx=(x,y,t,c="dg-t",a="")=>`<text x="${x}" y="${y}" class="${c}"${a?` text-anchor="${a}"`:""}>${t}</text>`;
+ const chip=(x,y,t,w)=>{w=w||t.length*5.6+18;return box(x,y,w,20,"dg-c",10)+tx(x+w/2,y+13.5,t,"dg-s","middle");};
+ const ln=(x1,y1,x2,y2,c="dg-l")=>`<path class="${c}" d="M${x1} ${y1} L${x2} ${y2}"/>`;
+ const ar=(x1,y,x2)=>ln(x1,y,x2-6,y)+`<path class="dg-a" d="M${x2-7} ${y-4} L${x2} ${y} L${x2-7} ${y+4}Z"/>`;
+ const lines=(x,y,n,w)=>Array.from({length:n},(_,i)=>`<rect class="dg-g" x="${x}" y="${y+i*9}" width="${w*(i%2?.7:1)}" height="4" rx="2"/>`).join("");
+ return {
+ c1first:W(`${box(20,18,280,144)}${tx(32,36,"One workspace","dg-h")}${tx(288,36,"⛃ filters","dg-s","end")}
+  ${chip(36,54,"Finance agent")}${chip(140,54,"HR flow")}${chip(212,54,"Sales app")}${chip(56,86,"HR agent")}${chip(140,86,"Finance app")}${chip(232,86,"Ops bot",58)}${chip(70,118,"Sales agent")}${chip(176,118,"Legal flow")}`,"One shared workspace with every team's work mixed together"),
+ c1now:W(`${box(14,14,292,22,"dg-k",11)}${tx(160,29,"Rules IT sets once","dg-tw","middle")}${ln(60,36,60,48)}${ln(160,36,160,48)}${ln(260,36,260,48)}
+  ${[["Finance",14],["HR",114],["Sales",214]].map(([n,x])=>`${box(x,48,92,118)}${tx(x+10,64,n,"dg-h")}${lines(x+10,76,3,60)}${box(x+8,136,76,20,"dg-c",10)}${tx(x+46,149.5,"Space policy","dg-s","middle")}`).join("")}`,"A Space per team, each inside the rules IT sets once"),
+ c2first:W(`${box(20,18,280,144)}${box(20,18,280,28,"dg-p",8)}${["Dashboard","Prepare","Build","Monitor","Configure"].map((t,i)=>tx(42+i*52,36,t,"dg-s")).join("")}
+  ${box(36,60,248,88,"dg-c",8)}${tx(160,108,"Builder","dg-t","middle")}${tx(292,36,"?","dg-s","end")}`,"Five stages across a top bar, with no room for Spaces or roles"),
+ c2now:W(`${box(20,18,280,144)}${box(20,18,86,144,"dg-p",8)}${box(28,26,70,22,"dg-k",8)}${tx(63,41,"Finance ▾","dg-tw","middle")}
+  ${lines(30,60,6,56)}${chip(30,132,"Builder role",66)}${box(118,30,170,120,"dg-c",8)}${tx(203,94,"Builder, full width","dg-t","middle")}`,"A collapsible sidebar with the Space switcher, navigation and role"),
+ c3first:W(`${box(14,70,70,36)}${tx(49,92,"Builder","dg-t","middle")}${ar(84,88,122)}${box(122,66,76,44,"dg-x",8)}${tx(160,86,"Not allowed","dg-t","middle")}${tx(160,99,"dead end","dg-s","middle")}
+  <path class="dg-d" d="M160 110 C160 150 250 150 250 112"/>${box(212,70,94,36)}${tx(259,86,"Email to IT","dg-t","middle")}${tx(259,99,"no record","dg-s","middle")}`,"A builder is blocked, then emails IT with no record"),
+ c3now:W(`${box(8,70,62,36)}${tx(39,92,"Builder","dg-t","middle")}${ar(70,88,92)}${box(92,70,64,36,"dg-k",8)}${tx(124,92,"Request","dg-tw","middle")}${ar(156,88,178)}${box(178,70,70,36)}${tx(213,86,"One queue","dg-t","middle")}${tx(213,99,"all Spaces","dg-s","middle")}
+  ${ar(248,88,262)}${box(262,70,52,36,"dg-c",8)}${tx(288,92,"✓ Yes","dg-t","middle")}<path class="dg-l" d="M288 106 C288 150 39 150 39 110"/>${tx(160,160,"Connected, back in the Space","dg-s","middle")}`,"A builder asks in place, the admin answers from one queue, and access comes back"),
+ c4first:W(`${box(30,64,70,48)}${tx(65,92,"One person","dg-t","middle")}${ar(100,88,140)}${box(140,64,60,48,"dg-c",8)}${tx(170,92,"Chat","dg-t","middle")}${ar(200,88,240)}${box(240,64,60,48)}${tx(270,92,"App","dg-t","middle")}`,"One person builds in one chat"),
+ c4now:W(`${ln(20,90,300,90,"dg-m")}${tx(20,80,"Main","dg-h")}<circle class="dg-n" cx="60" cy="90" r="5"/><circle class="dg-n" cx="270" cy="90" r="5"/>
+  <path class="dg-l" d="M60 90 C80 90 80 40 110 40 L200 40 C230 40 230 90 250 90"/><path class="dg-l" d="M60 90 C80 90 80 140 110 140 L190 140 C220 140 220 90 240 90"/>
+  ${chip(112,30,"Session · Ana",88)}${chip(112,130,"Session · Raj",84)}${chip(234,100,"PR",34)}`,"Two builders work in sessions that branch from Main and merge back"),
+ c5first:W(`${box(20,18,280,144)}${box(32,30,256,82,"dg-c",8)}${Array.from({length:12},(_,i)=>`<rect class="dg-g" x="${46+i*19}" y="${100-((i*37)%60)}" width="10" height="${(i*37)%60+4}" rx="2"/>`).join("")}${tx(36,44,"Usage","dg-s")}
+  ${box(32,120,256,30,"dg-p",8)}${tx(44,139,"Violations, below the fold","dg-s")}`,"Usage charts first, risk below the fold"),
+ c5now:W(`${box(20,18,280,144)}${[["At risk","6"],["Violations","6"],["Spend","$126"]].map(([l,v],i)=>`${box(32+i*86,30,78,40,i<2?"dg-k":"dg-c",8)}${tx(40+i*86,46,l,i<2?"dg-sw":"dg-s")}${tx(40+i*86,62,v,i<2?"dg-tw":"dg-t")}`).join("")}
+  ${[0,1,2].map(i=>`${box(32,80+i*24,256,20,"dg-c",6)}${lines(40,88+i*24,1,90)}${box(250,83+i*24,30,14,i===1?"dg-k":"dg-p",7)}${tx(265,93+i*24,"Kill",i===1?"dg-sw":"dg-s","middle")}`).join("")}`,"Agents at risk and violations first, with Kill on every agent's row"),
+ g1first:W(`${["Read","Write","Check","Send"].map((t,i)=>`${box(14+i*78,72,62,32)}${tx(45+i*78,92,t,"dg-t","middle")}${i<3?ar(76+i*78,88,92+i*78):""}`).join("")}${tx(160,130,"One agent does every step","dg-s","middle")}`,"One agent runs every step in a straight line"),
+ g1now:W(`${box(118,20,84,32,"dg-k",8)}${tx(160,40,"Supervisor","dg-tw","middle")}${[["Research",40],["Writer",130],["Reviewer",220]].map(([t,x])=>`${ln(160,52,x+30,96)}${box(x,96,60,30)}${tx(x+30,115,t,"dg-s","middle")}`).join("")}
+  <circle class="dg-k" cx="268" cy="148" r="11"/><path stroke="var(--ground)" stroke-width="2" d="M265 143v10M271 143v10"/>${tx(252,152,"Pauses for a person","dg-s","end")}`,"A supervisor directs a crew, which pauses for a person"),
+ g2first:W(`${["Builder","Knowledge","Agents","Apps","Flows","Prompts","Monitor"].map((t,i)=>`${box(10+(i%4)*76,40+Math.floor(i/4)*52,68,36)}${tx(44+(i%4)*76,62+Math.floor(i/4)*52,t,"dg-s","middle")}`).join("")}${tx(160,160,"Where do I start?","dg-s","middle")}`,"Seven modules side by side, with no starting point"),
+ g2now:W(`${[["Describe",0],["Plan",1],["Approve",2],["Build",3]].map(([t,i])=>`${box(10+i*78,72,62,34,i===2?"dg-k":"dg-b",8)}${tx(41+i*78,93,t,i===2?"dg-tw":"dg-t","middle")}${i<3?ar(72+i*78,89,88+i*78):""}`).join("")}${tx(197,130,"Nothing is built until a person approves","dg-s","middle")}`,"Describe, plan, approve, then build")
+ };})();
+
+const ROUTE_SVG=`<svg class="rtd" viewBox="0 38 800 258" role="img" aria-label="Who answers which request: model, integration and data requests go to the IT admin; edits to a teammate’s session now go to the solution admin or PM instead of IT; opening a teammate’s session is view-only.">
+<defs>
+<marker id="ah-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#8a8a8a"/></marker>
+<marker id="ah-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#d0563b"/></marker>
+<marker id="ah-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#0f9f8f"/></marker>
+</defs>
+<rect class="n" x="20" y="108" width="170" height="86" rx="14"/><text class="t" x="105" y="142">IT admin</text><text class="s" x="105" y="162">Admin Console queue,</text><text class="s" x="105" y="177">across Spaces</text>
+<rect class="n n-b" x="315" y="113" width="170" height="74" rx="14"/><text class="t" x="400" y="146">Builder</text><text class="s" x="400" y="166">working in a Space</text>
+<rect class="n n-new" x="610" y="108" width="172" height="86" rx="14"/><text class="t" x="696" y="142">Solution admin or PM</text><text class="s" x="696" y="162">notification panel</text><text class="s" x="696" y="177">in the solution view</text>
+<rect class="n n-p" x="315" y="235" width="170" height="54" rx="14"/><text class="t" x="400" y="258">Teammate’s session</text><text class="s" x="400" y="276">opens view-only</text>
+<path class="e-live" d="M315,132 C270,104 236,108 192,128" marker-end="url(#ah-g)"/>
+<path class="e-old" d="M315,170 C270,198 236,194 192,174" marker-end="url(#ah-r)"/>
+<path class="e-new" d="M487,150 L606,150" marker-end="url(#ah-t)"/>
+<path class="e-plan" d="M400,187 L400,231" marker-end="url(#ah-g)"/>
+<text class="l" x="253" y="84">Model, integration</text><text class="l" x="253" y="99">or data access</text>
+<g transform="translate(228,52)"><rect class="c c-live" width="50" height="20" rx="10"/><text class="ct" x="25" y="14">Live</text></g>
+<text class="l l-old" x="253" y="222">Session edits, before</text>
+<g transform="translate(253,190)"><circle class="x" r="9"/><path class="xm" d="M-3.5,-3.5L3.5,3.5M3.5,-3.5L-3.5,3.5"/></g>
+<text class="l l-new" x="547" y="122">Edit a teammate’s</text><text class="l l-new" x="547" y="138">session</text>
+<g transform="translate(507,162)"><rect class="c c-prog" width="80" height="20" rx="10"/><text class="ct" x="40" y="14">In progress</text></g>
+<text class="l lo" x="410" y="214">Open</text>
+<g transform="translate(452,200)"><rect class="c c-plan" width="62" height="20" rx="10"/><text class="ct" x="31" y="14">Planned</text></g>
+</svg>`;
 function block(b,pid,sec){
   const [t,...a]=b;
   switch(t){
@@ -2729,11 +3488,11 @@ function block(b,pid,sec){
       return `<div class="b-tbl${a[0].length>=4?" full":""}"><table><thead><tr>${a[0].map(h=>`<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>${rows.slice(0,cut).map(tr).join("")}</tbody>${rows.length>cut?`<tbody class="more-rows" hidden>${rows.slice(cut).map(tr).join("")}</tbody>`:""}</table>${rows.length>cut?`<button class="morebtn" type="button" aria-expanded="false">Show ${rows.length-cut} more rows</button>`:""}</div>`; }
     case "steps": return `<ol class="steps full">${a[0].map(([h,d],i)=>`<li><i>${String(i+1).padStart(2,"0")}</i><b>${esc(h)}</b>${esc(d)}</li>`).join("")}</ol>`;
     case "dec": {const d=a[0]; return `<section class="dec rv"><header><span>${esc(d.n)}</span><h4>${esc(d.h)}</h4></header><dl>
-      <div><dt>Options we looked at</dt><dd>${String(d.opts).includes(" · ")?`<ol class="opts">${String(d.opts).split(" · ").map(o=>`<li>${esc(o.charAt(0).toUpperCase()+o.slice(1))}</li>`).join("")}</ol>`:esc(d.opts)}</dd></div>
+      ${d.opts?`<div><dt>Options we looked at</dt><dd>${String(d.opts).includes(" · ")?`<ol class="opts">${String(d.opts).split(" · ").map(o=>`<li>${esc(o.charAt(0).toUpperCase()+o.slice(1))}</li>`).join("")}</ol>`:esc(d.opts)}</dd></div>`:""}
       <div class="pick"><dt>What I chose</dt><dd>${esc(d.chose)}</dd></div>
       <div><dt>What it cost</dt><dd>${esc(d.trade)}</dd></div>
       ${d.why?`<div><dt>Why</dt><dd>${esc(d.why)}</dd></div>`:""}</dl></section>`;}
-    case "cards": { const o=a[0]; return `<div class="zc c${o.c||3}${o.flow?" zc-flow":""} full">${o.items.map((x,i)=>`<div class="zc-i rv${x.muted?" mu":""}${x.big?" big":""}">${x.art&&ART[x.art]?`<div class="zc-art">${ART[x.art]}</div>`:""}${x.ic&&ICON[x.ic]?`<span class="zc-ic" aria-hidden="true">${ICON[x.ic]}</span>`:""}${o.flow&&i<o.items.length-1?`<span class="zc-ho" aria-hidden="true" title="hands off to"><svg viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>`:""}${x.k?`<small>${esc(x.k)}</small>`:""}${x.h?`<h5>${esc(x.h)}</h5>`:""}${x.s?`<em>${esc(x.s)}</em>`:""}${x.p?`<p>${esc(x.p)}</p>`:""}${x.f?`<span class="pain"><small><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 4.7v4M8 10.7v.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Pain point</small>${esc(x.f.replace(/^Pain:\s*/i,"").replace(/^./,c=>c.toUpperCase()))}</span>`:""}</div>`).join("")}</div>`; }
+    case "cards": { const o=a[0]; return `<div class="zc c${o.c||3}${o.flow?" zc-flow":""} full">${o.items.map((x,i)=>`<div class="zc-i rv${x.muted?" mu":""}${x.big?" big":""}">${x.art&&ART[x.art]?`<div class="zc-art">${ART[x.art]}</div>`:""}${x.ic&&ICON[x.ic]?`<span class="zc-ic" aria-hidden="true">${ICON[x.ic]}</span>`:""}${o.flow&&i<o.items.length-1?`<span class="zc-ho" aria-hidden="true" title="hands off to"><svg viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>`:""}${x.k?`<small>${esc(x.k)}</small>`:""}${x.h?`<h5>${esc(x.h)}</h5>`:""}${x.s?`<em>${esc(x.s)}</em>`:""}${x.p?`<p>${esc(x.p)}</p>`:""}${x.f?`<span class="pain"><small><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 4.7v4M8 10.7v.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>${esc(x.fl||(Array.isArray(x.f)?"Pain points":"Pain point"))}</small>${Array.isArray(x.f)?`<ul class="pain-l">${x.f.map(v=>`<li>${esc(v)}</li>`).join("")}</ul>`:esc(x.f.replace(/^Pain:\s*/i,"").replace(/^./,c=>c.toUpperCase()))}</span>`:""}${x.src?`<p class="zc-src">${esc(x.src)}</p>`:""}${x.q?`<q class="zc-q">${esc(x.q)}</q>`:""}</div>`).join("")}</div>`; }
     case "chain": { const o=a[0], li=(it,k)=>`<li><b>${o.num?`<i>${String(k+1).padStart(2,"0")}</i>`:""}${esc(it[0])}</b>${it[1]?`<span>${esc(it[1])}</span>`:""}</li>`;
       const ol=items=>`<ol class="ch-s" style="--cols:${items.length>8?Math.ceil(items.length/2):items.length}">${items.map(li).join("")}</ol>`;
       return `<div class="ch full rv">${o.rows?o.rows.map(([l,it])=>`<div class="ch-row"><p class="ch-l">${esc(l)}</p>${ol(it)}</div>`).join(""):ol(o.items)}
@@ -2779,12 +3538,73 @@ function block(b,pid,sec){
     case "mini": return `<div class="mini c${Math.min(3,a[0].length)} full">${a[0].map(([b,r])=>`<div class="rv"><small>Decision</small><p><b>${esc(b)}</b> ${esc(r)}</p></div>`).join("")}</div>`;
     case "gprob": return `<ol class="gp full c${a[0].length}">${a[0].map(x=>`<li class="rv"><span class="gp-ic" aria-hidden="true">${ICON[x.ic]||""}</span><h5>${esc(x.h)}</h5><p class="gp-e"><small>What we saw</small>${esc(x.e)}</p><p class="gp-r"><small>What it did</small>${esc(x.r)}</p></li>`).join("")}</ol>`;
     case "gdir": { const o=a[0]; return `<div class="gd full rv"><ul class="gd-why">${o.why.map(([b,t])=>`<li><b>${esc(b)}</b> ${esc(t)}</li>`).join("")}</ul><dl class="gd-side"><div><dt>Benchmarked against</dt><dd><ul class="ev-co">${o.comp.map(w=>`<li>${BRANDS[w]?`<i style="--m:url(&quot;${BRANDS[w]}&quot;)" aria-hidden="true"></i>`:`<i class="mono" aria-hidden="true">${esc(w[0])}</i>`}${esc(w)}</li>`).join("")}</ul></dd></div><div><dt>The bar to clear</dt><dd class="gd-bar">${esc(o.bar)}</dd></div></dl></div>`; }
+    case "genhead": { const o=a[3]||{}; return `<header class="gh full${o.mini?" gh-lite":""}" id="${a[1]}"><div class="gh-n" aria-hidden="true">${esc(o.n||"")}</div><div class="gh-t"><p class="gh-k">${esc(o.k||"")}</p><h3>${esc(a[0])}</h3>${o.p?`<p class="gh-p">${esc(o.p)}</p>`:""}<ul class="gh-m">${(o.m||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>${o.probs?`<ol class="gh-p2" style="--n:${o.probs.length}">${o.probs.map(([h,w,f],i)=>`<li><a href="#${pid}" data-jump="${pid}-${o.g}-${i+1}"><i>${String(i+1).padStart(2,"0")}</i><b>${esc(h)}</b><span>${esc(w)}</span><em>${esc(f)} ${arrow}</em></a></li>`).join("")}</ol>`:""}${o.steps?`<ol class="gh-s">${o.steps.map((x,i)=>`<li${i===o.at?' class="on"':""}>${esc(x)}</li>`).join("")}</ol>`:""}</header>`; }
+    case "pgrid": { const o=a[0];
+      return `<div class="pg2 full rv"><p class="pg2-h">${o.items.length} problems, and why the market demanded each</p><ol class="pg2-l" style="--n:${o.items.length}">${o.items.map(([h,w,f],i)=>`<li><a href="#${pid}" data-jump="${pid}-${o.g}-${i+1}"><span class="pg2-i">${String(i+1).padStart(2,"0")}</span><b>${esc(h)}</b><span class="pg2-w">${esc(w)}</span><span class="pg2-f"><i>${arrow}</i>${esc(f)}</span></a></li>`).join("")}</ol></div>`; }
+    case "chapter": { const o=a[0], id=a[1], b=o.bet, W=x=>({...x,n:"",k:"Walkthrough · "+x.k});
+      const slide=([f,c],i,dup)=>`<figure class="hl-s"${dup?' aria-hidden="true"':""}><button class="zoom" type="button"${dup?' tabindex="-1"':""} data-src="${IMG(f)}" data-cap="${esc(c)}" aria-label="Enlarge: ${esc(c)}"><span><img src="${IMG(f)}" alt="${dup?"":esc(c)}" loading="lazy" decoding="async"></span></button><figcaption><b>${String(i+1).padStart(2,"0")}</b>${esc(c)}</figcaption></figure>`;
+      const demos=[b.demo,o.ship.demo].filter(Boolean);
+      return `<section class="ch full rv${o.now?" is-cur":""}" id="${id}" style="--g:${o.c||"var(--ink)"}">
+        <header class="ch-h" data-num="${esc((o.v||{}).num||"")}"><p class="ch-k"><b>${esc(o.n)}</b><span>${esc(o.when)}</span><span>${esc(o.m)}</span></p><h4>${esc(o.q)}</h4><p class="ch-mk">${esc(o.mk)}</p></header>
+        ${(()=>{const v=o.v||{}, ic=k=>ICON[k]||ICON.info; return `<div class="sy2">
+          <div class="s2-col s2-br"><p class="s2-l">What broke</p><ul>${o.broke.map(([h],i)=>`<li><i aria-hidden="true">${ic((v.bi||[])[i])}</i>${esc(h)}</li>`).join("")}</ul></div>
+          <i class="s2-ar" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></i>
+          <div class="s2-col s2-bet"><p class="s2-l">The bet</p><h5>${esc(b.h)}</h5>${v.dg&&DG[v.dg]?`<div class="s2-dg dg">${DG[v.dg]}</div>`:""}<p class="s2-t"><b>Trade-off</b> ${esc(b.cost.replace(/\.$/,""))}</p></div>
+          <i class="s2-ar" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></i>
+          <div class="s2-col s2-sh"><p class="s2-l">What shipped</p><ul>${o.ship.l.map((x,i)=>`<li><i aria-hidden="true">${ic((v.si||[])[i])}</i><span>${esc(x)}</span></li>`).join("")}</ul></div>
+        </div>
+        <div class="vd">
+          <div class="vd-c ok"><p class="s2-l"><b aria-hidden="true">✓</b>What worked</p><ul>${(v.ok||o.ok).map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
+          <div class="vd-c no"><p class="s2-l"><b aria-hidden="true">✕</b>${o.now?"Not working yet":"What didn’t"}</p><ul>${(v.no||o.no).map(x=>`<li>${esc(x)}</li>`).join("")}</ul>${v.try?`<p class="vd-try">${esc(v.try)}</p>`:""}</div>
+        </div>`})()}
+        ${o.hl?`<div class="hl"><div class="hl-hd"><p class="ch-l">The shipped screens</p></div><div class="hl-v" style="--n:${o.hl.length}"><div class="hl-t">${o.hl.map((x,i)=>slide(x,i,0)).join("")}${o.hl.map((x,i)=>slide(x,i,1)).join("")}</div></div></div>`:""}
+        ${demos.map(d=>block(["demo",W(d)],pid,null)).join("")}
+        ${o.route?`<div class="rf"><p class="ch-l">${esc(o.route.h)}</p><div class="rf-b"><div class="rf-src"><span>${ICON.build}</span><b>Builder</b><small>working in a Space</small></div><div class="rf-hd" aria-hidden="true"><span>Wants to</span><span>Decided by</span><span>Seen in</span><span>Status</span></div><ol class="rf-rows">${o.route.rows.map(([q,who,was,where,st])=>`<li class="rf-r rfs-${st.toLowerCase().replace(/ /g,"-")}"><span class="rf-q">${esc(q)}</span><i class="rf-a" aria-hidden="true"></i><span class="rf-w"><b>${esc(who)}</b>${was?`<s>${esc(was)}</s>`:""}</span><i class="rf-a" aria-hidden="true"></i><span class="rf-p">${esc(where)}</span><span class="rf-s"><i></i>${esc(st)}</span></li>`).join("")}</ol></div></div>`:""}
+        ${o.more&&o.more.length?`<details class="ch-m"><summary><span>More decisions in ${esc(o.n)}</span><small>${o.more.length} problems, with the options we explored</small></summary><div class="ch-mb">${o.more.map((c,i)=>block(["mdec",c,i+1],pid,null)).join("")}</div></details>`:""}
+      </section>`; }
+    case "mdec": { const c=a[0], k=a[1]||1;
+      const tn=(x,fin)=>`<button class="zoom md-tn${fin?" fin":""}" type="button" data-src="${IMG(x[0])}" data-cap="${esc(x[1])}" aria-label="Enlarge: ${esc(x[1])}" title="${esc((fin?"Shipped: ":"Explored: ")+x[1])}"><img src="${IMG(x[0])}" alt="${esc(x[1])}" loading="lazy" decoding="async"></button>`;
+      return `<article class="md-c"><header class="md-h"><small>Problem ${k}</small><h6>${esc(c.h)}</h6><p>${esc(c.p)} <span>Built: ${esc(c.f)}</span></p></header>
+        ${c.subs.map((x,j)=>{const ch=x.chose||(x.opts?x.opts[x.pick]:""); return `<div class="md-s"><div class="md-t"><b><span>${k}.${j+1}</span>${esc(x.t)}</b>${ch?`<p class="md-ch">Chose: ${esc(ch)}</p>`:""}<p class="md-x">Trade-off: ${esc(x.cost)}</p></div><div class="md-th">${x.fin?tn(x.fin,1):""}${(x.ex||[]).map(e=>tn(e,0)).join("")}</div></div>`;}).join("")}
+        ${(c.demos||[]).length?`<div class="md-d">${c.demos.map(x=>block(["demo",({...x,n:"",k:"Walkthrough · "+x.k})],pid,null)).join("")}</div>`:""}</article>`; }
+    case "evostrip": return `<div class="evo full">${a[0].map(r=>`<section class="evo-r rv" style="--ar:${r.ar||"16/10"}"><p class="ch-l">${esc(r.h)}</p><div class="evo-g">${r.items.map(([f,g,c],i)=>`<figure style="--g:${["#7a6e8c","#a46b4e","#b8862f"][i]||"var(--ink)"}"${i===r.items.length-1?' class="is-now"':""}><button class="zoom" type="button" data-src="${IMG(f)}" data-cap="${esc(g+" · "+c)}" aria-label="Enlarge: ${esc(c)}"><span><img src="${IMG(f)}" alt="${esc(c)}" loading="lazy" decoding="async"></span></button><figcaption><b>${esc(g)}</b>${esc(c)}</figcaption></figure>`).join('<i class="evo-a" aria-hidden="true">→</i>')}</div></section>`).join("")}</div>`;
+    case "kk": return `<div class="kk full">${a[0].map(([h,l])=>`<div class="kk-c rv"><p class="ch-l">${esc(h)}</p><ul>${l.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>`;
+    case "flip": { const o=a[0], side=(x,tag)=>`<figure class="fl-p${tag==="Now"?" is-now":""}"><div class="fl-d dg">${DG[x[0]]||""}</div><figcaption><span>${tag}</span>${esc(x[1])}</figcaption></figure>`;
+      return `<section class="fl full rv"><header><p>${esc(o.n)}</p><h4>${esc(o.h)}</h4></header>
+        <div class="fl-g">${side(o.first,"First")}${side(o.now,"Now")}</div>
+        <dl class="fl-kv"><div><dt>Options we looked at</dt><dd>${esc(o.opts)}</dd></div><div><dt>Why I changed it</dt><dd>${esc(o.why)}</dd></div><div><dt>How it works now</dt><dd>${esc(o.how)}</dd></div><div><dt>What it cost</dt><dd>${esc(o.cost)}</dd></div></dl>
+        ${o.shot?`<figure class="fl-s"><button class="zoom" type="button" data-src="${IMG(o.shot[0])}" data-cap="${esc(o.shot[1])}" aria-label="Enlarge: ${esc(o.shot[1])}"><img src="${IMG(o.shot[0])}" alt="${esc(o.shot[1])}" loading="lazy" decoding="async"></button><figcaption><span>In the product</span>${esc(o.shot[1])}</figcaption></figure>`:""}
+      </section>`; }
+    case "hist": return `<div class="hs full">${a[0].map(o=>`<section class="hs-c rv"><div class="hs-t"><p class="hs-g">${esc(o.g)}</p><h4>${esc(o.h)}</h4><p class="hs-m">${esc(o.m)}</p>
+        <dl class="hs-fn"><div><dt>First</dt><dd>${esc(o.first[1])}</dd></div><div class="is-now"><dt>Now</dt><dd>${esc(o.now[1])}</dd></div></dl>
+        <p class="hs-d">${esc(o.d)}</p></div>${o.shot?`<figure class="hs-s"><button class="zoom" type="button" data-src="${IMG(o.shot[0])}" data-cap="${esc(o.shot[1])}" aria-label="Enlarge: ${esc(o.shot[1])}"><img src="${IMG(o.shot[0])}" alt="${esc(o.shot[1])}" loading="lazy" decoding="async"></button></figure>`:""}</section>`).join("")}</div>`;
+    case "moments": return `<div class="mo full">${a[0].map(([f,k,h,d])=>`<figure class="mo-c rv"><button class="zoom mo-i" type="button" data-src="${IMG(f)}" data-cap="${esc(h)}" aria-label="Enlarge: ${esc(h)}"><img src="${IMG(f)}" alt="${esc(h)}" loading="lazy" decoding="async"></button><figcaption><small>${esc(k)}</small><b>${esc(h)}</b>${esc(d)}</figcaption></figure>`).join("")}</div>`;
+    case "pcard": { const o=a[0], k=o.n.split("·").pop().trim().replace("Problem ","");
+      const th=(x,fin)=>`<figure class="p4-f${fin?" fin":""}"><button class="zoom" type="button" data-src="${IMG(x[0])}" data-cap="${esc(x[1])}" aria-label="Enlarge: ${esc(x[1])}"><span class="p4-im"><img src="${IMG(x[0])}" alt="${esc(x[1])}" loading="lazy" decoding="async"></span></button><figcaption>${fin?"<b>Final</b>":"<span>Explored</span>"}${esc(x[1])}</figcaption></figure>`;
+      const sub=(s,i)=>`<div class="p4-s"><h5><span>${esc(k)}.${i+1}</span>${esc(s.t)}</h5>
+        <div class="p4-dec">${s.opts?`<ul class="p4-o">${s.opts.map((x,j)=>`<li${j===s.pick?' class="on"':""}>${esc(x)}</li>`).join("")}</ul>`:""}${s.chose?`<p class="p4-c">${esc(s.chose)}</p>`:""}<p class="p4-t">Trade-off: ${esc(s.cost)}</p></div>
+        ${(s.ex.length||s.fin)?`<div class="p4-v" style="--a:${s.ex.length}">${s.ex.map(x=>th(x,0)).join("")}${s.fin?th(s.fin,1):""}</div>`:""}</div>`;
+      return `<section class="p4 full rv" id="${pid}-${o.id}">
+        <header class="p4-h"><p>Problem ${esc(k)}</p><h4>${esc(o.h)}</h4></header>
+        <dl class="p4-ctx"><div><dt>Problem</dt><dd>${esc(o.p)}</dd></div><div><dt>Why the market demanded it</dt><dd>${esc(o.why)}</dd></div><div class="on"><dt>What I built</dt><dd>${esc(o.f)}</dd></div></dl>
+        ${o.voice?`<blockquote class="p4-q"><p>“${esc(o.voice[1])}”</p><cite>What we kept hearing · ${esc(o.voice[0])}</cite></blockquote>`:""}
+        ${o.flow?`<ol class="p4-fl">${o.flow.map(([a,b])=>`<li><b>${esc(a)}</b>${b?`<span>${esc(b)}</span>`:""}</li>`).join("")}</ol>`:""}
+        ${o.subs.map(sub).join("")}
+        ${(o.demos||[]).length?`<div class="p4-w"><p class="p4-wh">Walkthrough</p>${o.demos.map(d=>block(["demo",d],pid,null)).join("")}</div>`:""}
+      </section>`; }
+    case "fromto": { const o=a[0], side=(x,cls)=>`<div class="ft-c ${cls}"><p class="ft-k">${cls==="ft-a"?"From":"To"} · ${esc(x[1])}</p>${figure(x[0],x[2],pid,true)}</div>`;
+      return `<div class="ft full rv">${side(o.from,"ft-a")}<span class="ft-ar" aria-hidden="true">${arrow}</span>${side(o.to,"ft-b")}</div>
+        ${o.steps?`<ol class="ft-l full">${o.steps.map(([y,t],i)=>`<li${i===o.steps.length-1?' class="on"':""}><b>${esc(y)}</b><span>${esc(t)}</span></li>`).join("")}</ol>`:""}`; }
+    case "ctx": { const o=a[0];
+      return `<div class="cx full rv"><header><p>${esc(o.h)}</p>${o.d?`<small>${esc(o.d)}</small>`:""}</header><ol>${o.items.map(([l,t,r])=>`<li><b>${esc(l)}</b><span>${esc(t)}</span>${r?`<em>${arrow}${esc(r)}</em>`:""}</li>`).join("")}</ol></div>`; }
+    case "prob": { const o=a[0];
+      return `<section class="pb full rv"><p class="pb-n">${esc(o.n)}</p><h4>${esc(o.h)}</h4><div class="pb-g"><div><small>The problem</small><p>${esc(o.p)}</p></div><div><small>What I built</small><p>${esc(o.f)}</p></div></div></section>`; }
     case "done": return `<p class="done rv"><b>${esc(a[0])}</b> ${esc(a[1])}</p>`;
-    case "nums": return `<dl class="proof cstats nums full">${a[0].map(([n,l,src])=>`<div><dt>${esc(n)}</dt><dd>${esc(l)}${src?`<small>${esc(src)}</small>`:""}</dd></div>`).join("")}</dl>`;
+    case "nums": return `<dl class="proof cstats nums full" style="--nn:${a[0].length}">${a[0].map(([n,l,src])=>`<div><dt>${esc(n)}</dt><dd>${esc(l)}${src?`<small>${esc(src)}</small>`:""}</dd></div>`).join("")}</dl>`;
     case "jobs": return a[0].map(([l,figs])=>`<div class="jobs full"><h5>${esc(l)}</h5><div class="figs c3">${figs.map(([f,c])=>figure(f,c,pid,true)).join("")}</div></div>`).join("");
     case "fig": return figure(a[0],a[1],pid,false);
     case "demo":{const d=a[0];return `<div class="dm full" data-dm>
-<div class="dm-h rv"><small><span>${esc(d.n)}</span>${esc(d.k)}</small><div><h5>${esc(d.h)}</h5><p>${esc(d.p)}</p></div></div>
+<div class="dm-h rv"><small>${d.n?`<span>${esc(d.n)}</span>`:""}${esc(d.k)}</small><div><h5>${esc(d.h)}</h5><p>${esc(d.p)}</p></div></div>
 <div class="dm-v stage th-${THEME[pid]||"stone"} rv-img"><div class="win"><div class="bar"><i></i><i></i><i></i><u></u></div><div class="dm-f"${d.ar?` style="aspect-ratio:${d.ar}"`:""}><video muted loop playsinline preload="none" poster="${d.v}.webp" data-src="${d.v}.mp4" aria-label="${esc(d.h)}"></video><button class="dm-fs" type="button" aria-label="Full screen"><i></i></button><button class="dm-pp" type="button" aria-label="Pause"><i></i></button></div></div></div>
 <ol class="dm-ch" style="--n:${d.ch.length}">${d.ch.map(([t,h,c],i)=>`<li><button type="button" data-t="${t}"><u><b></b></u><span><em>${String(i+1).padStart(2,"0")}</em>${esc(h)}</span><small>${esc(c)}</small></button></li>`).join("")}</ol>${d.why?`<div class="dm-x rv"><div><h6>Why it was needed</h6><p>${esc(d.why)}</p></div><div><h6>How it helps</h6><ul>${d.who.map(([r,t])=>`<li><b>${esc(r)}</b><span>${esc(t)}</span></li>`).join("")}</ul></div></div>`:""}</div>`;}
     case "figs": return `<div class="figs c${a[1]||2} full">${a[0].map(([f,c])=>figure(f,c,pid,true)).join("")}</div>`;
@@ -3004,6 +3824,9 @@ function aboutPage(){
 
 /* the 3i snapshot: problem, three generations, impact; each column jumps to its section */
 function snapHTML(p){
+  if(p.v2&&p.snap.gens){ return `<div class="gsnap gq">${p.snap.gens.map(([g,y,q,bet,res],i)=>`<a class="gs-c rv" style="--g:${["#7a6e8c","#a46b4e","#b8862f"][i]}" href="#${p.id}" data-jump="g${i+1}-zb" aria-label="${g}: go to chapter"><small>${g} · ${y}</small><p class="gq-q">${esc(q)}</p><dl><div><dt>Bet</dt><dd>${esc(bet)}</dd></div><div><dt>Result</dt><dd>${esc(res)}</dd></div></dl></a>`).join("")}</div>`; }
+  if(p.v2){ const s=p.snap, c=(id,num,name,inner)=>`<a class="gs-c rv" href="#${p.id}" data-jump="${id}" aria-label="${name}: go to section"><small>${num} · ${name}</small>${inner}</a>`;
+   return `<div class="gsnap">${c("identify","01","Identify",`<p>${esc(s.identify.p)}</p>`)}${c("iterate","02","Iterate",`<ol>${s.iterate.l.map(([n,t])=>`<li><b>${esc(n)}</b> ${esc(t)}</li>`).join("")}</ol>`)}${c("impact","03","Impact",`<dl>${s.impact.n.map(([n,l])=>`<div><dt>${esc(n)}</dt><dd>${esc(l)}</dd></div>`).join("")}</dl>`)}</div>`; }
   const s=p.snap, go=n=>`<span class="sn-go">Go to ${n} <i aria-hidden="true">→</i></span>`;
   const col=(id,num,name,k,inner)=>`<a class="sn-c rv" href="#${p.id}" data-jump="${id}" aria-label="${name}: go to section"><header><small>${num}</small><h4>${name}</h4></header><p class="sn-k">${k}</p>${inner}${go(name)}</a>`;
   return `<div class="snap">
@@ -3023,9 +3846,9 @@ function casePage(p){
   const secs=p.secs.map(s=>({...s,body:s.body.map((b,k)=>b[0]==="h3"?["h3",b[1],b[2]||`${s.id}-${k}`,b[3]]:b)}));
   const toc=[];
   if(STATS[p.id]||p.ov) toc.push({id:"overview",label:"Overview",n:"",kids:[]});
-  secs.forEach(s=>toc.push({id:s.id,label:s.title,n:s.num,kids:s.body.filter(b=>b[0]==="h3").map(b=>({id:b[2],label:b[3]||b[1].replace(/^[A-C] · /,"")}))}));
+  secs.forEach(s=>toc.push({id:s.id,label:s.title,n:s.num,kids:s.body.filter(b=>b[0]==="h3"||b[0]==="genhead"||b[0]==="chapter").map(b=>({id:b[2],label:b[3]||b[1].replace(/^[A-C] · /,"")}))}));
   if(p.refl) toc.push({id:"reflection",label:"Reflection",n:"",kids:[]});
-  return `<article class="cs wrap">
+  return `<article class="cs wrap${p.v2?" v2":""} p-${p.id}">
    <div class="crumb"><a href="#top">Home</a><i></i><a href="#work">Work</a><span class="cb-x"><i></i>${esc(p.cat||"")}</span>${STATUS[p.id]?`<i></i><b class="ok">${STATUS[p.id]}</b>`:""}${mins>2?`<i></i>${mins} min read · 1 min skim`:""}</div>
    <h1>${esc(p.name)}</h1>
    ${tagline?`<p class="tagline">${esc(tagline)}</p>`:""}
@@ -3038,7 +3861,7 @@ function casePage(p){
     <div class="cmain">
    ${p.snap?`<section class="cov" id="overview">${p.what?`<div class="cwhat rv"><h4>What is ${esc(p.whatName||p.name)}</h4><div>${p.what.map(t=>`<p>${esc(t)}</p>`).join("")}</div></div>`:""}${snapHTML(p)}</section>`:(STATS[p.id]||p.ov)?`<section class="cov" id="overview">${STATS[p.id]?`<dl class="proof cstats">${STATS[p.id].map(([n,l])=>`<div><dt>${n}</dt><dd>${esc(l)}</dd></div>`).join("")}</dl>`:""}
    ${p.ov?`<div class="ov">${p.ov.map(([k,v])=>`<div class="rv"><h4>${k}</h4><p>${esc(v)}</p></div>`).join("")}</div>`:""}</section>`:""}
-   ${secs.map(s=>`<section class="csec" id="${s.id}">${s.num?`<div class="csec-h"><h2 class="lbl"><small>${s.num}</small>${esc(s.title)}</h2><p class="stmt l">${esc(s.sub||"")}</p></div>`:""}
+   ${secs.map(s=>`<section class="csec" id="${s.id}">${s.num?`<div class="csec-h"><h2 class="lbl"><small>${s.num}</small>${esc(s.title)}</h2><p class="stmt l">${esc(s.sub||"")}</p>${false?`<nav class="act-nav" aria-label="${esc(s.title)}">${s.body.filter(b=>b[0]==="h3"||b[0]==="genhead").map(b=>`<a href="#${p.id}" data-jump="${b[2]}">${esc(b[3]||b[1])}</a>`).join("")}</nav>`:""}</div>`:""}
      <div class="flow">${s.body.map(b=>block(b,p.id,s)).join("")}</div></section>`).join("")}
    ${p.refl?`<div class="refl" id="reflection"><h2 class="lbl">Reflection</h2><p class="stmt">${esc(p.refl)}</p></div>`:""}
    ${p.src?`<div class="srcs">Sources<ul>${p.src.map(s=>`<li>${esc(s)}</li>`).join("")}</ul></div>`:""}
