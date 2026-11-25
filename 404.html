@@ -5067,9 +5067,10 @@ function RS(html){ if(!VAR) return html;
   const W=VW[s[1]]; if(!W) return m; const set=(VT.has(s[1])?[240,320,480,800,1280]:[480,800,1280]).filter(w=>w<W*.9).map(w=>`${s[1]}.w${w}.webp ${w}w`).concat(`${s[1]}.webp ${W}w`).join(", ");
   const lazy=/loading="lazy"/.test(a); return `<img${a.replace(/\ssrc="([^"]+)"/,' data-s0="$1"')} data-ss="${set}"${lazy?' data-lz=""':""}>`; }); }
 /* give each picture the copy that fits the slot it is actually shown in: measure first, then set srcset and src together, so only one file is fetched */
+document.addEventListener("toggle",e=>{ if(!VAR||!e.target.open) return; e.target.querySelectorAll("img[srcset]").forEach(i=>{ if(i.complete) return; const w=Math.ceil(i.getBoundingClientRect().width); if(w) i.sizes=w+"px"; }); },true);   /* pictures in a just-opened list get their real size */
 function fitImgs(root){ const L=[...root.querySelectorAll("img[data-ss]")];
  const W=L.map(i=>{ let w=i.getBoundingClientRect().width; if(!w&&i.parentElement) w=i.parentElement.getBoundingClientRect().width; return Math.ceil(w); });
- L.forEach((i,k)=>{ const w=W[k], lz=i.hasAttribute("data-lz"); i.sizes=w?(lz?"auto, ":"")+w+"px":(lz?"auto, ":"")+"100vw"; i.srcset=i.dataset.ss; i.src=i.dataset.s0; i.removeAttribute("data-ss"); i.removeAttribute("data-s0"); i.removeAttribute("data-lz"); }); }
+ L.forEach((i,k)=>{ const w=W[k], lz=i.hasAttribute("data-lz"); i.sizes=w?w+"px":"100vw"; i.srcset=i.dataset.ss; i.src=i.dataset.s0; i.removeAttribute("data-ss"); i.removeAttribute("data-s0"); i.removeAttribute("data-lz"); }); }
 function render(h){
   const p=byId[h], pre=app.hasAttribute("data-pre"); if(pre) app.removeAttribute("data-pre");
   if(h==="about"){
