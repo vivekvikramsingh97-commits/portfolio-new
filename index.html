@@ -3142,17 +3142,17 @@ body{font-family:var(--font-body);font-weight:400;letter-spacing:var(--ls-body);
 @media (prefers-reduced-motion: reduce){.h-ey,.h-av i{animation:none}}
 /* more work: three highlights, the rest one tap away */
 .mw{margin-top:var(--s-4)}
-.mw-s{list-style:none;cursor:pointer;position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);min-height:clamp(240px,22vw,300px);border-radius:24px;overflow:hidden;border:1px solid color-mix(in srgb,var(--ink) 10%,transparent);background:color-mix(in srgb,var(--ink) 3%,var(--ground));transition:border-color .3s var(--ease),background .3s var(--ease)}
+.mw-s{list-style:none;cursor:pointer;position:relative;display:grid;grid-template-columns:minmax(300px,.85fr) minmax(0,1.15fr);min-height:clamp(300px,26vw,360px);border-radius:24px;overflow:hidden;isolation:isolate;border:1px solid color-mix(in srgb,var(--ink) 10%,transparent);background:color-mix(in srgb,var(--ink) 3%,var(--ground));transition:border-color .3s var(--ease)}
 .mw-s::-webkit-details-marker{display:none}
-.mw-s:hover{border-color:color-mix(in srgb,var(--ink) 24%,transparent)}
+.mw-s:hover{border-color:color-mix(in srgb,var(--ink) 22%,transparent)}
 .mw-s:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.mw-t{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:clamp(24px,3vw,40px)}
+.mw-t{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:clamp(28px,3.2vw,44px)}
 .mw-t>b{font-family:var(--font-display);font-weight:600;font-size:var(--f32);line-height:1.1;letter-spacing:-.02em}
-.mw-d{font-size:17px;line-height:1.4;color:var(--ink2);max-width:36ch}
-.mw-g{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.mw-g span{display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 6px 0 12px;border-radius:99px;font-size:13px;color:var(--ink2);background:var(--ground);border:1px solid color-mix(in srgb,var(--ink) 10%,transparent)}
-.mw-g i{font-style:normal;font-weight:600;font-size:13px;color:var(--ink);min-width:20px;height:20px;padding:0 6px;border-radius:99px;display:grid;place-items:center;background:color-mix(in srgb,var(--ink) 6%,transparent)}
-.mw-b{margin-top:auto;padding-top:20px;display:inline-flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:var(--ink)}
+.mw-d{font-size:17px;line-height:1.45;color:var(--ink2);max-width:32ch}
+.mw-g{display:grid;width:min(100%,280px);margin-top:8px;border-top:1px solid color-mix(in srgb,var(--ink) 12%,transparent)}
+.mw-g span{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 12%,transparent);font-size:15px;color:var(--ink2)}
+.mw-g i{font-style:normal;font-weight:600;font-size:15px;color:var(--ink);font-variant-numeric:tabular-nums}
+.mw-b{margin-top:auto;padding-top:24px;display:inline-flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:var(--ink)}
 .mw-b>i{flex:none;position:relative;width:40px;height:40px;border-radius:50%;background:var(--ink);transition:transform .35s var(--ease)}
 .mw-b>i::before,.mw-b>i::after{content:"";position:absolute;left:50%;top:50%;width:13px;height:1.6px;background:var(--ground);transform:translate(-50%,-50%);transition:transform .3s var(--ease)}
 .mw-b>i::after{transform:translate(-50%,-50%) rotate(90deg)}
@@ -3160,22 +3160,26 @@ body{font-family:var(--font-body);font-weight:400;letter-spacing:var(--ls-body);
 .mw[open] .mw-b>i::after{transform:translate(-50%,-50%) rotate(0deg)}
 .mw .mw-c,.mw[open] .mw-o{display:none}
 .mw[open] .mw-c{display:inline}
-.mw-p{position:relative;min-height:100%}
-.mw-p img{position:absolute;width:38%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;left:calc(4% + var(--k)*13.5%);top:calc(50% + (var(--k) - 2)*(var(--k) - 2)*2.5%);transform:translateY(-50%) rotate(calc((var(--k) - 2)*4deg));transform-origin:50% 120%;box-shadow:0 1px 2px rgba(0,0,0,.12),0 18px 36px -18px rgba(0,0,0,.45);transition:transform .6s cubic-bezier(.2,.7,.1,1),left .6s cubic-bezier(.2,.7,.1,1);z-index:calc(5 - (var(--k) - 2)*(var(--k) - 2))}
-.mw-s:hover .mw-p img{left:calc(1% + var(--k)*14.5%);transform:translateY(calc(-50% - 8px)) rotate(calc((var(--k) - 2)*6deg))}
-.mw[open] .mw-s{margin-bottom:var(--s-5);min-height:0}
-.mw[open] .mw-p{opacity:.0;pointer-events:none}
-.mw[open] .mw-g,.mw[open] .mw-d{display:none}
-.mw[open] .mw-t{flex-direction:row;align-items:center;justify-content:space-between;width:100%;grid-column:1/-1;padding:20px clamp(20px,2.6vw,32px)}
+.mw-p{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22%);mask-image:linear-gradient(90deg,transparent 0,#000 22%)}
+.mw-w{position:absolute;left:-6%;top:50%;display:grid;gap:14px;transform:translateY(-50%) rotate(-7deg);transform-origin:30% 50%}
+.mw-r{display:flex;gap:14px;transition:transform 1.4s cubic-bezier(.2,.7,.1,1)}
+.mw-r+.mw-r{margin-left:-96px}
+.mw-r img{flex:none;width:clamp(150px,14vw,200px);aspect-ratio:16/10;object-fit:cover;border-radius:10px;box-shadow:0 1px 2px rgba(0,0,0,.1),0 12px 24px -16px rgba(0,0,0,.4)}
+.mw-s:hover .mw-r:first-child{transform:translateX(-48px)}
+.mw-s:hover .mw-r+.mw-r{transform:translateX(40px)}
+.mw[open] .mw-s{margin-bottom:var(--s-5);min-height:0;grid-template-columns:1fr}
+.mw[open] .mw-p,.mw[open] .mw-g,.mw[open] .mw-d{display:none}
+.mw[open] .mw-t{flex-direction:row;align-items:center;justify-content:space-between;padding:20px clamp(20px,2.6vw,32px)}
 .mw[open] .mw-t>b{font-size:var(--f20)}
 .mw[open] .mw-b{margin:0;padding:0}
 @media (max-width:899px){
  .mw-s{grid-template-columns:1fr;min-height:0}
- .mw-p{order:-1;height:190px;min-height:0;overflow:hidden}
- .mw-p img{width:52%;left:calc(-2% + var(--k)*12.5%);top:calc(52% + (var(--k) - 2)*(var(--k) - 2)*3%)}
- .mw[open] .mw-p{display:none}
+ .mw-p{order:-1;height:180px;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
+ .mw-w{left:-10%}
+ .mw-r img{width:150px}
+ .mw-g{width:100%}
 }
-@media (prefers-reduced-motion:reduce){.mw-p img,.mw-b>i{transition:none}}
+@media (prefers-reduced-motion:reduce){.mw-r,.mw-b>i{transition:none}}
 
 .svc-sub{margin:0;max-width:34em;font-size:var(--f20);line-height:1.55;color:var(--ink2)}
 
@@ -3234,9 +3238,9 @@ button,input,select,textarea{font-family:inherit}
 <footer class="foot" id="contact"><div class="wrap">
   <div class="row12">
     <div class="cta">
-      <h2>Building with AI agents? <span class="it">Let’s talk.</span></h2>
+      <h2>Making something people rely on? <span class="it">Let’s talk.</span></h2>
       <div class="mail"><span id="mail">projects.vivekvikramsingh@gmail.com</span><button id="copy" type="button">Copy email</button></div>
-      <p>Open to senior product design roles in AI and enterprise.</p>
+      <p>Open to product design roles.</p>
     </div>
     <nav class="ncol a" aria-label="Footer"></nav>
   </div>
@@ -4235,7 +4239,7 @@ function home(){
      const top=["squirrel","crestos","ranbhoomi"], groups=[["Security AI",["advanced-hunting","cipherstar","watchtower-onboarding"]],["Concepts",["chaperone","loom"]],["Brand and craft",craft.map(p=>p.id).filter(id=>!top.includes(id))]];
      const n=groups.reduce((a,[,ids])=>a+ids.length,0);
      return `${vlist([["Highlights",top.map((id,i)=>mrow(byId[id],i))]])}
-     <details class="mw"><summary class="mw-s"><span class="mw-t"><b class="mw-o">${n} more projects</b><b class="mw-c">Showing all ${n} projects</b><small class="mw-d">From security AI tools to posters, packaging and card games.</small><span class="mw-g">${groups.map(([g,ids])=>`<span>${g}<i>${ids.length}</i></span>`).join("")}</span><span class="mw-b"><i aria-hidden="true"></i><span class="mw-o">Show all</span><span class="mw-c">Show fewer</span></span></span><span class="mw-p" aria-hidden="true">${["advanced-hunting","vidhi","pepsi","apocalyptica","deerupt"].map((id,k)=>`<img style="--k:${k}" src="${IMG(COVER(id)||byId[id].thumb)}" alt="" loading="lazy" decoding="async">`).join("")}</span></summary>
+     <details class="mw"><summary class="mw-s"><span class="mw-t"><b class="mw-o">${n} more projects</b><b class="mw-c">Showing all ${n} projects</b><small class="mw-d">From security AI tools to posters, packaging and card games.</small><span class="mw-g">${groups.map(([g,ids])=>`<span>${g}<i>${ids.length}</i></span>`).join("")}</span><span class="mw-b"><i aria-hidden="true"></i><span class="mw-o">Show all ${n}</span><span class="mw-c">Show fewer</span></span></span><span class="mw-p" aria-hidden="true"><span class="mw-w">${[["advanced-hunting","vidhi","pepsi","chaperone","apocalyptica","uvvis"],["cipherstar","deerupt","spectrum","loom","clubhouse","pop-the-bubble"]].map(row=>`<span class="mw-r">${row.map(id=>`<img src="${IMG(COVER(id)||byId[id].thumb)}" alt="" loading="lazy" decoding="async">`).join("")}</span>`).join("")}</span></span></summary>
      ${vlist(groups.map(([g,ids])=>[g,ids.map((id,i)=>mrow(byId[id],i))]))}</details>`; })()}
   </section>
 `;
@@ -4310,7 +4314,7 @@ function aboutPage(){
      <dl class="now">
       <div><dt>Based in</dt><dd>Lucknow, India</dd></div>
       <div><dt>Working on</dt><dd>Governance and trust for AI agents in ZBrain, at The Hackett Group</dd></div>
-      <div><dt>Open to</dt><dd>Senior product design roles in AI and enterprise</dd></div>
+      <div><dt>Open to</dt><dd>Product design roles</dd></div>
       <div><dt>Elsewhere</dt><dd class="ab-links"><a class="ab-l" href="#" data-ext="linkedin">LinkedIn <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a><a class="ab-l" href="#" data-ext="strava">Strava <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a><a class="ab-l" href="#" data-ext="letterboxd">Letterboxd <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a></dd></div>
      </dl>
      <p class="ab-links"><a class="lnk" href="#work">Back to the work <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a><a class="lnk" href="#contact">Say hello <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9.5 2.5M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a></p>
